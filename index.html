@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pi-Init • Python Project Initializer</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Pi-Init</h1>
+  </header>
+
+  <!-- Main Form Section -->
+  <main class="main-container">
+    <section class="form-section">
+      
+      <!-- Project Name -->
+      <div class="form-group">
+        <label for="project-name">Project Name:</label>
+        <input type="text" id="project-name" placeholder="Enter project name">
+      </div>
+
+      <!-- Framework Selection -->
+      <div class="form-group">
+        <label>Framework:</label>
+        <select id="framework">
+          <option value="none">None</option>
+          <option value="flask">Flask</option>
+          <option value="django">Django</option>
+          <option value="fastapi">FastAPI</option>
+        </select>
+      </div>
+
+      <!-- Dependencies Selector -->
+      <div class="form-group">
+        <label>Dependencies:</label>
+        <select id="framework">
+          <option value="none">None</option>
+          <option value="floe">Floe</option>
+          <option value="requests">Requests</option>
+          <option value="numpy">Numpy</option>
+          <option value="pandas">Pandas</option>
+        </select>
+      </div>
+
+      <!-- License Selection -->
+      <div class="form-group">
+        <label for="license">License:</label>
+        <select id="license">
+          <option value="none">None</option>
+          <option value="mit">MIT</option>
+          <option value="apache">Apache</option>
+          <option value="gpl">GPL</option>
+        </select>
+      </div>
+
+      <!-- Optional .env -->
+      <div class="form-group">
+        <label><input type="checkbox" id="env-toggle"> Include .env file</label>
+        <label><input type="checkbox" id="env-toggle"> Include .gitignore file</label>
+      </div>
+
+      <!-- Generate Button -->
+      <div class="form-group">
+        <button id="generate-btn">Generate Project</button>
+      </div>
+
+    </section>
+
+    <!-- Preview Section -->
+    <section class="preview-section">
+      <h2>Live Preview</h2>
+      <div id="file-preview">
+        <!-- JS will inject preview tabs here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Feedback Modal -->
+  <div id="feedback-modal" class="modal hidden">
+    <p>Project Generated Successfully!</p>
+    <button id="download-btn">Download Zip</button>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

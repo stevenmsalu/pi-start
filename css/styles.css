@@ -1,0 +1,115 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Main Layout */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1 1 300px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Checkbox group */
+.checkbox-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0088cc;
+}
+
+/* Preview Section */
+.preview-section {
+  flex: 1 1 400px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.preview-section h2 {
+  margin-bottom: 15px;
+}
+
+/* Feedback Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e0ffe0;
+  padding: 20px;
+  border: 2px solid #00aa00;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.modal.hidden {
+  display: none;
+}

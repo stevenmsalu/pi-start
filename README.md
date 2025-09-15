@@ -1,15 +1,15 @@
-# Pie-Init
+# Pi-Init
 
 **Generate Python Project Scaffolds in Your Browser**
 
-Pie-Init is an Interactive Web-based tool that lets you generate Python project scaffolds.
+Pi-Init is an Interactive Web-based tool that lets you generate Python project scaffolds.
 
 ---
 
 ### Core Interactions
 - **Project Name** – Input your project name.  
 - **Framework** – Choose from Flask, Django, FastAPI, or None.  
-- **Dependencies** – Select optional libraries like `floe`.
+- **Dependencies** – Select optional libraries like `Floe`, `Requests`, `Numpy`, `Pandas`.
 - **License** – Pick between MIT, Apache, GPL, or None.  
 - **Generate** – Create project files instantly.  
 - **Download** – Save your project as a zip archive.  
