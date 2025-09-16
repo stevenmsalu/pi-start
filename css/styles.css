@@ -1,4 +1,3 @@
-/* Reset & Base */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,7 +12,6 @@ body {
   padding: 20px;
 }
 
-/* Header */
 .header {
   text-align: left;
   margin-bottom: 30px;
@@ -24,12 +22,6 @@ body {
   margin-bottom: 5px;
 }
 
-.header p {
-  font-size: 1rem;
-  color: #555;
-}
-
-/* Main Layout */
 .main-container {
   display: flex;
   flex-wrap: wrap;
@@ -37,13 +29,12 @@ body {
   justify-content: center;
 }
 
-/* Form Section */
 .form-section {
   flex: 1 1 300px;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -64,13 +55,16 @@ body {
   border-radius: 4px;
 }
 
-/* Checkbox group */
 .checkbox-group label {
   display: block;
   margin-bottom: 5px;
+  font-weight: 500;
 }
 
-/* Buttons */
+.form-group input[type="checkbox"] {
+  margin-right: 6px;
+}
+
 button {
   padding: 10px 20px;
   background-color: #00aaff;
@@ -84,32 +78,78 @@ button:hover {
   background-color: #0088cc;
 }
 
-/* Preview Section */
 .preview-section {
   flex: 1 1 400px;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .preview-section h2 {
   margin-bottom: 15px;
+  font-size: 1.5rem; 
 }
 
-/* Feedback Modal */
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #e0ffe0;
-  padding: 20px;
-  border: 2px solid #00aa00;
-  border-radius: 8px;
-  z-index: 100;
+.file-tree {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
 }
 
-.modal.hidden {
+.file-tree ul {
+  list-style: none;
+  padding-left: 1.8rem;
+  font-family: monospace;
+  font-size: 1.25rem;  
+  line-height: 1.8;  
+}
+
+.file-tree li {
+  margin: 0.5rem 0; 
+  position: relative;
+}
+
+.file-tree li::before {
+  content: "│";
+  position: absolute;
+  left: -1rem;
+  color: #888;
+  font-size: 1.25rem;
+}
+
+.file-tree li:last-child::before {
+  content: "└";
+  color: #888;
+  font-size: 1.25rem;
+}
+
+.file-tree li:not(:last-child)::before {
+  content: "├";
+  color: #888;
+  font-size: 1.25rem;
+}
+
+.tree ul.hidden {
   display: none;
+}
+
+#editor-container {
+  margin-top: 1rem;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

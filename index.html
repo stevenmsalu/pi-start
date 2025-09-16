@@ -1,95 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pi-Init • Python Project Initializer</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
 </head>
-<body>
 
-  <!-- Header -->
+<body>
   <header class="header">
     <h1>Pi-Init</h1>
   </header>
 
-  <!-- Main Form Section -->
   <main class="main-container">
-    <section class="form-section">
-      
-      <!-- Project Name -->
-      <div class="form-group">
-        <label for="project-name">Project Name:</label>
-        <input type="text" id="project-name" placeholder="Enter project name">
-      </div>
-
-      <!-- Framework Selection -->
-      <div class="form-group">
-        <label>Framework:</label>
-        <select id="framework">
-          <option value="none">None</option>
-          <option value="flask">Flask</option>
-          <option value="django">Django</option>
-          <option value="fastapi">FastAPI</option>
-        </select>
-      </div>
-
-      <!-- Dependencies Selector -->
-      <div class="form-group">
-        <label>Dependencies:</label>
-        <select id="framework">
-          <option value="none">None</option>
-          <option value="floe">Floe</option>
-          <option value="requests">Requests</option>
-          <option value="numpy">Numpy</option>
-          <option value="pandas">Pandas</option>
-        </select>
-      </div>
-
-      <!-- License Selection -->
-      <div class="form-group">
-        <label for="license">License:</label>
-        <select id="license">
-          <option value="none">None</option>
-          <option value="mit">MIT</option>
-          <option value="apache">Apache</option>
-          <option value="gpl">GPL</option>
-        </select>
-      </div>
-
-      <!-- Optional .env -->
-      <div class="form-group">
-        <label><input type="checkbox" id="env-toggle"> Include .env file</label>
-        <label><input type="checkbox" id="env-toggle"> Include .gitignore file</label>
-      </div>
-
-      <!-- Generate Button -->
-      <div class="form-group">
-        <button id="generate-btn">Generate Project</button>
-      </div>
-
-    </section>
-
-    <!-- Preview Section -->
-    <section class="preview-section">
-      <h2>Live Preview</h2>
-      <div id="file-preview">
-        <!-- JS will inject preview tabs here -->
-      </div>
-    </section>
+    <div class="form-section"><!-- Dynamic Content JS --></div>
+    
+    <div class="preview-section">
+      <!-- Both preview-container and editor-container will now be injected dynamically by renderUI() -->
+    </div>
 
   </main>
 
-  <!-- Feedback Modal -->
-  <div id="feedback-modal" class="modal hidden">
-    <p>Project Generated Successfully!</p>
-    <button id="download-btn">Download Zip</button>
-  </div>
+  <footer>
+    &copy; 2025 Pi-Init. All rights reserved.
+  </footer>
 
-  <script src="js/utils.js"></script>
-  <script src="js/components.js"></script>
-  <script src="js/store.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 
+  <script type="module" src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 </body>
+
 </html>

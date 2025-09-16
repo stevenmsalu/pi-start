@@ -1,17 +1,11 @@
-import { projectNameInput, frameworkSelector, dependenciesSelector, licenseSelector, envToggle, generateButton } from './components.js';
+import { renderUI } from './render.js';
+import { registerEventListeners } from './events.js';
 
-const formContainer = document.querySelector('.form-section');
+function startApp() {
+  renderUI();
+  registerEventListeners();
+}
 
-formContainer.innerHTML = `
-  ${projectNameInput()}
-  ${frameworkSelector()}
-  ${dependenciesSelector()}
-  ${licenseSelector()}
-  ${envToggle()}
-  ${generateButton()}
-`;
-
-// Add event listener to generate button
-document.getElementById('generate-btn').addEventListener('click', () => {
-  alert('Project generated! (placeholder)');
+document.addEventListener("DOMContentLoaded", () => {
+  startApp();
 });
