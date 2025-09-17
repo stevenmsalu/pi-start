@@ -11,6 +11,7 @@ import {
 
 export function renderUI() {
   const formContainer = document.querySelector('.form-section');
+  const buttonContainer = document.querySelector('.button-container');
   const previewContainer = document.querySelector('.preview-section');
 
   formContainer.innerHTML = `
@@ -20,8 +21,9 @@ export function renderUI() {
     ${dependenciesSelector()}
     ${licenseSelector()}
     ${optionalToggle()}
-    ${generateButton()}
   `;
+
+  buttonContainer.innerHTML = generateButton();
 
   previewContainer.innerHTML = previewSection();
 }

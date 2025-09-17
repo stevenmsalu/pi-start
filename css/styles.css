@@ -1,121 +1,299 @@
-/* Reset styles */
+/* ---------------------------
+   Pi-Init Terminal Theme
+   Dedicated styles.css
+--------------------------- */
+
+/* ---------------------------
+   Global Variables and Base Styling
+--------------------------- */
+:root {
+  --bg: #0b0f12;
+  --panel: #081014;
+  --fg: #9be28bd9;
+  --muted: #7a8f72;
+  --accent: #5be1ffd3;
+  --font-stack: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+  --radius: 8px;
+  --pad: 20px;
+  --caret-width: 2px;
+  --font-size: 20px;
+}
+
 * {
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #f5f7fa;
-  color: #1a1a1a;
-  line-height: 1.5;
-  padding: 20px;
+  background: linear-gradient(180deg, var(--bg), #051018 85%);
+  font-family: var(--font-stack);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--fg);
+  font-size: var(--font-size);
+  line-height: 1.45;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* ---------------------------
+   Header Styling
+--------------------------- */
 .header {
-  text-align: left;
-  margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .header h1 {
-  font-size: 2rem;
-  margin-bottom: 5px;
+  margin: 0;
+  font-size: 2.2rem;
+  color: var(--accent);
 }
 
+/* ---------------------------
+   Main Container Styling
+--------------------------- */
 .main-container {
+  width: min(920px, 96%);
+  background: linear-gradient(180deg, var(--panel), rgba(0, 0, 0, 0.25));
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(2, 6, 10, 0.6), inset 0 1px rgba(255, 255, 255, 0.02);
+  padding: var(--pad);
+  border: 1px solid rgba(255, 255, 255, 0.03);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
+}
+
+/* ---------------------------
+   Form Section Styling
+--------------------------- */
+.form-section {
+  background: transparent;
+  padding: var(--pad);
+  min-height: 200px;
+}
+
+/* ---------------------------
+   Form Controls Styling
+--------------------------- */
+input[type="text"],
+select {
+  border-radius: 20px;
+  background: #000 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--fg) !important;
+  padding: 0.5rem 1rem; 
+  flex-grow: 1;
+  caret-color: var(--fg);
+}
+
+input[type="text"]::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+  padding-left: 4px; 
+}
+
+/* Target all input states to maintain consistent styling */
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:hover,
+input[type="text"]:autofill,
+input[type="text"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill:hover, 
+input[type="text"]:-webkit-autofill:focus,
+input[type="text"]:-webkit-autofill:active,
+select:focus,
+select:active,
+select:hover {
+  border-color: var(--accent);
+  outline: none;
+  background: #000 !important; 
+  color: var(--fg) !important;
+  -webkit-text-fill-color: var(--fg) !important;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
+  box-shadow: 0 0 0px 1000px #000 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Remove browser default styles for autofill */
+input:-webkit-autofill {
+  -webkit-background-clip: text;
+}
+
+/* For Firefox */
+input[type="text"]:-moz-ui-valid {
+  box-shadow: none;
+}
+
+/* Blink animation for cursor */
+@keyframes blink {
+  0%, 50% { border-color: var(--accent); }
+  51%, 100% { border-color: rgba(255, 255, 255, 0.1); }
+}
+
+/* ---------------------------
+   Button Styles
+--------------------------- */
+.button-container {
+  display: flex;
   justify-content: center;
 }
 
-.form-section {
-  flex: 1 1 300px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+button,
+.button-primary {
+  background: var(--accent);
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem 1.5rem;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(91, 224, 255, 0.5);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
 }
 
+button:hover,
+.button-primary:hover {
+  background: #35c8f7;
+  box-shadow: 0 0 18px rgba(91, 224, 255, 0.8);
+}
+
+/* ---------------------------
+   Footer Styling
+--------------------------- */
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-top: 2rem;
+}
+
+/* ---------------------------
+   Prompt Styling (User/Host)
+--------------------------- */
+.prompt {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.user {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.host {
+  color: var(--muted);
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.95em;
+}
+
+/* ---------------------------
+   Caret Styling (Blinking Cursor)
+--------------------------- */
+.caret {
+  display: inline-block;
+  width: var(--caret-width);
+  background: var(--fg);
+  margin-left: 4px;
+  animation: blink 1s steps(1) infinite;
+  height: 1.2em;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* ---------------------------
+   Typewriter Effect
+--------------------------- */
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: var(--caret-width) solid transparent;
+  box-sizing: content-box;
+  animation:
+    typing 3.6s steps(40, end) 0s 1 normal both,
+    blink 1s steps(1) 3.6s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* ---------------------------
+   Responsive Design
+--------------------------- */
+@media (max-width: 520px) {
+  :root { --font-size: 14px; }
+}
+
+/* ---------------------------
+   Form Group Styling (Checkboxes and Labels)
+--------------------------- */
 .form-group {
-  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .form-group label {
-  display: block;
+  margin-right: 10px;
   font-weight: 600;
-  margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group select {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.checkbox-group {
-  display: flex;               
-  gap: 70px;                  
-  flex-wrap: wrap;             
-}
-
-.checkbox-group label {
-  display: inline-flex;        
-  align-items: center;        
-  font-weight: 500;
 }
 
 .checkbox-group input[type="checkbox"] {
-  margin-right: 6px;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #00aaff;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: inline-block;
+  position: relative;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0088cc;
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: #000;
+  border-color: var(--accent);
 }
 
-/* Preview Section */
-.preview-section {
-  flex: 1 1 400px;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
+.checkbox-group input[type="checkbox"]:hover {
+  background-color: #333;
+  border-color: var(--accent);
 }
 
-.preview-section h2 {
-  margin-bottom: 15px;
-  font-size: 1.5rem; 
+.checkbox-group input[type="checkbox"]:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--fg);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
 }
 
-/* Editor Container (keep for future use) */
-#editor-container {
-  margin-top: 1rem;
-}
-
-footer {
-  margin-top: 40px;
-  text-align: center;
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-  .main-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 }

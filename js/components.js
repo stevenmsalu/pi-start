@@ -10,7 +10,7 @@ export const pythonSelector = () => `
   <div class="form-group">
     <label>Python Version:</label>
     <div class="checkbox-group">
-      <label><input type="checkbox" class="python-checkbox" value="3.13.0">Latest</label>
+      <label><input type="checkbox" class="python-checkbox" value="3.13.0">@Latest</label>
       <label><input type="checkbox" class="python-checkbox" value="3.9.5">LTS</label>
       <label><input type="checkbox" class="python-checkbox" value="custom">Custom</label>
     </div>
