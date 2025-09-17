@@ -9,7 +9,7 @@
 :root {
   --bg: #0b0f12;
   --panel: #081014;
-  --fg: #9be28bd9;
+  --fg: #e9f7e6d9;
   --muted: #7a8f72;
   --accent: #5be1ffd3;
   --font-stack: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
@@ -92,6 +92,7 @@ select {
   padding: 0.5rem 1rem; 
   flex-grow: 1;
   caret-color: var(--fg);
+  font-size: 15px;
 }
 
 input[type="text"]::placeholder {
@@ -255,7 +256,7 @@ footer {
 
 .form-group label {
   margin-right: 10px;
-  font-weight: 600;
+  font: weight 400;
 }
 
 .checkbox-group input[type="checkbox"] {

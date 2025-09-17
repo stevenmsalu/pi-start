@@ -24,6 +24,4 @@ export function renderUI() {
   `;
 
   buttonContainer.innerHTML = generateButton();
-
-  previewContainer.innerHTML = previewSection();
 }

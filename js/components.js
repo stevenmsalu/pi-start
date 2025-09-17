@@ -11,8 +11,11 @@ export const pythonSelector = () => `
     <label>Python Version:</label>
     <div class="checkbox-group">
       <label><input type="checkbox" class="python-checkbox" value="3.13.0">@Latest</label>
-      <label><input type="checkbox" class="python-checkbox" value="3.9.5">LTS</label>
-      <label><input type="checkbox" class="python-checkbox" value="custom">Custom</label>
+      <label><input type="checkbox" class="python-checkbox" value="3.9.5">@3.9.5(LTS)</label>
+      <label>
+        <input type="checkbox" class="python-checkbox custom-checkbox" value="custom">Custom
+        <input type="text" class="custom-input" placeholder="Enter version" style="display:none; margin-left: 8px;" />
+      </label>
     </div>
   </div>
 `;
@@ -34,7 +37,7 @@ export const dependenciesSelector = () => `
     <div class="checkbox-group">
       <label><input type="checkbox" class="dependencies-checkbox" value="Floe">Floe</label>
       <label><input type="checkbox" class="dependencies-checkbox" value="Numpy">Numpy</label>
-      <label><input type="checkbox" class="dependencies-checkbox" value="Other">Other</label>
+      <label><input type="checkbox" class="dependencies-checkbox" value="More">More</label>
     </div>
   </div>
 `;
@@ -44,8 +47,9 @@ export const licenseSelector = () => `
     <label for="license">License:</label>
     <div class="checkbox-group">
       <label><input type="checkbox" class="license-checkbox" value="mit">MIT</label>
-      <label><input type="checkbox" class="license-checkbox" value="apache">Apache</label>
+      <label><input type="checkbox" class="license-checkbox" value="apache">Apache 2.0</label>
       <label><input type="checkbox" class="license-checkbox" value="gnu">GNU</label>
+      <label><input type="checkbox" class="license-checkbox" value="more">More</label>
     </div>
   </div>
 `;
