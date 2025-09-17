@@ -22,7 +22,7 @@
   - `frameworkSelector()` – returns framework selection dropdown
   - `dependenciesSelector()` – returns dependency checkboxes (`requests`, `numpy`, `pandas`)
   - `licenseSelector()` – returns license dropdown (`MIT`, `Apache`, `GPL`)
-  - `envToggle()` – checkbox for including a `.env` file
+  - `optionalToggle()` – checkbox for including a `.env` `gitgnore` `README` files
   - `generateButton()` – button to trigger project generation
 
 - **Basic styling** (`css/styles.css`):

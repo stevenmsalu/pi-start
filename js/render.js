@@ -1,12 +1,13 @@
 import {
   projectNameInput,
+  pythonSelector,
   frameworkSelector,
   dependenciesSelector,
   licenseSelector,
   optionalToggle,
   generateButton,
   previewSection
-} from './components/_index.js';
+} from './components.js';
 
 export function renderUI() {
   const formContainer = document.querySelector('.form-section');
@@ -14,6 +15,7 @@ export function renderUI() {
 
   formContainer.innerHTML = `
     ${projectNameInput()}
+    ${pythonSelector()}
     ${frameworkSelector()}
     ${dependenciesSelector()}
     ${licenseSelector()}
