@@ -1,6 +1,7 @@
 import { generateProject } from './generate.js';
 
 export function registerEventListeners() {
+  // Generate Project button
   document.getElementById('generate-btn').addEventListener('click', () => {
     generateProject();
   });

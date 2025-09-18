@@ -7,7 +7,7 @@ import {
   optionalToggle,
   generateButton,
   navbar
-} from './components.js';
+} from './components/_index.js';
 
 export function renderUI() {
   const formContainer = document.querySelector(".form-section");
