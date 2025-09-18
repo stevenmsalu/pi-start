@@ -6,13 +6,13 @@ import {
   licenseSelector,
   optionalToggle,
   generateButton,
-  previewSection
+  navbar
 } from './components.js';
 
 export function renderUI() {
-  const formContainer = document.querySelector('.form-section');
-  const buttonContainer = document.querySelector('.button-container');
-  const previewContainer = document.querySelector('.preview-section');
+  const formContainer = document.querySelector(".form-section");
+  const navContainer = document. querySelector(".vertical-navbar")
+  const buttonContainer = document.querySelector(".button-container");
 
   formContainer.innerHTML = `
     ${projectNameInput()}
@@ -22,6 +22,8 @@ export function renderUI() {
     ${licenseSelector()}
     ${optionalToggle()}
   `;
+  
+  navContainer.innerHTML = navbar();
 
   buttonContainer.innerHTML = generateButton();
 }
