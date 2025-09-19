@@ -2,20 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pi-Start • Project Initializer</title>
 
   <!-- Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="icon" href="./assets/imgs/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 
-  <!-- Chota CSS
-  <link rel="stylesheet" href="https://unpkg.com/chota@latest">
-  -->
+  <!-- Chota CSS (commented out) -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/chota@latest" /> -->
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/utils.css" />
+  <link rel="stylesheet" href="css/effects.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/modal.css" />
 
   <!-- Alpine.js -->
   <script src="https://unpkg.com/alpinejs" defer></script>
@@ -28,17 +37,20 @@
 
 <body>
   <header class="header">
-    <h1>Pi-Start</h1>
+    <div class="header-container">
+      <a href="./">
+        <img src="./assets/imgs/logo.svg" alt="Pi-Start Logo" class="logo" />
+      </a>
+    </div>
   </header>
 
   <main class="content-layout">
-    <nav class="vertical-navbar"><!-- Dynamic Content by renderUI() --></nav>
+    <nav class="vertical-navbar"><!-- Dynamic Content --></nav>
     <div class="main-container">
-      <div class="form-section"><!-- Dynamic Content by renderUI() --></div>
-      <div class="button-container"><!-- Dynamic content by renderUI() --></div>
+      <div class="form-section"><!-- Dynamic Content --></div>
+      <div class="button-container"><!-- Dynamic Content --></div>
     </div>
   </main>
-
 
   <footer>
     &copy; 2025 Pi-Start. All rights reserved.

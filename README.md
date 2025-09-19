@@ -1,8 +1,8 @@
-# Pi-Init
+# Pi-Start
 
 **Generate Python Project Scaffolds in Your Browser**
 
-Pi-Init is an Interactive Web-based tool that lets you generate Python project scaffolds.
+Pi-Start is an Interactive Web-based tool that lets you generate Python project scaffolds.
 
 ---
 

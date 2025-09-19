@@ -1,0 +1,16 @@
+/* ---------------------------
+   Utility Classes
+--------------------------- */
+.hidden {
+  display: none;
+}
+
+.caret {
+  display: inline-block;
+  width: var(--caret-width);
+  background: var(--fg);
+  margin-left: 4px;
+  animation: blink 1s steps(1) infinite;
+  height: 1.2em;
+  vertical-align: bottom;
+}

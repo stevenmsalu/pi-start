@@ -1,0 +1,11 @@
+/* ---------------------------
+   Footer Styling - DEBUG LINES
+--------------------------- */
+footer {
+  margin-top: auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-top: 2rem;
+
+}

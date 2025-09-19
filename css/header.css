@@ -1,0 +1,26 @@
+/* ---------------------------
+   Header Styling - DEBUG LINES
+--------------------------- */
+.header {
+  margin-bottom: 0.5rem;
+  padding: var(--pad) 0;
+  background: transparent;
+
+  /** border: 2px dashed red; /* DEBUG - border around header */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  /** border: 2px dashed blue; /* DEBUG - border around header-container */
+}
+
+.logo {
+  height: clamp(32px, 5vw, 48px);
+  width: auto;
+  
+  /** border: 2px dashed green; /* DEBUG - border around logo */
+}

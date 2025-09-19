@@ -1,12 +1,10 @@
-import { generateProject } from './generate.js';
+import { generateProject } from './controllers/generateBtn.js';
 
 export function registerEventListeners() {
-  // Generate Project button
   document.getElementById('generate-btn').addEventListener('click', () => {
     generateProject();
   });
 
-  // Handle custom checkbox toggle
   document.querySelectorAll('.custom-checkbox').forEach((checkbox) => {
     checkbox.addEventListener('change', (e) => {
       const input = e.target.closest('label').querySelector('.custom-input');
