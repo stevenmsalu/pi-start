@@ -2,8 +2,11 @@
    Header Styling
 --------------------------- */
 header {
-  padding: var(--spacing-md) 0;
   background: transparent;
+  max-width: var(--container-max-width, 1200px);
+  margin: 15px;          
+  padding: 0 var(--spacing-md); 
+  position: relative;     
 }
 
 .logo {
