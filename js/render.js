@@ -5,13 +5,13 @@ import {
   licenseSelector,
   includes,
   generateButton,
-  navbar
+  sidebar
 } from './components/_index.js';
 
 export function renderUI() {
-  const formContainer = document.querySelector(".form-section");
-  const navContainer = document. querySelector(".vertical-navbar")
-  const buttonContainer = document.querySelector(".button-container");
+  const formContainer = document.querySelector(".panel-body");
+  const navContainer = document. querySelector(".sidebar")
+  const buttonContainer = document.querySelector(".panel-actions");
 
   formContainer.innerHTML = `
     ${projectNameInput()}
@@ -21,7 +21,7 @@ export function renderUI() {
     ${includes()}
   `;
   
-  navContainer.innerHTML = navbar();
+  navContainer.innerHTML = sidebar();
 
   buttonContainer.innerHTML = generateButton();
 }

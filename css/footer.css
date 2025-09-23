@@ -1,9 +1,7 @@
 /* ---------------------------
-   Footer Styling - DEBUG LINES
+   Footer Styling
 --------------------------- */
 footer {
-  display: flex;
-  justify-content: center;
   padding-top: 2rem;
   margin-top: auto;
   background: transparent;
@@ -11,17 +9,3 @@ footer {
   font-size: 0.9rem;
   text-align: center;
 }
-
-.footer-inner {
-  width: 100%;
-  max-width: 1200px; 
-  padding: 0 var(--pad);
-  text-align: center;
-}
-
-/**
-.footer,
-.footer-inner {
-  border: 1px dashed orange;
-}
-*/

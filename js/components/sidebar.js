@@ -1,5 +1,5 @@
 
-export const navbar = () => `
+export const sidebar = () => `
   <div class="nav-top">
     <a href="javascript:void(0)" id="modeToggle" title="Toggle Theme">
       <span id="modeIcon" class="material-icons">light_mode</span>

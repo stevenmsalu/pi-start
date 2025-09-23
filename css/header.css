@@ -1,20 +1,9 @@
 /* ---------------------------
-   Header Styling 
+   Header Styling
 --------------------------- */
-.header-container {
-  display: flex;
-  justify-content: center;
+header {
   padding: var(--spacing-md) 0;
   background: transparent;
-}
-
-.header-inner {
-  width: 100%;
-  max-width: var(--container-max-width, 1200px);
-  padding: 0 var(--spacing-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .logo {
@@ -27,26 +16,8 @@
   opacity: 0.8;
 }
 
-/* Utility classes that could replace some header styles */
-.container-wide {
-  max-width: var(--container-max-width, 1200px);
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .header-container {
+  header {
     padding: var(--spacing-sm) 0;
-  }
-  
-  .header-inner {
-    padding: 0 var(--spacing-sm);
   }
 }

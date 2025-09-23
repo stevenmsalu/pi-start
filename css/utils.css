@@ -1,6 +1,18 @@
-/* ---------------------------
+/* -----------------------
    Utility Classes
 --------------------------- */
+.container-wide {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hidden {
   display: none;
 }

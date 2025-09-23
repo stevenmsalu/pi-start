@@ -1,7 +1,7 @@
 /* ---------------------------
-   Vertical Navbar
+   Sidebar
 --------------------------- */
-.vertical-navbar {
+.sidebar {
   width: 100px;
   background: linear-gradient(180deg, var(--panel), rgba(0, 0, 0, 0.25));
   border-radius: var(--radius);
@@ -23,7 +23,7 @@
   margin-top: auto; 
 }
 
-.vertical-navbar a {
+.sidebar a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,23 +34,47 @@
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
 }
 
-.vertical-navbar a .material-icons,
-.vertical-navbar a .ti {
+.sidebar a .material-icons,
+.sidebar a .ti {
   font-size: 32px;
   line-height: 1;
 }
 
-.vertical-navbar a:hover {
+.sidebar a:hover {
   background: rgba(255, 255, 255, 0.06);
   color: var(--accent);
   transform: translateY(-2px); 
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
-.vertical-navbar a.active {
+.sidebar a.active {
   background: rgba(91, 225, 255, 0.1); 
   color: var(--accent);
   box-shadow: 0 0 10px rgba(91, 225, 255, 0.6);
+}
+
+/* ---------------------------
+   Panel Body
+--------------------------- */
+.panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: transparent;
+  padding: var(--pad);
+  min-height: 200px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+
+.form-group label {
+  margin-right: 10px;
+  font: weight 400;
 }
 
 /* ---------------------------
@@ -107,7 +131,6 @@ input[type="text"]:-moz-ui-valid {
 /* ---------------------------
    Buttons
 --------------------------- */
-
 .button-primary {
   background: var(--accent);
   border: none;
@@ -187,7 +210,6 @@ input[type="text"]:-moz-ui-valid {
 /* ---------------------------
    Checkbox Groups
 --------------------------- */
-
 .checkbox-group {
   display: inline-flex;
   gap: 15px; 

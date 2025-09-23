@@ -16,15 +16,14 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/globals.css" />
-  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/main-layout.css" />
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/footer.css" />
-  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/main-components.css" />
   <link rel="stylesheet" href="css/typography.css" />
   <link rel="stylesheet" href="css/utils.css" />
   <link rel="stylesheet" href="css/effects.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="css/modal.css" />
 
   <!-- Alpine.js -->
   <script src="https://unpkg.com/alpinejs" defer></script>
@@ -36,27 +35,25 @@
 </head>
 
 <body>
-  <header class="header-container">
-    <div class="header-inner">
-      <a href="./">
-        <img src="./assets/imgs/logo.svg" alt="Pi-Start Logo" class="logo" />
-      </a>
-    </div>
+  <header class="container-wide flex-center" role="banner">
+    <a href="./" aria-label="Pi-Start Home">
+      <img src="./assets/imgs/logo.svg" alt="Pi-Start Logo" class="logo" />
+    </a>
   </header>
 
-  <main class="content-layout">
-    <nav class="vertical-navbar"><!-- Dynamic Content --></nav>
-    <div class="main-container">
-      <div class="form-section"><!-- Dynamic Content --></div>
-      <div class="button-container"><!-- Dynamic Content --></div>
-    </div>
-  </main>
+  <main class="container-wide main-layout">
+    <nav class="sidebar"><!-- Dynamic Content --></nav>
 
-  <footer>
-    <div class="footer-inner">
-      &copy; 2025 Pi-Start. All rights reserved.
-    </div>
+    <section class="panel">
+      <div class="panel-body"><!-- Dynamic Content --></div>
+      <div class="panel-actions"><!-- Dynamic Content --></div>
+    </section>
+  </main>
+  
+  <footer class="flex-center">
+    &copy; 2025 Pi-Start. All rights reserved.
   </footer>
+
 </body>
 
 </html>

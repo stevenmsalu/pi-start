@@ -2,14 +2,12 @@
    Global Variables and Base Styling
 --------------------------- */
 :root {
-  /* Color Palette */
   --bg: #0b0f12;
   --panel: #081014;
   --fg: #e9f7e6d9;
   --muted: #7a8f72;
   --accent: #5be1ffd3;
   
-  /* Typography */
   --font-stack: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
   --font-size: 20px;
   --line-height: 1.45;
