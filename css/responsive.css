@@ -1,6 +1,0 @@
-/* ---------------------------
-   Responsive Design
---------------------------- */
-@media (max-width: 520px) {
-  :root { --font-size: 14px; }
-}

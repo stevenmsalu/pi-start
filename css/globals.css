@@ -1,38 +1,29 @@
-/* ---------------------------
-   Global Variables and Base Styling
---------------------------- */
 :root {
   --bg: #0b0f12;
   --panel: #081014;
   --fg: #e9f7e6d9;
   --muted: #7a8f72;
   --accent: #5be1ffd3;
-  
+
   --font-stack: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
   --font-size: 20px;
   --line-height: 1.45;
-  
-  /* Spacing Scale */
-  --spacing-xs: 0.5rem;   /* 10px */
-  --spacing-sm: 1rem;     /* 20px */
-  --spacing-md: 1.5rem;   /* 30px */
-  --spacing-lg: 2rem;     /* 40px */
-  --spacing-xl: 3rem;     /* 60px */
-  
-  /* Backward compatibility for existing --pad */
-  --pad: var(--spacing-sm); /* 20px */
-  
-  /* Layout & Sizing */
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --pad: var(--spacing-sm);
+
   --container-max-width: 1200px;
   --radius: 8px;
   --caret-width: 2px;
-  
-  /* Transitions & Animations */
+
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
-  
-  /* Z-index scale */
+
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
@@ -63,28 +54,11 @@ body {
   align-items: center;
 }
 
-/* Optional: Add some base utility classes */
-.container {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-sm);
-}
-
-.container-wide {
-  width: 100%;
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-/* Focus styles for accessibility */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-/* Selection styles */
 ::selection {
   background-color: var(--accent);
   color: var(--bg);
