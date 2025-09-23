@@ -1,13 +1,12 @@
 /* ---------------------------
-   Layout Containers - DEBUG BORDERS
+   Main Containers
 --------------------------- */
+
 .content-layout {
   display: flex;
   gap: 20px;
   width: 100%;
   max-width: 1200px;
-
-  /** border: 2px dashed red; /* DEBUG */
 }
 
 .main-container {
@@ -21,10 +20,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 40px;
+  margin-left: 0 auto;
   min-height: 100%; 
-
-  /** border: 2px dashed blue; /* DEBUG */
 }
 
 .form-section {
@@ -34,21 +31,45 @@
   background: transparent;
   padding: var(--pad);
   min-height: 200px;
-
-  /** border: 2px dashed green; /* DEBUG */
 }
 
 .form-group {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-
-  /** border: 2px dashed orange; /* DEBUG */
+  gap: 5px;
 }
 
 .form-group label {
   margin-right: 10px;
   font: weight 400;
-
-  /** border: 1px dashed purple; /* DEBUG */
 }
+
+.button-container {
+  width: 100%;
+}
+
+.button-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.center-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right-button {
+  margin-left: auto;
+}
+
+/**
+.main-container,
+.button-inner-container {
+  border: 1px dashed red;
+}
+*/

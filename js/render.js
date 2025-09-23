@@ -1,10 +1,9 @@
 import {
   projectNameInput,
   pythonSelector,
-  frameworkSelector,
   dependenciesSelector,
   licenseSelector,
-  optionalToggle,
+  includes,
   generateButton,
   navbar
 } from './components/_index.js';
@@ -17,10 +16,9 @@ export function renderUI() {
   formContainer.innerHTML = `
     ${projectNameInput()}
     ${pythonSelector()}
-    ${frameworkSelector()}
     ${dependenciesSelector()}
     ${licenseSelector()}
-    ${optionalToggle()}
+    ${includes()}
   `;
   
   navContainer.innerHTML = navbar();

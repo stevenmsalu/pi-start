@@ -2,10 +2,26 @@
    Footer Styling - DEBUG LINES
 --------------------------- */
 footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
   margin-top: auto;
-  text-align: center;
+  background: transparent;
   color: var(--muted);
   font-size: 0.9rem;
-  padding-top: 2rem;
-
+  text-align: center;
 }
+
+.footer-inner {
+  width: 100%;
+  max-width: 1200px; 
+  padding: 0 var(--pad);
+  text-align: center;
+}
+
+/**
+.footer,
+.footer-inner {
+  border: 1px dashed orange;
+}
+*/

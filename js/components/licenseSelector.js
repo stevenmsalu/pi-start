@@ -15,18 +15,12 @@ export const licenseSelector = () => `
           :checked="selected === 'apache'">
         Apache 2.0
       </label>
-      <label>
-        <input type="checkbox" value="gnu"
-          @click="selected = (selected === 'gnu' ? null : 'gnu')"
-          :checked="selected === 'gnu'">
-        GNU
-      </label>
-      <label>
-        <input type="checkbox" value="more"
-          @click="selected = (selected === 'more' ? null : 'more')"
-          :checked="selected === 'more'">
-        More
-      </label>
+    </div>
+
+    <div class="license-more">
+      <button type="button" id="license-moreBtn" class="button-tertiary">
+        show more
+      </button>
     </div>
   </div>
 `;

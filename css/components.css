@@ -93,7 +93,7 @@ select:hover {
   -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
   box-shadow: 0 0 0px 1000px #000 inset !important;
   transition: background-color 5000s ease-in-out 0s;
-  transform: translateY(-2px); 
+  transform: translateY(-0.5px); 
 }
 
 input:-webkit-autofill {
@@ -107,10 +107,6 @@ input[type="text"]:-moz-ui-valid {
 /* ---------------------------
    Buttons
 --------------------------- */
-.button-container {
-  display: flex;
-  justify-content: center;
-}
 
 .button-primary {
   background: var(--accent);
@@ -146,12 +142,57 @@ input[type="text"]:-moz-ui-valid {
   background: rgba(255, 255, 255, 0.1);
   border-color: #5be1ffc1;
   color: #5be1ffc1;
-  transform: translateY(-1px); 
+  transform: translateY(-0.5px); 
+}
+
+.button-tertiary {
+  background: none;
+  border: none;
+  color: var(--fg);
+  font: inherit;
+  cursor: pointer;
+  padding: 0 6px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.button-tertiary:hover {
+  border-color: #5be1ffc1;
+  color: #5be1ffc1;
+  transform: translateY(-0.5px); 
+}
+
+.options-button {
+  background: transparent;
+  border: 1.5px solid #fff;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.options-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #5be1ffc1;
+  color: #5be1ffc1;
+  transform: translateY(-0.5px); 
 }
 
 /* ---------------------------
    Checkbox Groups
 --------------------------- */
+
+.checkbox-group {
+  display: inline-flex;
+  gap: 15px; 
+}
+
 .checkbox-group input[type="checkbox"] {
   width: 18px;
   height: 18px;
@@ -190,4 +231,11 @@ input[type="text"]:-moz-ui-valid {
   display: inline-flex;
   align-items: center;
   gap: 5px;
+}
+
+.includes-more {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-bottom: 1px;
 }

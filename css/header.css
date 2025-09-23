@@ -1,26 +1,52 @@
 /* ---------------------------
-   Header Styling - DEBUG LINES
+   Header Styling 
 --------------------------- */
-.header {
-  margin-bottom: 0.5rem;
-  padding: var(--pad) 0;
+.header-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-md) 0;
   background: transparent;
-
-  /** border: 2px dashed red; /* DEBUG - border around header */
 }
 
-.header-container {
+.header-inner {
+  width: 100%;
+  max-width: var(--container-max-width, 1200px);
+  padding: 0 var(--spacing-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-
-  /** border: 2px dashed blue; /* DEBUG - border around header-container */
 }
 
 .logo {
   height: clamp(32px, 5vw, 48px);
   width: auto;
+  transition: opacity var(--transition-fast);
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+/* Utility classes that could replace some header styles */
+.container-wide {
+  max-width: var(--container-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    padding: var(--spacing-sm) 0;
+  }
   
-  /** border: 2px dashed green; /* DEBUG - border around logo */
+  .header-inner {
+    padding: 0 var(--spacing-sm);
+  }
 }
