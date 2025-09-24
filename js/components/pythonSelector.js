@@ -6,7 +6,7 @@ export const pythonSelector = () => `
       
       <!-- Latest -->
       <label>
-        <input type="checkbox" value="3.13.0"
+        <input type="checkbox" value="3.13.0" class="interactive"
           @click="selected = (selected === '3.13.0' ? null : '3.13.0')"
           :checked="selected === '3.13.0'">
         @Latest
@@ -14,7 +14,7 @@ export const pythonSelector = () => `
 
       <!-- LTS -->
       <label>
-        <input type="checkbox" value="3.9.5"
+        <input type="checkbox" value="3.9.5" class="interactive"
           @click="selected = (selected === '3.9.5' ? null : '3.9.5')"
           :checked="selected === '3.9.5'">
         @LTS
