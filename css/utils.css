@@ -1,6 +1,6 @@
-/* -----------------------
-   Container Class
---------------------------- */
+/* -------------------------------------
+   1. Layout Utilities
+-------------------------------------- */
 .container-wide {
   max-width: var(--container-max-width, 1200px);
   margin: 0 auto;
@@ -13,30 +13,28 @@
   justify-content: center;
 }
 
-/* ---------------------------
-   Interactive Class
---------------------------- */
+/* -------------------------------------
+   2. Interaction Utilities
+-------------------------------------- */
 .interactive {
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
-
 .interactive:hover {
   background: rgba(255, 255, 255, 0.06);
   color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.4), 0 0 6px rgba(91, 225, 255, 0);
 }
-
 .interactive.active {
   background: rgba(91, 225, 255, 0.1);
   color: var(--accent);
   box-shadow: 0 0 10px rgba(91, 225, 255, 0.6);
 }
 
-/* ---------------------------
-   Appearance Class
---------------------------- */
+/* -------------------------------------
+   3. Appearance Utilities
+-------------------------------------- */
 .appearance-base {
   display: inline-flex;
   align-items: center;

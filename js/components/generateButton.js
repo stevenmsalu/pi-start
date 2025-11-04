@@ -1,4 +1,3 @@
-
 export const generateButton = () => `
   <div class="center-button">
     <button id="generate-btn" class="button-primary">Generate Project</button>

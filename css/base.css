@@ -1,0 +1,43 @@
+/* -------------------------------------
+   1. Reset & Box Sizing
+-------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* -------------------------------------
+   2. Base Typography & Body Defaults
+-------------------------------------- */
+body {
+  background: linear-gradient(180deg, var(--bg), #051018 85%);
+  font-family: var(--font-stack);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--fg);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -------------------------------------
+   3. Accessibility & Focus States
+-------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* -------------------------------------
+   4. Text Selection
+-------------------------------------- */
+::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}

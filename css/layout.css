@@ -1,0 +1,37 @@
+/* -------------------------------------
+   1. Global Layout Container
+-------------------------------------- */
+.main-layout {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* -------------------------------------
+   2. Header Layout
+-------------------------------------- */
+header {
+  background: transparent;
+  max-width: var(--container-max-width, 1200px);
+  margin: 15px;
+  padding: 0 var(--spacing-md);
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: var(--spacing-sm) 0;
+  }
+}
+
+/* -------------------------------------
+   4. Footer Layout
+-------------------------------------- */
+footer {
+  padding-top: 2rem;
+  margin-top: auto;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
