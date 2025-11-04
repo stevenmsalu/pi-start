@@ -1,4 +1,4 @@
-import { generateProject } from './controllers/generateBtn.js';
+import { generateProject } from './generator.js';
 
 export function registerEventListeners() {
   document.getElementById('generate-btn').addEventListener('click', () => {

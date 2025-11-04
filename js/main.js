@@ -1,4 +1,4 @@
-import { homeUI} from './render/home.js';
+import { homeUI} from './ui/home.js';
 import { registerEventListeners } from './events.js';
 
 function startApp() {

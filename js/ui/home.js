@@ -6,7 +6,7 @@ import {
   includes,
   generateButton,
   sidebar
-} from '../components/_index.js';
+} from '../components/index.js';
 
 export function homeUI() {
   const panelContainer = document.querySelector(".panel-body");

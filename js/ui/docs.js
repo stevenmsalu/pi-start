@@ -1,4 +1,4 @@
-import { sidebar } from "../components/_index.js";
+import { sidebar } from "../components/index.js";
 
 export function docsUI() {
   const sidebarContainer = document.querySelector(".sidebar");
