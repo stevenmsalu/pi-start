@@ -41,6 +41,6 @@
   justify-content: center;
   padding: 8px 12px;
   border-radius: 8px;
-  color: var(--fg);
+  color: var(--font-color);
   text-decoration: none;
 }

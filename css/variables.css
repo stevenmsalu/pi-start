@@ -1,11 +1,11 @@
 :root {
-  --bg: #0b0f12;
-  --panel: #081014;
-  --fg: #e9f7e6d9;
-  --muted: #7a8f72;
-  --accent: #5be1ffd3;
+  --bg-start: #e7ebee;     
+  --bg-end: #d1d7dc;       
+  --font-color: #242428;
+  --muted: #5f6b73;
+  --accent: #007acc;
 
-  --font-stack: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+  --font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
   --font-size: 20px;
   --line-height: 1.45;
 
@@ -30,4 +30,15 @@
   --z-modal: 1040;
   --z-popover: 1050;
   --z-tooltip: 1060;
+}
+
+/* -------------------------------------
+  Dark Mode
+-------------------------------------- */
+.theme-dark {
+  --bg-start: #0b0f12;
+  --bg-end: #081926;
+  --font-color: #e9f7e6d9;
+  --muted: #7a8f72;
+  --accent: #5be1ffd3;
 }

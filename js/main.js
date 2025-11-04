@@ -2,6 +2,12 @@ import { loadPage } from "./router.js";
 import { registerEventListeners } from "./events.js";
 
 function startApp() {
+  const saved = localStorage.getItem("theme");
+  
+  if (saved === "dark") {
+    document.documentElement.classList.add("theme-dark");
+  }
+
   loadPage("home");
   registerEventListeners();
 

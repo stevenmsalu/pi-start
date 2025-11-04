@@ -8,17 +8,16 @@
 html, body {
   height: 100%;
   margin: 0;
+  transition: background var(--transition-slow), color var(--transition-slow);
 }
 
 /* -------------------------------------
    2. Base Typography & Body Defaults
 -------------------------------------- */
 body {
-  background: linear-gradient(180deg, var(--bg), #051018 85%);
-  font-family: var(--font-stack);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--fg);
+  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  font-family: var(--font-family);
+  color: var(--font-color);
   font-size: var(--font-size);
   line-height: var(--line-height);
   display: flex;
