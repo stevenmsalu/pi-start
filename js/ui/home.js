@@ -10,7 +10,7 @@ import {
 
 export function homeUI() {
   const panelContainer = document.querySelector(".panel-body");
-  const sidebarContainer = document. querySelector(".sidebar")
+  const sidebarContainer = document.querySelector(".sidebar");
   const buttonContainer = document.querySelector(".panel-actions");
 
   panelContainer.innerHTML = `
@@ -22,6 +22,5 @@ export function homeUI() {
   `;
   
   sidebarContainer.innerHTML = sidebar();
-
   buttonContainer.innerHTML = generateButton();
 }
