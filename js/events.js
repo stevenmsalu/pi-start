@@ -17,16 +17,4 @@ export function registerEventListeners() {
       }
     });
   });
-
-  const toggle = document.getElementById("modeToggle");
-
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      document.documentElement.classList.toggle("theme-dark");
-
-      const isDark = document.documentElement.classList.contains("theme-dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    });
-  }
 }
-

@@ -2,7 +2,7 @@
    1. Logo
 -------------------------------------- */
 .logo {
-  height: clamp(32px, 5vw, 48px);
+  height: clamp(32px, 5vw, 48px); /* can variable if needed */
   width: auto;
   transition: opacity var(--transition-fast);
 }
@@ -19,20 +19,23 @@
   width: 100px;
   background: transparent;
   border-radius: var(--radius);
-  box-shadow: 
-    0 1px 3px rgba(0, 0, 0, 0.2),
-    0 4px 10px rgba(0, 0, 0, 0.3);
-  padding: var(--pad);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--spacing-sm);
+
+  border: var(--border-thickness) solid var(--border-color-medium);
+
+  box-shadow:
+    var(--shadow-1),
+    var(--shadow-2);
+
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: var(--spacing-xs);
 }
 
 .nav-top {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--spacing-md);
 }
 
 .nav-bottom {
@@ -44,33 +47,37 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: var(--font-color);
-  padding: 12px;
-  border-radius: 10px;
+
+  color: var(--fg);
+  padding: var(--spacing-xs);
+
+  border-radius: var(--radius-lg);
+
   transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    transform 0.15s ease,
-    box-shadow 0.2s ease;
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .sidebar a .material-icons,
 .sidebar a .ti {
-  font-size: 32px;
+  font-size: var(--size-xl);
   line-height: 1;
 }
 
 .sidebar a:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--hover-bg);
   color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 0 6px rgba(91, 225, 255, 0);
+
+  box-shadow: var(--shadow-hover-1), var(--shadow-accent-weak);
 }
 
 .sidebar a.active {
-  background: rgba(91, 225, 255, 0.1);
+  background: rgba(91, 225, 255, 0.1); /* optional: make a var if needed */
   color: var(--accent);
-  box-shadow: 0 0 10px rgba(91, 225, 255, 0.6);
+  box-shadow: var(--shadow-accent-medium);
 }
 
 
@@ -80,25 +87,31 @@
 .panel {
   width: min(920px, 96%);
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--spacing-md);
+
   background: transparent;
   border-radius: var(--radius);
+
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.2),
-    0 4px 10px rgba(0, 0, 0, 0.3);
-  padding: var(--pad);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+    var(--shadow-1),
+    var(--shadow-2);
+
+  padding: var(--spacing-sm);
+  border: var(--border-thickness) solid var(--border-color-light);
 }
 
 .panel-body {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--spacing-xs);
+
   background: transparent;
-  padding: var(--pad);
-  min-height: 200px;
+  padding: var(--spacing-sm);
+
+  min-height: 200px; /* keep explicit size */
 }
 
 .panel-actions {
@@ -121,12 +134,12 @@
 .form-group {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  gap: 5px;
+  margin-bottom: var(--spacing-md);
+  gap: var(--spacing-xs);
 }
 
 .form-group label {
-  margin-right: 10px;
+  margin-right: var(--spacing-xs);
   font-weight: 400;
 }
 
@@ -136,20 +149,24 @@
 -------------------------------------- */
 input[type="text"],
 select {
-  border-radius: 20px;
-  background: #000 !important;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--font-color) !important;
+  border-radius: var(--radius-xl);
+  background: var(--input-bg) !important;
+
+  border: var(--border-thickness) solid var(--border-color-strong);
+
+  color: var(--white) !important;
   padding: 0.5rem 1rem;
   flex-grow: 1;
-  caret-color: var(--font-color);
-  font-size: 15px;
+
+  caret-color: var(--white);
+  font-size: var(--size-md);
+
   transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.15s ease,
-    box-shadow 0.2s ease;
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 input[type="text"]::placeholder {
@@ -166,17 +183,20 @@ select:active,
 select:hover {
   border-color: var(--accent);
   outline: none;
-  background: #000 !important;
-  color: var(--font-color) !important;
+
+  background: var(--input-bg) !important;
+  color: var(--white) !important;
+
   transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4), 0 0 6px rgba(91, 225, 255, 0);
+
+  box-shadow: var(--shadow-hover-1), var(--shadow-accent-weak);
 }
 
 input[type="text"]:-webkit-autofill,
 input[type="text"]:-webkit-autofill:hover,
 input[type="text"]:-webkit-autofill:focus,
 input[type="text"]:-webkit-autofill:active {
-  -webkit-text-fill-color: var(--font-color) !important;
+  -webkit-text-fill-color: var(--fg) !important;
   -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
   box-shadow: 0 0 0px 1000px #000 inset !important;
   transition: background-color 5000s ease-in-out 0s;
@@ -189,73 +209,90 @@ input[type="text"]:-webkit-autofill:active {
 .button-primary {
   background: var(--accent);
   border: none;
-  border-radius: 5px;
+
+  border-radius: var(--radius);
   padding: 0.8rem 1.5rem;
+
   color: #000;
   text-transform: uppercase;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 0 12px rgba(91, 224, 255, 0.5);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+
+  box-shadow: var(--shadow-accent-strong);
+
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .button-primary:hover {
-  background: #35c8f7;
+  background: #35c8f7; /* can become var if needed */
   box-shadow: 0 0 18px rgba(91, 224, 255, 0.8);
 }
 
 .button-secondary {
   background: transparent;
-  border: 1.5px solid #fff;
-  border-radius: 20px;
+
+  border: var(--border-thickness-bold) solid var(--fg);
+  border-radius: var(--radius-xl);
+
   padding: 0.6rem 1.2rem;
-  color: #fff;
-  font-size: 15px;
+  color: var(--fg);
+  font-size: var(--size-md);
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+
+  transition: all var(--transition-fast);
 }
 
 .button-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: #5be1ffc1;
-  color: #5be1ffc1;
+  background: var(--hover-bg);
+  border-color: var(--accent);
+  color: var(--accent);
   transform: translateY(-0.5px);
 }
 
 .button-tertiary {
   background: none;
   border: none;
-  color: var(--font-color);
+  color: var(--fg);
+
   font: inherit;
   cursor: pointer;
+
   padding: 0 6px;
+
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
+
   display: inline-flex;
   align-items: center;
 }
 
 .button-tertiary:hover {
-  color: #5be1ffc1;
+  color: var(--accent);
   transform: translateY(-0.5px);
 }
 
 .options-button {
   background: transparent;
-  border: 1.5px solid #fff;
-  border-radius: 5px;
+
+  border: var(--border-thickness-bold) solid var(--fg);
+  border-radius: var(--radius);
+
   padding: 0.6rem 1.2rem;
-  color: #fff;
-  font-size: 15px;
+
+  color: var(--fg);
+  font-size: var(--size-md);
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+
+  transition: all var(--transition-fast);
 }
 
 .options-button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--hover-bg);
   border-color: #5be1ffc1;
   color: #5be1ffc1;
   transform: translateY(-0.5px);
@@ -267,28 +304,32 @@ input[type="text"]:-webkit-autofill:active {
 -------------------------------------- */
 .checkbox-group {
   display: inline-flex;
-  gap: 15px;
+  gap: var(--spacing-sm);
 }
 
 .checkbox-group input[type="checkbox"] {
   width: 18px;
   height: 18px;
+
   appearance: none;
-  background-color: #000;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
+  background-color: var(--input-bg);
+
+  border: var(--border-thickness) solid var(--border-color-strong);
+
+  border-radius: var(--radius-xl);
   display: inline-block;
+
   position: relative;
   cursor: pointer;
 }
 
 .checkbox-group input[type="checkbox"]:hover {
-  background-color: #333;
+  background-color: #333; /* could be var if needed */
   border-color: var(--accent);
 }
 
 .checkbox-group input[type="checkbox"]:checked {
-  background-color: #000;
+  background-color: var(--input-bg);
   border-color: var(--accent);
 }
 
@@ -298,7 +339,7 @@ input[type="text"]:-webkit-autofill:active {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--font-color);
+  color: var(--white);
   font-size: 14px;
   font-weight: bold;
   line-height: 16px;
@@ -307,12 +348,12 @@ input[type="text"]:-webkit-autofill:active {
 .checkbox-group label {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: var(--spacing-xs);
 }
 
 .includes-more {
   display: inline-flex;
   align-items: center;
-  margin-left: 20px;
+  margin-left: var(--spacing-md);
   margin-bottom: 1px;
 }

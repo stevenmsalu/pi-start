@@ -17,7 +17,7 @@ html, body {
 body {
   background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
   font-family: var(--font-family);
-  color: var(--font-color);
+  color: var(--fg);
   font-size: var(--font-size);
   line-height: var(--line-height);
   display: flex;

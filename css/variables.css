@@ -1,29 +1,95 @@
 :root {
-  --bg-start: #e7ebee;     
-  --bg-end: #d1d7dc;       
-  --font-color: #242428;
-  --muted: #5f6b73;
-  --accent: #007acc;
+  /* ---------------------------------
+     1. Core Colors (Light Mode)
+  --------------------------------- */
+  --bg-start: rgba(231, 235, 238, 1);
+  --bg-end: rgba(209, 215, 220, 1);
 
+  --fg: rgba(36, 36, 40, 1);
+  --white: rgba(233, 247, 230, 0.85);
+  --muted: rgba(119, 131, 141, 1);
+  --accent: rgba(0, 122, 204, 1);
+
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(36, 36, 40, 1);
+
+
+  /* ---------------------------------
+     2. Borders
+  --------------------------------- */
+  --border-color-strong: rgba(255, 255, 255, 0.1);
+  --border-color-medium: rgba(255, 255, 255, 0.08);
+  --border-color-light: rgba(255, 255, 255, 0.03);
+
+  --border-thickness: 1px;
+  --border-thickness-bold: 1.5px;
+
+
+  /* ---------------------------------
+     3. Radius
+  --------------------------------- */
+  --radius: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 20px;
+  --radius-round: 999px;
+
+
+  /* ---------------------------------
+     4. Shadows
+  --------------------------------- */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-2: 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-hover-1: 0 2px 6px rgba(0, 0, 0, 0.4);
+
+  --shadow-accent-weak: 0 0 6px rgba(91, 225, 255, 0);
+  --shadow-accent-medium: 0 0 10px rgba(91, 225, 255, 0.6);
+  --shadow-accent-strong: 0 0 12px rgba(91, 224, 255, 0.5);
+
+
+  /* ---------------------------------
+     5. Typography
+  --------------------------------- */
   --font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
-  --font-size: 20px;
+  --font-size: 1.25rem; 
   --line-height: 1.45;
 
+
+  /* ---------------------------------
+     6. Sizes
+  --------------------------------- */
+  --size-sm: 12px;
+  --size-md: 15px;
+  --size-lg: 20px;
+  --size-xl: 32px;
+
+
+  /* ---------------------------------
+     7. Spacing Scale
+  --------------------------------- */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
 
-  --pad: var(--spacing-sm);
-  --container-max-width: 1200px;
-  --radius: 8px;
-  --caret-width: 2px;
 
+  /* ---------------------------------
+     8. Layout
+  --------------------------------- */
+  --container-max-width: 1200px;
+
+
+  /* ---------------------------------
+     9. Transitions
+  --------------------------------- */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
 
+
+  /* ---------------------------------
+     10. Z-Index System
+  --------------------------------- */
   --z-dropdown: 1000;
   --z-sticky: 1020;
   --z-fixed: 1030;
@@ -32,13 +98,20 @@
   --z-tooltip: 1060;
 }
 
-/* -------------------------------------
-  Dark Mode
--------------------------------------- */
+
+  /* ---------------------------------
+     11. Core Colors (Dark Mode)
+  --------------------------------- */
 .theme-dark {
-  --bg-start: #0b0f12;
-  --bg-end: #081926;
-  --font-color: #e9f7e6d9;
-  --muted: #7a8f72;
-  --accent: #5be1ffd3;
+  --bg-start: rgba(11, 15, 18, 1);
+  --bg-end: rgba(8, 25, 38, 1);
+
+  --input-bg: rgba(0, 0, 0, 1);
+
+  --fg: rgba(233, 247, 230, 0.85);
+  --white: rgba(233, 247, 230, 0.85);
+  --muted: rgba(122, 143, 114, 1);
+  --accent: rgba(91, 225, 255, 0.83);
+
+  --hover-bg: rgba(255, 255, 255, 0.1);
 }

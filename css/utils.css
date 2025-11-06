@@ -1,5 +1,5 @@
 /* -------------------------------------
-   1. Layout Utilities
+   1. Layout Util
 -------------------------------------- */
 .container-wide {
   max-width: var(--container-max-width, 1200px);
@@ -14,7 +14,7 @@
 }
 
 /* -------------------------------------
-   2. Interaction Utilities
+   2. Interaction Util
 -------------------------------------- */
 .interactive {
   transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
@@ -33,7 +33,7 @@
 }
 
 /* -------------------------------------
-   3. Appearance Utilities
+   3. Appearance Util
 -------------------------------------- */
 .appearance-base {
   display: inline-flex;
@@ -41,6 +41,5 @@
   justify-content: center;
   padding: 8px 12px;
   border-radius: 8px;
-  color: var(--font-color);
   text-decoration: none;
 }
