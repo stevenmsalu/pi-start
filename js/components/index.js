@@ -1,4 +1,5 @@
 export * from './projectNameInput.js';
+export * from './virtualEnvSelector.js'
 export * from './dependenciesSelector.js';
 export * from './licenseSelector.js';
 export * from './includes.js';

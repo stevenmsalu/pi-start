@@ -1,5 +1,6 @@
 import {
   projectNameInput,
+  VirtualEnvSelector,
   pythonSelector,
   dependenciesSelector,
   licenseSelector,
@@ -15,6 +16,7 @@ export function homePage() {
 
   panelContainer.innerHTML = `
     ${projectNameInput()}
+    ${VirtualEnvSelector()}
     ${pythonSelector()}
     ${dependenciesSelector()}
     ${licenseSelector()}
