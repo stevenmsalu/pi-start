@@ -8,7 +8,7 @@ import {
   sidebar
 } from '../components/index.js';
 
-export function homeUI() {
+export function homePage() {
   const panelContainer = document.querySelector(".panel-body");
   const sidebarContainer = document.querySelector(".sidebar");
   const buttonContainer = document.querySelector(".panel-actions");

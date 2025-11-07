@@ -1,12 +1,17 @@
-import { homeUI } from "./ui/home.js";
-import { docsUI } from "./ui/docs.js";
-import { contactUI } from "./ui/contact.js";
+import { homePage } from "./pages/home.js";
 
 export function loadPage(page) {
-  if (page === "home") return homeUI();
-  if (page === "docs") return docsUI();
-  if (page === "contact") return contactUI();
+  if (page === "home") return homePage();
 
   // fallback
-  homeUI();
+  homePage();
+}
+
+export function handleRouteClick(e) {
+  const link = e.target.closest("[data-route]");
+  if (!link) return;
+
+  e.preventDefault();
+  const route = link.getAttribute("data-route");
+  loadPage(route);
 }

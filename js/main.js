@@ -1,33 +1,25 @@
-import { loadPage } from "./router.js";
-import { registerEventListeners } from "./events.js";
+import { componentEventListeners } from "./events.js";
+import { loadTheme, toggleTheme } from "./theme.js";
+import { loadPage, handleRouteClick } from "./router.js";
 
 function startApp() {
-  const saved = localStorage.getItem("theme");
-  if (saved === "dark") {
-    document.documentElement.classList.add("theme-dark");
-  }
-
+  loadTheme();
   loadPage("home");
-  registerEventListeners();
 
+  // UI-level event listeners
+  componentEventListeners();
+
+  // Global listeners
   document.addEventListener("click", (e) => {
-    // ROUTING
-    const link = e.target.closest("[data-route]");
-    if (link) {
-      e.preventDefault();
-      const route = link.getAttribute("data-route");
-      loadPage(route);
+
+    if (e.target.closest("#modeToggle")) {
+      toggleTheme();
       return;
     }
 
-    // THEME TOGGLE
-    if (e.target.closest("#modeToggle")) {
-      document.documentElement.classList.toggle("theme-dark");
-
-      const isDark = document.documentElement.classList.contains("theme-dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
-    }
+    handleRouteClick(e);
   });
+  
 }
 
 document.addEventListener("DOMContentLoaded", startApp);

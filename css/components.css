@@ -2,7 +2,7 @@
    1. Logo
 -------------------------------------- */
 .logo {
-  height: clamp(32px, 5vw, 48px); /* can variable if needed */
+  height: clamp(32px, 5vw, 48px); 
   width: auto;
   transition: opacity var(--transition-fast);
 }
@@ -60,23 +60,26 @@
     box-shadow var(--transition-fast);
 }
 
-.sidebar a .material-icons,
-.sidebar a .ti {
-  font-size: var(--size-xl);
+.sidebar a .material-icons {
+  font-size: var(--size-xxl);
   line-height: 1;
+}
+
+.sidebar a .ti {
+  width: var(--size-xxl);
+  height: var(--size-xxl);
+  display: block;
 }
 
 .sidebar a:hover {
   background: var(--hover-bg);
-  color: var(--accent);
   transform: translateY(-2px);
 
   box-shadow: var(--shadow-hover-1), var(--shadow-accent-weak);
 }
 
 .sidebar a.active {
-  background: rgba(91, 225, 255, 0.1); /* optional: make a var if needed */
-  color: var(--accent);
+  background: var(--hover-bg);
   box-shadow: var(--shadow-accent-medium);
 }
 
@@ -181,7 +184,7 @@ input[type="text"]:hover,
 select:focus,
 select:active,
 select:hover {
-  border-color: var(--accent);
+  border-color: var(--hover-bg);
   outline: none;
 
   background: var(--input-bg) !important;
@@ -219,20 +222,16 @@ input[type="text"]:-webkit-autofill:active {
   cursor: pointer;
 
   box-shadow: var(--shadow-accent-strong);
-
-  transition:
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+  transition: background var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .button-primary:hover {
-  background: #35c8f7; /* can become var if needed */
+  background: #35c8f7; 
   box-shadow: 0 0 18px rgba(91, 224, 255, 0.8);
 }
 
 .button-secondary {
   background: transparent;
-
   border: var(--border-thickness-bold) solid var(--fg);
   border-radius: var(--radius-xl);
 
@@ -240,16 +239,6 @@ input[type="text"]:-webkit-autofill:active {
   color: var(--fg);
   font-size: var(--size-md);
   font-weight: 500;
-  cursor: pointer;
-
-  transition: all var(--transition-fast);
-}
-
-.button-secondary:hover {
-  background: var(--hover-bg);
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-0.5px);
 }
 
 .button-tertiary {
@@ -258,8 +247,6 @@ input[type="text"]:-webkit-autofill:active {
   color: var(--fg);
 
   font: inherit;
-  cursor: pointer;
-
   padding: 0 6px;
 
   text-decoration: underline;
@@ -270,14 +257,8 @@ input[type="text"]:-webkit-autofill:active {
   align-items: center;
 }
 
-.button-tertiary:hover {
-  color: var(--accent);
-  transform: translateY(-0.5px);
-}
-
 .options-button {
   background: transparent;
-
   border: var(--border-thickness-bold) solid var(--fg);
   border-radius: var(--radius);
 
@@ -286,16 +267,6 @@ input[type="text"]:-webkit-autofill:active {
   color: var(--fg);
   font-size: var(--size-md);
   font-weight: 500;
-  cursor: pointer;
-
-  transition: all var(--transition-fast);
-}
-
-.options-button:hover {
-  background: var(--hover-bg);
-  border-color: #5be1ffc1;
-  color: #5be1ffc1;
-  transform: translateY(-0.5px);
 }
 
 
@@ -324,13 +295,13 @@ input[type="text"]:-webkit-autofill:active {
 }
 
 .checkbox-group input[type="checkbox"]:hover {
-  background-color: #333; /* could be var if needed */
-  border-color: var(--accent);
+  background-color: #333;
+  border-color: var(--hover-bg);
 }
 
 .checkbox-group input[type="checkbox"]:checked {
   background-color: var(--input-bg);
-  border-color: var(--accent);
+  border-color: var(--hover-bg);
 }
 
 .checkbox-group input[type="checkbox"]:checked::before {
