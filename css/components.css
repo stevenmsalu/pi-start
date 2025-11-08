@@ -136,6 +136,7 @@
   align-items: center;
   margin-bottom: var(--spacing-md);
   gap: var(--spacing-xs);
+  position: relative;
 }
 
 .form-group label {
@@ -325,4 +326,52 @@ input[type="text"]:-webkit-autofill:active {
   align-items: center;
   margin-left: var(--spacing-md);
   margin-bottom: 1px;
+}
+
+
+/* -------------------------------------
+   7. Hidden Info Card
+-------------------------------------- */
+.label-row {
+  display: flex;
+  position: relative;
+}
+
+.info-icon {
+  font-size: .75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.label-row:hover .info-icon {
+  opacity: 1;
+}
+
+.info-card {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 260px;
+  margin-top: 6px;
+  padding: 12px;
+  background: var(--card-bg);
+  color: var(--card-fg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 50;
+}
+
+.info-card content {
+  font-size: 1rem;
+}
+
+.info-card ul {
+  margin: 0.5rem 0 0 0;
+}
+.info-card li {
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
 }

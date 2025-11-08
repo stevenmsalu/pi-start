@@ -22,4 +22,30 @@ export function componentEventListeners() {
       }
     });
   });
+
+  // Hidden Info Card 
+  document.addEventListener("click", (e) => {
+    const icon = e.target.closest(".info-icon");
+
+    // If clicked on icon → toggle its card
+    if (icon) {
+      const cardId = icon.dataset.info;
+      const card = document.getElementById(cardId);
+      const isOpen = card.style.display === "block";
+
+      // Close all cards
+      document.querySelectorAll(".info-card").forEach(c => c.style.display = "none");
+
+      // Toggle this one
+      if (!isOpen) card.style.display = "block";
+
+      return;
+    }
+
+    // If clicked outside any card → close all
+    if (!e.target.closest(".info-card")) {
+      document.querySelectorAll(".info-card").forEach(c => c.style.display = "none");
+    }
+  });
+  
 }
