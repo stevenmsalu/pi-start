@@ -29,7 +29,7 @@ export const licenseSelector = () => `
       </button>
     </div>
 
-    <div class="info-card" id="license-info">
+    <div class="info-card" id="license-info" style="width: 260px">
       <content>Choose the license under which your project will be released.</content>
     </div>
 

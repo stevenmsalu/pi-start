@@ -19,7 +19,7 @@ export const includes = () => `
       </button>
     </div>
 
-    <div class="info-card" id="includes-info">
+    <div class="info-card" id="includes-info" style="width: 260px">
       <content>Select common project starter files to include.</content>
     </div>
 

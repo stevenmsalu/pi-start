@@ -26,8 +26,8 @@ export function componentEventListeners() {
   // Hidden Info Card 
   document.addEventListener("click", (e) => {
     const icon = e.target.closest(".info-icon");
+    const backdrop = document.getElementById("blur-backdrop");
 
-    // If clicked on icon → toggle its card
     if (icon) {
       const cardId = icon.dataset.info;
       const card = document.getElementById(cardId);
@@ -35,17 +35,21 @@ export function componentEventListeners() {
 
       // Close all cards
       document.querySelectorAll(".info-card").forEach(c => c.style.display = "none");
+      backdrop.style.display = "none";
 
-      // Toggle this one
-      if (!isOpen) card.style.display = "block";
-
+      // Open card if it was not already open
+      if (!isOpen) {
+        card.style.display = "block";  
+        backdrop.style.display = "block";
+      }
       return;
     }
 
-    // If clicked outside any card → close all
+    // If clicked outside any card
     if (!e.target.closest(".info-card")) {
       document.querySelectorAll(".info-card").forEach(c => c.style.display = "none");
+      backdrop.style.display = "none";
     }
   });
-  
+
 }

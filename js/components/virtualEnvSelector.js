@@ -16,7 +16,7 @@ export const VirtualEnvSelector = () => `
       </label>
     </div>
 
-    <div class="info-card" id="venv-info">
+    <div class="info-card" id="venv-info" style="width: 260px">
       <content>Using a virtual environment isolates your project dependencies.</content>
     </div>
 

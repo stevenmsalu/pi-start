@@ -23,7 +23,7 @@ export const pythonSelector = () => `
       </label>
     </div>
 
-    <div class="info-card" id="python-info">
+    <div class="info-card" id="python-info" style="width: 260px">
       <content>Choose the Python version your project will run on.</content>
     </div>
 
