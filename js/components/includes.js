@@ -20,59 +20,115 @@ export const includes = () => `
     </div>
 
     <div class="info-card" id="includes-info" style="width: 260px">
-      <content>Select common project starter files to include.</content>
+      <content>Select common project starter files and configuration templates to include.</content>
     </div>
 
+    <!-- Modal for additional include options -->
     <div class="modal-backdrop" id="includesModal">
       <div class="modal-card">
 
         <div class="modal-header">
-          <h2>Select Dependencies</h2>
+          <h2>Include Options</h2>
           <span class="material-icons close-modal" id="closeIncludesModal">close</span>
         </div>
 
-        <div class="modal-body">
+        <!-- Scrollable Section -->
+        <div class="modal-body scrollable">
 
-          <!-- Dependency Item -->
+          <!-- Core Files -->
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="dependency1">
-              Dependency
+              <input type="checkbox" value="requirements.txt">
+              requirements.txt
             </label>
-            <small class="dep-desc">dependency description in small font</small>
+            <small class="dep-desc">Include a dependency requirements file for Python packages.</small>
           </div>
 
-          <!-- Numpy -->
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="numpy">
-              Numpy
+              <input type="checkbox" value="setup.py">
+              setup.py
             </label>
-            <small class="dep-desc">Numpy is a python dependency</small>
+            <small class="dep-desc">Basic setup script for packaging and installing the project.</small>
           </div>
 
-          <!-- Pandas -->
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="pandas">
-              Pandas
+              <input type="checkbox" value="main.py">
+              main.py
             </label>
-            <small class="dep-desc">Pandas is a fast python dataframe library</small>
+            <small class="dep-desc">Entry-point Python script for the project.</small>
           </div>
 
-          <!-- Requests -->
+          <!-- Environment / Config -->
+          <h3 class="dep-section" style="margin-top: 2rem">Environment / Config</h3>
+
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="requests">
-              Requests
+              <input type="checkbox" value=".env.example">
+              .env.example
             </label>
-            <small class="dep-desc">Requests is the standard HTTP client for Python</small>
+            <small class="dep-desc">Example environment file for configuration variables.</small>
+          </div>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value=".prettierrc">
+              .prettierrc
+            </label>
+            <small class="dep-desc">Formatter configuration file for consistent code styling.</small>
+          </div>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="pyproject.toml">
+              pyproject.toml
+            </label>
+            <small class="dep-desc">Modern build configuration file used by Poetry or Flit.</small>
+          </div>
+
+          <!-- Documentation -->
+          <h3 class="dep-section" style="margin-top: 2rem">Documentation</h3>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="CHANGELOG.md">
+              CHANGELOG.md
+            </label>
+            <small class="dep-desc">Log file for documenting changes across versions.</small>
+          </div>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="CONTRIBUTING.md">
+              CONTRIBUTING.md
+            </label>
+            <small class="dep-desc">Guidelines for contributing to the project.</small>
+          </div>
+
+          <!-- Testing -->
+          <h3 class="dep-section" style="margin-top: 2rem">Testing</h3>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="tests/">
+              tests/
+            </label>
+            <small class="dep-desc">Include a starter folder for your unit or integration tests.</small>
+          </div>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="pytest.ini">
+              pytest.ini
+            </label>
+            <small class="dep-desc">Pytest configuration file for test discovery and settings.</small>
           </div>
 
         </div>
 
         <div class="modal-footer">
-          <button class="button-primary" id="saveIncludesBtn">Save</button>
+          <button class="button-primary" id="saveIncludesBtn">Done</button>
         </div>
 
       </div>

@@ -33,57 +33,99 @@ export const licenseSelector = () => `
       <content>Choose the license under which your project will be released.</content>
     </div>
 
-
-    <div class="modal-backdrop" id="licenseModal">
+    <!-- License Modal -->
+    <div class="modal-backdrop" id="licenseModal" x-data="{ selected: null }">
       <div class="modal-card">
 
         <div class="modal-header">
-          <h2>Select Dependencies</h2>
+          <h2>Select License</h2>
           <span class="material-icons close-modal" id="closeLicenseModal">close</span>
         </div>
 
-        <div class="modal-body">
+        <!-- Scrollable section -->
+        <div class="modal-body scrollable">
 
-          <!-- Dependency Item -->
+          <!-- Common Open Source Licenses -->
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="dependency1">
-              Dependency
+              <input type="checkbox" value="mit"
+                @click="selected = (selected === 'mit' ? null : 'mit')"
+                :checked="selected === 'mit'">
+              MIT License
             </label>
-            <small class="dep-desc">dependency description in small font</small>
+            <small class="dep-desc">A short, permissive license allowing reuse with attribution.</small>
           </div>
 
-          <!-- Numpy -->
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="numpy">
-              Numpy
+              <input type="checkbox" value="apache"
+                @click="selected = (selected === 'apache' ? null : 'apache')"
+                :checked="selected === 'apache'">
+              Apache License 2.0
             </label>
-            <small class="dep-desc">Numpy is a python dependency</small>
+            <small class="dep-desc">Allows modification and distribution with a NOTICE file.</small>
           </div>
 
-          <!-- Pandas -->
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="pandas">
-              Pandas
+              <input type="checkbox" value="gpl"
+                @click="selected = (selected === 'gpl' ? null : 'gpl')"
+                :checked="selected === 'gpl'">
+              GNU GPL v3
             </label>
-            <small class="dep-desc">Pandas is a fast python dataframe library</small>
+            <small class="dep-desc">Copyleft license requiring derivatives to remain open source.</small>
           </div>
 
-          <!-- Requests -->
+          <!-- Less Restrictive Licenses -->
+          <h3 class="dep-section" style="margin-top: 2rem">Permissive Licenses</h3>
+
           <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="requests">
-              Requests
+              <input type="checkbox" value="bsd"
+                @click="selected = (selected === 'bsd' ? null : 'bsd')"
+                :checked="selected === 'bsd'">
+              BSD 3-Clause
             </label>
-            <small class="dep-desc">Requests is the standard HTTP client for Python</small>
+            <small class="dep-desc">Flexible license similar to MIT but with attribution clause.</small>
+          </div>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="isc"
+                @click="selected = (selected === 'isc' ? null : 'isc')"
+                :checked="selected === 'isc'">
+              ISC License
+            </label>
+            <small class="dep-desc">Simplified MIT-like license with minimal conditions.</small>
+          </div>
+
+          <!-- Others -->
+          <h3 class="dep-section" style="margin-top: 2rem">Other Licenses</h3>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="lgpl"
+                @click="selected = (selected === 'lgpl' ? null : 'lgpl')"
+                :checked="selected === 'lgpl'">
+              GNU LGPL v3
+            </label>
+            <small class="dep-desc">Allows linking to closed-source software under some terms.</small>
+          </div>
+
+          <div class="form-group modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="mpl"
+                @click="selected = (selected === 'mpl' ? null : 'mpl')"
+                :checked="selected === 'mpl'">
+              Mozilla Public License 2.0
+            </label>
+            <small class="dep-desc">Requires shared modifications for MPL-licensed files only.</small>
           </div>
 
         </div>
 
         <div class="modal-footer">
-          <button class="button-primary" id="saveLicenseBtn">Save</button>
+          <button class="button-primary" id="saveLicenseBtn">Done</button>
         </div>
 
       </div>

@@ -1,6 +1,7 @@
-export const generateButton = () => `
+
+export const actionPanel = () => `
   <div class="center-button">
     <button id="generate-btn" class="button-primary">Generate Project</button>
-    <button id="options-btn" class="options-button interactive">Options</button>
+    <button id="clear-btn" class="options-button interactive">Clear</button>
   </div>
 `;

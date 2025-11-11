@@ -378,7 +378,6 @@ input[type="text"]:-webkit-autofill:active {
 /* -------------------------------------
    8. Modal Card
 -------------------------------------- */
-/* Backdrop */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -390,19 +389,20 @@ input[type="text"]:-webkit-autofill:active {
   z-index: var(--z-modal, 999);
 }
 
-/* Modal Card */
 .modal-card {
   background: var(--card-bg);
   color: var(--card-fg);
   padding: 24px;
-  width: 400px;
+  width: 450px;
+  height: 500px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   border: 1px solid var(--border);
   animation: fadeIn 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -420,10 +420,26 @@ input[type="text"]:-webkit-autofill:active {
   font-size: 1.25rem;
 }
 
-/* Body Items */
+.modal-body {
+  flex: 1;
+  overflow: hidden; /* handled by .scrollable */
+}
+
 .modal-item {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dep-section {
+  font-size: 1.25rem;
 }
 
 .dep-desc {
@@ -439,7 +455,6 @@ input[type="text"]:-webkit-autofill:active {
   justify-content: flex-end;
 }
 
-/* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }

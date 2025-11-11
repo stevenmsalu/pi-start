@@ -5,7 +5,7 @@ import {
   dependenciesSelector,
   licenseSelector,
   includes,
-  generateButton,
+  actionPanel,
   sidebar
 } from '../components/index.js';
 
@@ -24,5 +24,5 @@ export function homePage() {
   `;
   
   sidebarContainer.innerHTML = sidebar();
-  buttonContainer.innerHTML = generateButton();
+  buttonContainer.innerHTML = actionPanel();
 }
