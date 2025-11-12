@@ -1,27 +1,26 @@
 
 export const licenseSelector = () => `
-  <div class="form-group" x-data="{ selected: null }">
+  <div class="form-group" x-data>
 
     <div class="label-row">
       <label for="license">License</label>
       <span class="material-icons info-icon" data-info="license-info">info</span>
     </div>
 
-    <div class="checkbox-group" x-data>
-      <label>
+    <div class="checkbox-group">
+      <label class="custom-checkbox">
         <input type="checkbox" value="mit" class="interactive"
           @change="$store.formState.toggleSingle('license', 'mit')"
           :checked="$store.formState.isSelected('license', 'mit')">
         MIT
       </label>
 
-      <label>
+      <label class="custom-checkbox">
         <input type="checkbox" value="apache" class="interactive"
           @change="$store.formState.toggleSingle('license', 'apache')"
           :checked="$store.formState.isSelected('license', 'apache')">
         Apache 2.0
       </label>
-
     </div>
 
     <div class="license-more">
@@ -36,7 +35,7 @@ export const licenseSelector = () => `
 
     <!-- License Modal -->
     <div class="modal-backdrop" id="licenseModal">
-      <div class="modal-card">
+      <div class="modal-card" x-data>
 
         <div class="modal-header">
           <h2>Select License</h2>
@@ -48,7 +47,7 @@ export const licenseSelector = () => `
 
           <!-- Common Open Source Licenses -->
           <div class="form-group modal-item">
-            <label class="checkbox-group" x-data>
+            <label class="checkbox-group">
               <input type="checkbox" value="gpl" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'gpl')"
                 :checked="$store.formState.isSelected('license', 'gpl')">
@@ -60,9 +59,9 @@ export const licenseSelector = () => `
           <!-- Less Restrictive Licenses -->
           <h3 class="dep-section" style="margin-top: 2rem">Permissive Licenses</h3>
 
-          <div class="form-group modal-item" x-data>
+          <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="bsd"
+              <input type="checkbox" value="bsd" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'bsd')"
                 :checked="$store.formState.isSelected('license', 'bsd')">
               BSD 3-Clause
@@ -70,9 +69,9 @@ export const licenseSelector = () => `
             <small class="dep-desc">Flexible license similar to MIT but with attribution clause.</small>
           </div>
 
-          <div class="form-group modal-item" x-data>
+          <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="isc"
+              <input type="checkbox" value="isc" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'isc')"
                 :checked="$store.formState.isSelected('license', 'isc')">
               ISC License
@@ -83,9 +82,9 @@ export const licenseSelector = () => `
           <!-- Others -->
           <h3 class="dep-section" style="margin-top: 2rem">Other Licenses</h3>
 
-          <div class="form-group modal-item" x-data>
+          <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="lgpl"
+              <input type="checkbox" value="lgpl" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'lgpl')"
                 :checked="$store.formState.isSelected('license', 'lgpl')">
               GNU LGPL v3
@@ -93,9 +92,9 @@ export const licenseSelector = () => `
             <small class="dep-desc">Allows linking to closed-source software under some terms.</small>
           </div>
 
-          <div class="form-group modal-item" x-data>
+          <div class="form-group modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="mpl"
+              <input type="checkbox" value="mpl" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'mpl')"
                 :checked="$store.formState.isSelected('license', 'mpl')">
               Mozilla Public License 2.0

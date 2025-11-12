@@ -1,21 +1,21 @@
 
 export const pythonSelector = () => `
-  <div class="form-group" x-data="{ selected: null }">
-
+  <div class="form-group" x-data>
+    
     <div class="label-row">
       <label>Python Version</label>
       <span class="material-icons info-icon" data-info="python-info">info</span>
     </div>
 
-    <div class="checkbox-group" x-data>
-      <label>
+    <div class="checkbox-group">
+      <label class="custom-checkbox">
         <input type="checkbox" value="3.13.0" class="interactive"
           @change="$store.formState.toggleSingle('pythonVersion', '3.13.0')"
           :checked="$store.formState.isSelected('pythonVersion', '3.13.0')">
         @Latest
       </label>
 
-      <label>
+      <label class="custom-checkbox">
         <input type="checkbox" value="3.9.5" class="interactive"
           @change="$store.formState.toggleSingle('pythonVersion', '3.9.5')"
           :checked="$store.formState.isSelected('pythonVersion', '3.9.5')">
