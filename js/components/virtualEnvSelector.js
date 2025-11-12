@@ -7,11 +7,11 @@ export const VirtualEnvSelector = () => `
       <span class="material-icons info-icon" data-info="venv-info">info</span>
     </div>
 
-    <div class="checkbox-group">
+    <div class="checkbox-group" x-data>
       <label>
         <input type="checkbox" value="Venv" class="interactive"
-          @click="selected = (selected === 'Venv' ? null : 'Venv')"
-          :checked="selected === 'Venv'">
+          @change="$store.formState.toggleSingle('venv', 'Venv')"
+          :checked="$store.formState.isSelected('venv', 'Venv')">
         Venv
       </label>
     </div>

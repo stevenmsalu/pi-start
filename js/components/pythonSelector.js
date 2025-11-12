@@ -7,18 +7,18 @@ export const pythonSelector = () => `
       <span class="material-icons info-icon" data-info="python-info">info</span>
     </div>
 
-    <div class="checkbox-group">
+    <div class="checkbox-group" x-data>
       <label>
         <input type="checkbox" value="3.13.0" class="interactive"
-          @click="selected = (selected === '3.13.0' ? null : '3.13.0')"
-          :checked="selected === '3.13.0'">
+          @change="$store.formState.toggleSingle('pythonVersion', '3.13.0')"
+          :checked="$store.formState.isSelected('pythonVersion', '3.13.0')">
         @Latest
       </label>
 
       <label>
         <input type="checkbox" value="3.9.5" class="interactive"
-          @click="selected = (selected === '3.9.5' ? null : '3.9.5')"
-          :checked="selected === '3.9.5'">
+          @change="$store.formState.toggleSingle('pythonVersion', '3.9.5')"
+          :checked="$store.formState.isSelected('pythonVersion', '3.9.5')">
         @LTS
       </label>
     </div>

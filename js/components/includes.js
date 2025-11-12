@@ -7,10 +7,28 @@ export const includes = () => `
       <span class="material-icons info-icon" data-info="includes-info">info</span>
     </div>
 
-    <div class="checkbox-group">
-      <label><input type="checkbox" class="includes-checkbox interactive" value=".env" id="env-toggle">.env</label>
-      <label><input type="checkbox" class="includes-checkbox interactive" value=".gitignore" id="gitignore-toggle">.gitignore</label>
-      <label><input type="checkbox" class="includes-checkbox interactive" value="readme" id="readme-toggle">README</label>
+    <div class="checkbox-group" x-data>
+      <label>
+        <input type="checkbox" class="includes-checkbox interactive" value=".env" 
+          @change="$store.formState.toggleMultiple('includeOptions', '.env')"
+          :checked="$store.formState.isSelected('includeOptions', '.env')">
+        .env  
+      </label>
+
+      <label>
+        <input type="checkbox" class="includes-checkbox interactive" value=".gitignore" 
+          @change="$store.formState.toggleMultiple('includeOptions', '.gitignore')"
+          :checked="$store.formState.isSelected('includeOptions', '.gitignore')">
+        .gitignore
+      </label>
+
+      <label>
+        <input type="checkbox" class="includes-checkbox interactive" value="readme"
+          @change="$store.formState.toggleMultiple('includeOptions', 'readme')"
+          :checked="$store.formState.isSelected('includeOptions', 'readme')">
+        README
+      </label>
+    
     </div>
 
     <div class="includes-more">
@@ -36,25 +54,31 @@ export const includes = () => `
         <div class="modal-body scrollable">
 
           <!-- Core Files -->
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="requirements.txt">
+              <input type="checkbox" value="requirements.txt"
+                @change="$store.formState.toggleMultiple('includeOptions', 'requirements.txt')"
+                :checked="$store.formState.isSelected('includeOptions', 'requirements.txt')">
               requirements.txt
             </label>
             <small class="dep-desc">Include a dependency requirements file for Python packages.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="setup.py">
+              <input type="checkbox" value="setup.py"
+                @change="$store.formState.toggleMultiple('includeOptions', 'setup.py')"
+                :checked="$store.formState.isSelected('includeOptions', 'setup.py')">
               setup.py
             </label>
             <small class="dep-desc">Basic setup script for packaging and installing the project.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="main.py">
+              <input type="checkbox" value="main.py"
+                @change="$store.formState.toggleMultiple('includeOptions', 'main.py')"
+                :checked="$store.formState.isSelected('includeOptions', 'main.py')">
               main.py
             </label>
             <small class="dep-desc">Entry-point Python script for the project.</small>
@@ -63,25 +87,31 @@ export const includes = () => `
           <!-- Environment / Config -->
           <h3 class="dep-section" style="margin-top: 2rem">Environment / Config</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value=".env.example">
+              <input type="checkbox" value=".env.example"
+                @change="$store.formState.toggleMultiple('includeOptions', '.env.example')"
+                :checked="$store.formState.isSelected('includeOptions', '.env.example')">
               .env.example
             </label>
             <small class="dep-desc">Example environment file for configuration variables.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value=".prettierrc">
+              <input type="checkbox" value=".prettierrc"
+                @change="$store.formState.toggleMultiple('includeOptions', '.prettierrc')"
+                :checked="$store.formState.isSelected('includeOptions', '.prettierrc')">
               .prettierrc
             </label>
             <small class="dep-desc">Formatter configuration file for consistent code styling.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="pyproject.toml">
+              <input type="checkbox" value="pyproject.toml"
+                @change="$store.formState.toggleMultiple('includeOptions', 'pyproject.toml')"
+                :checked="$store.formState.isSelected('includeOptions', 'pyproject.toml')">
               pyproject.toml
             </label>
             <small class="dep-desc">Modern build configuration file used by Poetry or Flit.</small>
@@ -90,17 +120,21 @@ export const includes = () => `
           <!-- Documentation -->
           <h3 class="dep-section" style="margin-top: 2rem">Documentation</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="CHANGELOG.md">
+              <input type="checkbox" value="CHANGELOG.md"
+                @change="$store.formState.toggleMultiple('includeOptions', 'CHANGELOG.md')"
+                :checked="$store.formState.isSelected('includeOptions', 'CHANGELOG.md')">
               CHANGELOG.md
             </label>
             <small class="dep-desc">Log file for documenting changes across versions.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="CONTRIBUTING.md">
+              <input type="checkbox" value="CONTRIBUTING.md"
+                @change="$store.formState.toggleMultiple('includeOptions', 'CONTRIBUTING.md')"
+                :checked="$store.formState.isSelected('includeOptions', 'CONTRIBUTING.md')">
               CONTRIBUTING.md
             </label>
             <small class="dep-desc">Guidelines for contributing to the project.</small>
@@ -109,17 +143,21 @@ export const includes = () => `
           <!-- Testing -->
           <h3 class="dep-section" style="margin-top: 2rem">Testing</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="tests/">
+              <input type="checkbox" value="tests/"
+                @change="$store.formState.toggleMultiple('includeOptions', 'tests/')"
+                :checked="$store.formState.isSelected('includeOptions', 'tests/')">
               tests/
             </label>
             <small class="dep-desc">Include a starter folder for your unit or integration tests.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-group modal-item" x-data>
             <label class="checkbox-group">
-              <input type="checkbox" value="pytest.ini">
+              <input type="checkbox" value="pytest.ini"
+                @change="$store.formState.toggleMultiple('includeOptions', 'pytest.ini')"
+                :checked="$store.formState.isSelected('includeOptions', 'pytest.ini')">
               pytest.ini
             </label>
             <small class="dep-desc">Pytest configuration file for test discovery and settings.</small>
