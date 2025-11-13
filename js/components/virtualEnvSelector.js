@@ -17,7 +17,7 @@ export const VirtualEnvSelector = () => `
       </label>
 
       <!-- Reactive input field -->
-      <input type="text" placeholder="Enter venv name (Optional)"
+      <input type="text" id="venv-name" placeholder="Enter venv name (Optional)"
         x-show="$store.formState.isSelected('venv', 'Venv')"
         x-transition
         x-ref="venvInput"

@@ -3,6 +3,7 @@ import { initInfoCardEvents } from "./infoCards.js";
 import { initDependencyModal } from "./dependencyModal.js";
 import { initLicenseModal } from "./licenseModal.js";
 import { initIncludesModal } from "./includesModal.js";
+import { initSuccessModal } from "./successModal.js";
 
 export function componentEventListeners() {
   initButtonEvents();
@@ -10,4 +11,5 @@ export function componentEventListeners() {
   initDependencyModal();
   initLicenseModal();
   initIncludesModal();
+  initSuccessModal();
 }

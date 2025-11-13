@@ -27,5 +27,4 @@ export function clearForm() {
     const store = Alpine.store('formState').clearAll();
   }
 
-  console.log('🧹 Form cleared. Alpine state reset.');
 }
