@@ -10,8 +10,8 @@ function updateGithubLogo(isDark) {
   if (!img) return;
 
   img.src = isDark
-    ? "../../assets/github-mark-white.svg"
-    : "../../assets/github-mark.svg";
+    ? "/assets/github-mark-white.svg"
+    : "/assets/github-mark.svg";
 }
 
 export function loadTheme() {

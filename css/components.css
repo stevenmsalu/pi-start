@@ -197,9 +197,11 @@ input[type="text"]:-webkit-autofill,
 input[type="text"]:-webkit-autofill:hover,
 input[type="text"]:-webkit-autofill:focus,
 input[type="text"]:-webkit-autofill:active {
-  -webkit-text-fill-color: var(--fg) !important;
-  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
-  box-shadow: 0 0 0px 1000px #000 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--input-bg) inset !important;
+  box-shadow: 0 0 0 1000px var(--input-bg) inset !important;
+
+  -webkit-text-fill-color: var(--white) !important;
+
   transition: background-color 5000s ease-in-out 0s;
 }
 

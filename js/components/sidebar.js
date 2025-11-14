@@ -11,7 +11,7 @@ export const sidebar = () => `
 
   <div class="nav-bottom">
     <a href="https://github.com/stevenmsalu/pi-start" target="_blank" title="GitHub">
-      <img id="githubLogo" src="../../assets/github-mark.svg" class="ti" alt="GitHub Logo">
+      <img id="githubLogo" src="/assets/github-mark.svg" class="ti" alt="GitHub Logo">
     </a>
   </div>
 `;
