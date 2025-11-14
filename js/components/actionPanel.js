@@ -18,17 +18,17 @@ export const actionPanel = () => `
         <div class="modal-item">
           <div class="command-group">
             <code id="venvCommand">.\venv\Scripts\activate</code>
-            <button class="button-secondary small" id="copyVenvBtn">Copy</button>
+            <span id="copyVenvBtn" class="material-icons icon-button">content_copy</span>
           </div>
-          <small class="dep-desc">Activate your Python virtual environment</small>
+          <small class="dep-desc" style="margin-left: 10px">Activate your Python virtual environment</small>
         </div>
 
         <div class="modal-item">
           <div class="command-group">
             <code id="runCommand">py main.py</code>
-            <button class="button-secondary small" id="copyRunBtn">Copy</button>
+            <span id="copyRunBtn" class="material-icons icon-button">content_copy</span>
           </div>
-          <small class="dep-desc">Run your project's main file</small>
+          <small class="dep-desc" style="margin-left: 10px">Run your project's main file</small>
         </div>
 
       </div>

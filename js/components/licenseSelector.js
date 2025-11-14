@@ -35,7 +35,7 @@ export const licenseSelector = () => `
 
     <!-- License Modal -->
     <div class="modal-backdrop" id="licenseModal">
-      <div class="modal-card" x-data>
+      <div class="modal-card" style="width: 450px; height: 500px;" x-data>
 
         <div class="modal-header">
           <h2>Select License</h2>

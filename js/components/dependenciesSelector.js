@@ -9,8 +9,7 @@ export const dependenciesSelector = () => `
 
     <!-- Dependency Modal -->
     <div class="modal-backdrop" id="dependenciesModal">
-      <div class="modal-card" x-data>
-
+      <div class="modal-card" style="width: 450px; height: 500px;" x-data>
         <div class="modal-header">
           <h2>Select Dependencies</h2>
           <span class="material-icons close-modal" id="closeDependenciesModal">close</span>

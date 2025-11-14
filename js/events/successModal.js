@@ -1,3 +1,4 @@
+
 export function initSuccessModal() {
     const modal = document.getElementById("successModal");
     const closeBtn = document.getElementById("closeSuccessModal");
@@ -20,25 +21,28 @@ export function initSuccessModal() {
     // Copy buttons
     copyVenvBtn?.addEventListener("click", async () => {
         await navigator.clipboard.writeText(venvCommand.textContent.trim());
-        copyVenvBtn.textContent = "Copied!";
+
+        copyVenvBtn.textContent = "done";
         copyVenvBtn.classList.add("copied");
+
         setTimeout(() => {
-            copyVenvBtn.textContent = "Copy";
+            copyVenvBtn.textContent = "content_copy";
             copyVenvBtn.classList.remove("copied");
         }, 1200);
     });
 
     copyRunBtn?.addEventListener("click", async () => {
+        // FIXED: Copy runCommand instead of venvCommand
         await navigator.clipboard.writeText(runCommand.textContent.trim());
-        copyRunBtn.textContent = "Copied!";
-        setTimeout(() => (copyRunBtn.textContent = "Copy"), 1200);
-    });
-}
 
-// Auto-Adjust the venv command
-const venvCmd = document.getElementById("venvCommand");
-if (venvCmd) {
-    venvCmd.textContent = `.${venvOutput}\\Scripts\\activate`;
+        copyRunBtn.textContent = "done";
+        copyRunBtn.classList.add("copied");
+
+        setTimeout(() => {
+            copyRunBtn.textContent = "content_copy";
+            copyRunBtn.classList.remove("copied");
+        }, 1200);
+    });
 }
 
 // Helper to show the modal externally

@@ -393,8 +393,7 @@ input[type="text"]:-webkit-autofill:active {
   background: var(--card-bg);
   color: var(--card-fg);
   padding: 24px;
-  width: 450px;
-  height: 500px;
+
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   border: 1px solid var(--border);
@@ -408,6 +407,7 @@ input[type="text"]:-webkit-autofill:active {
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--spacing-md);
+  gap: var(--spacing-lg)
 }
 
 .modal-header h2 {
@@ -518,7 +518,7 @@ input[type="text"]:-webkit-autofill:active {
   align-items: center;
   justify-content: space-between;
   gap: var(--spacing-sm);
-  background: var(--input-bg);
+  background: var(--card-bg);
   border: 1px solid var(--border-color-strong);
   border-radius: var(--radius-md);
   padding: 8px 12px;
@@ -534,12 +534,21 @@ input[type="text"]:-webkit-autofill:active {
   overflow-x: auto;
 }
 
-.command-group button {
-  flex-shrink: 0;
-  transition: all 0.2s ease;
+.icon-button {
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px;
+  border-radius: 6px;
+  transition: 0.2s ease;
 }
 
-.command-group button.copied {
+.icon-button:hover {
+  background: var(--border-color-strong);
+}
+
+.icon-button.copied {
   background: var(--accent-bg);
   color: var(--accent-fg);
+  scale: 1.1;
 }

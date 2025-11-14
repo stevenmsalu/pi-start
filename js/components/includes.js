@@ -42,7 +42,7 @@ export const includes = () => `
 
     <!-- Modal for additional include options -->
     <div class="modal-backdrop" id="includesModal">
-      <div class="modal-card" x-data>
+      <div class="modal-card" style="width: 450px; height: 500px;" x-data>
 
         <div class="modal-header">
           <h2>Include Options</h2>

@@ -15,9 +15,45 @@ export function generateProject() {
   let venvOutput = "(none)";
   const venvCheckbox = document.querySelector('input[value="Venv"]');
   const venvNameInput = document.getElementById("venv-name");
+  const venvModalItem = document.querySelector('.modal-item:has(#venvCommand)');
+
   if (venvCheckbox?.checked) {
     const inputValue = venvNameInput?.value.trim();
     venvOutput = inputValue || "venv";
+
+    // Update the venv command and show the item
+    const venvCmd = document.getElementById("venvCommand");
+    if (venvCmd) {
+      venvCmd.textContent = `.\\${venvOutput}\\Scripts\\activate`;
+    }
+    if (venvModalItem) {
+      venvModalItem.classList.remove('hidden');
+    }
+  } else {
+    // Hide the venv command item
+    if (venvModalItem) {
+      venvModalItem.classList.add('hidden');
+    }
+  }
+
+  // Run command logic
+  let runModalItem = document.querySelector('.modal-item:has(#runCommand)');
+  const mainPyCheckbox = document.querySelector('input[value="main.py"]');
+
+  if (mainPyCheckbox?.checked) {
+    const runCmd = document.getElementById("runCommand");
+
+    if (runCmd) {
+      runCmd.textContent = "python main.py";
+    }
+
+    if (runModalItem) {
+      runModalItem.classList.remove("hidden");
+    }
+  } else {
+    if (runModalItem) {
+      runModalItem.classList.add("hidden");
+    }
   }
 
   // Try to access Alpine store if available
@@ -83,7 +119,7 @@ export function generateProject() {
 
     // Show success modal
     showSuccessModal();
-    
+
     setTimeout(() => {
       generateBtn.innerHTML = "Generate Project";
       generateBtn.disabled = false;
