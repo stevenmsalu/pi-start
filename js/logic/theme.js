@@ -1,3 +1,4 @@
+
 function updateThemeIcon(isDark) {
   const icon = document.getElementById("themeIcon");
   if (!icon) return;

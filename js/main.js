@@ -5,32 +5,22 @@ import { loadPage, handleRouteClick } from "./router.js";
 import { initStore } from './store.js';
 
 window.Alpine = Alpine;
-
-// Initialize Alpine store before Alpine starts
 initStore();
-
 Alpine.start();
 
 function startApp() {
-
   loadTheme();
   loadPage("home");
-
-  // Re-scan the DOM for Alpine components (important for dynamic content)
+  
   const mainContainer = document.querySelector("#app") || document.body;
   Alpine.initTree(mainContainer);
-
   componentEventListeners();
 
   document.addEventListener("click", (e) => {
-    if (e.target.closest("#modeToggle")) {
-      toggleTheme();
-      return;
-    }
+    if (e.target.closest("#modeToggle")) { toggleTheme(); return; }
     handleRouteClick(e);
   });
 
-  // Re-initialize Alpine after route changes
   document.addEventListener("pageLoaded", () => {
     const mainContainer = document.querySelector("#app") || document.body;
     Alpine.initTree(mainContainer);

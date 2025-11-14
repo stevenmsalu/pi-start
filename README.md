@@ -1,33 +1,36 @@
 # Pi-Start
 
-**Generate Python Project Scaffolds in Your Browser**
+**Generate Python Project Scaffolds — Right in Your Browser**
 
-Pi-Start is an Interactive Web-based tool that lets you generate Python project scaffolds.
+Pi-Start is an interactive web tool that helps you create clean, ready-to-build Python project scaffolds in seconds.
 
 ---
 
-### Core Interactions
-- **Project Name** – Input your project name.  
-- **Framework** – Choose from Flask, Django, FastAPI, or None.  
-- **Dependencies** – Select optional libraries like `Floe`, `Requests`, `Numpy`, `Pandas`.
-- **License** – Pick between MIT, Apache, GPL, or None.  
-- **Generate** – Create project files instantly.  
-- **Download** – Save your project as a zip archive.  
-- **.env** - Auto-generates a `.env` file 
-- **.gitignore** – Auto-generates `.gitignore` file.  
+## Core Features
 
-### Enhanced Interactions
-- **Live Preview** – See your files (`main.py`, `requirements.txt`, etc.) in real-time.  
-- **Validation** – Ensures valid project names.  
-- **Progress Indicator** – Step-by-step user flow.  
-- **Feedback Modal** – Confirms successful generation.  
-- **Theme Switcher** – Toggle between light and dark modes.
-- **Copy to Clipboard** – Copy `pip install -r requirements.txt` commands with one click.  
-- **Smooth Animations** – Visual polish for UI elements.  
-- **About Section** – Collapsible panels and tooltips for additional info.
+- **Project Name** – Enter your project’s name.  
+- **Virtual Environment** – Enable venv, with an optional custom name.  
+- **Dependencies** – Choose optional libraries like `requests`, `fastapi`, `numpy`, `typer`, and more.  
+- **Python Version** – Select either the latest release or an LTS version.  
+- **License** – Choose MIT, Apache, GPL, etc or none.  
+- **Includes** – Add optional files like `.env`, `.gitignore`, `README.md`, and more.  
+- **Generate** – Instantly preview all selected project options.  
+
+---
+
+## Enhanced Features
+
+- **Theme Switcher** – Toggle between light and dark mode.  
+- **Smooth Animations** – Polished UI transitions.  
+- **About Section** – Collapsible tooltips for extra details.  
+- **Validation** – Ensures valid and safe project names.  
+- **Success Modal** – Confirms scaffold generation.  
+- **Copy to Clipboard** – Copy commands like `pip install -r requirements.txt` with one click.  
 
 ---
 
 ## Footer
 
-Built with ❤️ by Steven Msalu | 2nd Semester 2025, IWD Project | BSc ICT Software Engineering
+Built with ❤️ by Steven Msalu  
+2nd Semester 2025 — IWD Project  
+BSc ICT Software Engineering

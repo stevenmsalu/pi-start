@@ -4,10 +4,8 @@ import { validateForm } from "./validator.js";
 
 export function generateProject() {
   if (!validateForm()) return;
-  
-  const generateBtn = document.getElementById("generate-btn");
 
-  // Set loading state
+  const generateBtn = document.getElementById("generate-btn");
   generateBtn.disabled = true;
   generateBtn.innerHTML = `<span class="spinner"></span> Generating...`;
   showLoadingOverlay();
@@ -23,49 +21,36 @@ export function generateProject() {
   if (venvCheckbox?.checked) {
     const inputValue = venvNameInput?.value.trim();
     venvOutput = inputValue || "venv";
-
-    // Update the venv command and show the item
     const venvCmd = document.getElementById("venvCommand");
-    if (venvCmd) {
-      venvCmd.textContent = `.\\${venvOutput}\\Scripts\\activate`;
-    }
-    if (venvModalItem) {
-      venvModalItem.classList.remove('hidden');
-    }
+    if (venvCmd) venvCmd.textContent = `.\\${venvOutput}\\Scripts\\activate`;
+    if (venvModalItem) venvModalItem.classList.remove('hidden');
   } else {
-    // Hide the venv command item
-    if (venvModalItem) {
-      venvModalItem.classList.add('hidden');
-    }
+    if (venvModalItem) venvModalItem.classList.add('hidden');
+  }
+
+  // Requirements command logic
+  const reqCheckbox = document.querySelector('input[value="requirements.txt"]');
+  const reqModalItem = document.querySelector('.modal-item:has(#requirementsCommand)');
+  if (reqCheckbox?.checked) {
+    document.getElementById("requirementsCommand").textContent = "pip install -r requirements.txt";
+    reqModalItem.classList.remove("hidden");
+  } else {
+    reqModalItem.classList.add("hidden");
   }
 
   // Run command logic
   let runModalItem = document.querySelector('.modal-item:has(#runCommand)');
   const mainPyCheckbox = document.querySelector('input[value="main.py"]');
-
   if (mainPyCheckbox?.checked) {
     const runCmd = document.getElementById("runCommand");
-
-    if (runCmd) {
-      runCmd.textContent = "python main.py";
-    }
-
-    if (runModalItem) {
-      runModalItem.classList.remove("hidden");
-    }
+    if (runCmd) runCmd.textContent = "python main.py";
+    if (runModalItem) runModalItem.classList.remove("hidden");
   } else {
-    if (runModalItem) {
-      runModalItem.classList.add("hidden");
-    }
+    if (runModalItem) runModalItem.classList.add("hidden");
   }
 
   // Try to access Alpine store if available
-  let venv = [];
-  let pythonVersion = [];
-  let dependencies = [];
-  let license = [];
-  let includeOptions = [];
-
+  let venv = [], pythonVersion = [], dependencies = [], license = [], includeOptions = [];
   try {
     const store = window.Alpine?.store("formState");
     if (store && store.data) {
@@ -85,19 +70,16 @@ export function generateProject() {
       .filter(el => el.checked)
       .map(el => el.value);
   }
-
   if (dependencies.length === 0) {
     dependencies = [...document.querySelectorAll('#dependenciesModal input[type="checkbox"]')]
       .filter(el => el.checked)
       .map(el => el.value);
   }
-
   if (license.length === 0) {
     license = [...document.querySelectorAll('#licenseModal input[type="checkbox"], .form-group input[value="mit"], .form-group input[value="apache"]')]
       .filter(el => el.checked)
       .map(el => el.value);
   }
-
   if (includeOptions.length === 0) {
     includeOptions = [...document.querySelectorAll('.includes-checkbox')]
       .filter(el => el.checked)
@@ -119,18 +101,14 @@ export function generateProject() {
   setTimeout(() => {
     hideLoadingOverlay();
     generateBtn.innerHTML = "Success!";
-
-    // Show success modal
     showSuccessModal();
-
     setTimeout(() => {
       generateBtn.innerHTML = "Generate Project";
       generateBtn.disabled = false;
     }, 1500);
   }, 2000);
 
-  // At End Clear Form 
-  clearForm();
+  clearForm(); // At End Clear Form
 }
 
 // Loading overlay helpers
@@ -139,12 +117,7 @@ function showLoadingOverlay() {
   if (!overlay) {
     overlay = document.createElement("div");
     overlay.id = "loading-overlay";
-    overlay.innerHTML = `
-      <div class="loading-screen">
-        <div class="spinner large"></div>
-        <p>Generating your project...</p>
-      </div>
-    `;
+    overlay.innerHTML = `<div class="loading-screen"><div class="spinner large"></div><p>Generating your project...</p></div>`;
     document.body.appendChild(overlay);
   }
   overlay.style.display = "flex";

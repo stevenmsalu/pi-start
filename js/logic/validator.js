@@ -1,3 +1,4 @@
+
 export function validateForm() {
   const projectNameEl = document.getElementById("project-name");
   const projectName = projectNameEl?.value.trim();
@@ -8,7 +9,7 @@ export function validateForm() {
 
   let isValid = true;
 
-  // --- PROJECT NAME ---
+  // Project Name 
   if (!projectName) {
     projectNameEl.classList.add("input-error");
     projectNameError.textContent = "Project name is required.";
@@ -18,7 +19,7 @@ export function validateForm() {
     projectNameError.textContent = "";
   }
 
-  // --- PYTHON VERSION ---
+  // Python version
   const pythonBox = document.querySelector(".python-checkbox-group");
 
   if (!pythonVersion) {

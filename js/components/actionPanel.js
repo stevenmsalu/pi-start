@@ -20,7 +20,15 @@ export const actionPanel = () => `
             <code id="venvCommand">.\venv\Scripts\activate</code>
             <span id="copyVenvBtn" class="material-icons icon-button">content_copy</span>
           </div>
-          <small class="dep-desc" style="margin-left: 10px">Activate your Python virtual environment</small>
+          <small class="dep-desc" style="margin-left: 6px">Activate your Python virtual environment</small>
+        </div>
+
+        <div class="modal-item">
+          <div class="command-group">
+            <code id="requirementsCommand">pip install -r requirements.txt</code>
+            <span id="copyRequirementsBtn" class="material-icons icon-button">content_copy</span>
+          </div>
+          <small class="dep-desc" style="margin-left: 6px">Install all Python dependencies listed in requirements.txt</small>
         </div>
 
         <div class="modal-item">
@@ -28,7 +36,7 @@ export const actionPanel = () => `
             <code id="runCommand">py main.py</code>
             <span id="copyRunBtn" class="material-icons icon-button">content_copy</span>
           </div>
-          <small class="dep-desc" style="margin-left: 10px">Run your project's main file</small>
+          <small class="dep-desc" style="margin-left: 6px">Run your project's main file</small>
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 /* -------------------------------------
-   1. Layout Util
+  1. Layout Util
 -------------------------------------- */
 .container-wide {
   max-width: var(--container-max-width, 1200px);
@@ -14,7 +14,7 @@
 }
 
 /* -------------------------------------
-   2. Interaction Util
+  2. Interaction Util
 -------------------------------------- */
 .interactive {
   transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -35,7 +35,7 @@
 }
 
 /* -------------------------------------
-   3. Appearance Util
+  3. Appearance Util
 -------------------------------------- */
 .appearance-base {
   display: inline-flex;
@@ -47,7 +47,7 @@
 }
 
 /* -------------------------------------
-   4. Background Blur Util
+  4. Background Blur Util
 -------------------------------------- */
 #blur-backdrop {
   position: fixed;
@@ -59,7 +59,7 @@
 }
 
 /* ---------------------------
-   5. Custom ScrollBar
+  5. Custom ScrollBar
 --------------------------- */
 .scrollable {
   overflow-y: auto;
@@ -86,7 +86,7 @@
 }
 
 /* ---------------------------
-   6. Hidden Util
+  6. Hidden Util
 --------------------------- */
 .hidden {
     display: none !important;
