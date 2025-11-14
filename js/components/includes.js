@@ -164,10 +164,6 @@ export const includes = () => `
 
         </div>
 
-        <div class="modal-footer">
-          <button class="button-primary" id="saveIncludesBtn">Done</button>
-        </div>
-
       </div>
     </div>
 

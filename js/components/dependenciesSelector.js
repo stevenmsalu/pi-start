@@ -120,10 +120,6 @@ export const dependenciesSelector = () => `
 
         </div>
 
-        <div class="modal-footer">
-          <button class="button-primary" id="saveDependenciesBtn">Done</button>
-        </div>
-
       </div>
     </div>
   </div>

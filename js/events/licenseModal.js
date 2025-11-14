@@ -3,19 +3,26 @@ export function initLicenseModal() {
   const openBtn = document.getElementById("license-moreBtn");
   const modal = document.getElementById("licenseModal");
   const closeBtn = document.getElementById("closeLicenseModal");
-  const saveBtn = document.getElementById("saveLicenseBtn");
 
-  if (!openBtn || !modal || !closeBtn || !saveBtn) return;
+  if (!openBtn || !modal || !closeBtn) return;
 
   openBtn.addEventListener("click", () => {
     modal.style.display = "flex";
   });
 
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  function swapIcon(newIcon) {
+    closeBtn.classList.add("fading");
 
-  saveBtn.addEventListener("click", () => {
+    setTimeout(() => {
+      closeBtn.textContent = newIcon;
+      closeBtn.classList.remove("fading");
+    }, 150);
+  }
+
+  closeBtn.addEventListener("mouseenter", () => swapIcon("check"));
+  closeBtn.addEventListener("mouseleave", () => swapIcon("close"));
+
+  closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
 

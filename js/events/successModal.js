@@ -10,6 +10,19 @@ export function initSuccessModal() {
     if (!modal) return;
 
     // Close modal handlers
+
+    function swapIcon(newIcon) {
+        closeBtn.classList.add("fading");
+
+        setTimeout(() => {
+            closeBtn.textContent = newIcon;
+            closeBtn.classList.remove("fading");
+        }, 150);
+    }
+
+    closeBtn.addEventListener("mouseenter", () => swapIcon("check"));
+    closeBtn.addEventListener("mouseleave", () => swapIcon("close"));
+
     closeBtn.addEventListener("click", () => {
         modal.style.display = "none";
     });

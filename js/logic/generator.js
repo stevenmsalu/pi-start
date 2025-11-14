@@ -1,7 +1,10 @@
 import { clearForm } from "./clearForm.js";
 import { showSuccessModal } from "../events/successModal.js";
+import { validateForm } from "./validator.js";
 
 export function generateProject() {
+  if (!validateForm()) return;
+  
   const generateBtn = document.getElementById("generate-btn");
 
   // Set loading state

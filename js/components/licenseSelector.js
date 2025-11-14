@@ -104,10 +104,6 @@ export const licenseSelector = () => `
 
         </div>
 
-        <div class="modal-footer">
-          <button class="button-primary" id="saveLicenseBtn">Done</button>
-        </div>
-
       </div>
     </div>
 

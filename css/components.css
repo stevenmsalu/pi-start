@@ -417,8 +417,17 @@ input[type="text"]:-webkit-autofill:active {
 
 .close-modal {
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   border-radius: var(--radius-round);
+  padding: 6px;
+
+  /* Much smoother timing & easing */
+  transition:
+    opacity 0.15s cubic-bezier(0.25, 0.1, 0.25, 1),
+}
+
+.close-modal.fading {
+  opacity: 0;
 }
 
 .close-modal:hover {
@@ -551,4 +560,34 @@ input[type="text"]:-webkit-autofill:active {
   background: var(--accent-bg);
   color: var(--accent-fg);
   scale: 1.1;
+}
+
+/* -------------------------------------
+   Validation Styles
+-------------------------------------- */
+.error-msg {
+  color: #ff4a4a;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.input-error {
+  border: 1px dashed #ff4a4a !important;
+  border-radius: 6px;
+  animation: shake 0.2s ease-in-out;
+}
+
+.checkbox-group.input-error {
+  border: 1px dashed #ff4a4a;
+  padding: 6px;
+  border-radius: 6px;
+  animation: shake 0.2s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0) }
+  25% { transform: translateX(-3px) }
+  50% { transform: translateX(3px) }
+  75% { transform: translateX(-3px) }
+  100% { transform: translateX(0) }
 }

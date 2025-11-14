@@ -7,7 +7,7 @@ export const pythonSelector = () => `
       <span class="material-icons info-icon" data-info="python-info">info</span>
     </div>
 
-    <div class="checkbox-group">
+    <div class="checkbox-group python-checkbox-group">
       <label class="custom-checkbox">
         <input type="checkbox" value="3.13.0" class="interactive"
           @change="$store.formState.toggleSingle('pythonVersion', '3.13.0')"
@@ -22,6 +22,8 @@ export const pythonSelector = () => `
         @LTS
       </label>
     </div>
+
+    <p class="error-msg" id="python-version-error"></p>
 
     <div class="info-card" id="python-info" style="width: 260px">
       <content>Choose the Python version your project will run on.</content>

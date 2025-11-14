@@ -9,6 +9,8 @@ export const projectNameInput = () => `
 
     <input type="text" id="project-name" placeholder="Enter project name">
 
+    <p class="error-msg" id="project-name-error"></p>
+
     <div class="info-card" id="project-name-info">
       <content>Your project name should follow these rules:</content>
       <ul>
