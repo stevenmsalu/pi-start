@@ -50,14 +50,14 @@ export function generateProject() {
   }
 
   // Try to access Alpine store if available
-  let venv = [], pythonVersion = [], dependencies = [], license = [], includeOptions = [];
+  let venv = [], pythonVersion = "", dependencies = [], license = "", includeOptions = [];
   try {
     const store = window.Alpine?.store("formState");
     if (store && store.data) {
-      pythonVersion = store.data.pythonVersion || [];
+      pythonVersion = store.data.pythonVersion || "";
       venv = store.data.venv || [];
       dependencies = store.data.dependencies || [];
-      license = store.data.license || [];
+      license = store.data.license || "";
       includeOptions = store.data.includeOptions || [];
     }
   } catch (err) {
@@ -65,36 +65,44 @@ export function generateProject() {
   }
 
   // Fallbacks for missing store data
-  if (pythonVersion.length === 0) {
-    pythonVersion = [...document.querySelectorAll('input[value^="3."]')]
-      .filter(el => el.checked)
-      .map(el => el.value);
+  if (!pythonVersion) {
+    const checked = document.querySelector('input[value^="3."]:checked');
+    pythonVersion = checked ? checked.value : "";
   }
+
   if (dependencies.length === 0) {
     dependencies = [...document.querySelectorAll('#dependenciesModal input[type="checkbox"]')]
       .filter(el => el.checked)
       .map(el => el.value);
   }
-  if (license.length === 0) {
-    license = [...document.querySelectorAll('#licenseModal input[type="checkbox"], .form-group input[value="mit"], .form-group input[value="apache"]')]
-      .filter(el => el.checked)
-      .map(el => el.value);
+
+  if (!license) {
+    const selectedLicense = document.querySelector(
+      '#licenseModal input[type="checkbox"]:checked, .form-group input[value="mit"]:checked, .form-group input[value="apache"]:checked'
+    );
+    license = selectedLicense ? selectedLicense.value : "";
   }
+
   if (includeOptions.length === 0) {
     includeOptions = [...document.querySelectorAll('.includes-checkbox')]
       .filter(el => el.checked)
       .map(el => el.value);
   }
 
-  // Log summary
+  // Build JSON config object
+  const config = {
+    project_name: projectName,
+    virtual_environment: venvOutput,
+    python_version: pythonVersion,
+    dependencies: dependencies,
+    license: license,
+    includes: includeOptions
+  };
+
+  // Output clean JSON object
   console.clear();
-  console.group("Project Configuration Summary");
-  console.log("📁 Project Name:", projectName);
-  console.log("🧩 Virtual Environment:", venvOutput);
-  console.log("🐍 Python Version:", pythonVersion.join(", ") || "(none)");
-  console.log("📦 Dependencies:", dependencies.join(", ") || "(none)");
-  console.log("📄 License:", license.join(", ") || "(none)");
-  console.log("📄 Include Options:", includeOptions.join(", ") || "(none)");
+  console.group("JSON Project Configuration");
+  console.log(JSON.stringify(config, null, 2));
   console.groupEnd();
 
   // Simulate processing delay

@@ -23,9 +23,9 @@ export const includes = () => `
       </label>
 
       <label class="custom-checkbox">
-        <input type="checkbox" class="includes-checkbox interactive" value="readme"
-          @change="$store.formState.toggleMultiple('includeOptions', 'readme')"
-          :checked="$store.formState.isSelected('includeOptions', 'readme')">
+        <input type="checkbox" class="includes-checkbox interactive" value="readme.md"
+          @change="$store.formState.toggleMultiple('includeOptions', 'readme.md')"
+          :checked="$store.formState.isSelected('includeOptions', 'readme.md')">
         README
       </label>
     </div>

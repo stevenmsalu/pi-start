@@ -1,36 +1,69 @@
 # Pi-Start
 
-**Generate Python Project Scaffolds — Right in Your Browser**
+**Create Python Project Scaffolds in Your Browser**
 
-Pi-Start is an interactive web tool that helps you create clean, ready-to-build Python project scaffolds in seconds.
-
----
-
-## Core Features
-
-- **Project Name** – Enter your project’s name.  
-- **Virtual Environment** – Enable venv, with an optional custom name.  
-- **Dependencies** – Choose optional libraries like `requests`, `fastapi`, `numpy`, `typer`, and more.  
-- **Python Version** – Select either the latest release or an LTS version.  
-- **License** – Choose MIT, Apache, GPL, etc or none.  
-- **Includes** – Add optional files like `.env`, `.gitignore`, `README.md`, and more.  
-- **Generate** – Instantly preview all selected project options.  
+Pi-Start is an interactive web tool that helps you generate clean, ready-to-use Python projects.
 
 ---
 
-## Enhanced Features
+## Interactive Features
 
-- **Theme Switcher** – Toggle between light and dark mode.  
-- **Smooth Animations** – Polished UI transitions.  
-- **About Section** – Collapsible tooltips for extra details.  
-- **Validation** – Ensures valid and safe project names.  
-- **Success Modal** – Confirms scaffold generation.  
-- **Copy to Clipboard** – Copy commands like `pip install -r requirements.txt` with one click.  
+- Input validation for required fields
+- Optional input fields
+- Reactive input fields
+- Light/Dark mode
+- Dynamic icons and buttons
+- Smooth animations
+- Custom scrollbar design and placement
+- Responsive layout
+- Collapsible tooltips
+- Success modal with copy-to-clipboard actions
 
 ---
 
-## Footer
+## How It Works
 
-Built with ❤️ by Steven Msalu  
-2nd Semester 2025 — IWD Project  
+Pi-Start is a **Single Page Application (SPA)** built with:
+
+- HTML, CSS, JavaScript  
+- AlpineJS for state management  
+
+The app collects your project settings and sends them to a backend service that generates the final scaffold.
+
+---
+
+## Architecture (Short Overview)
+
+**Frontend**
+- Form components
+- Event Handlers  
+- AlpineJS state store  
+- Extractor that builds a configuration object  
+
+**Backend** : `Out of scope for this assignment`
+- Receives configuration  
+- Generates the Python project folder with all selected options  
+
+---
+
+## Example Output (Config Object)
+
+```json
+{
+  "project_name": "example",
+  "virtual_environment": "venv",
+  "python_version": "3.13",
+  "dependencies": ["python-Dotenv", "fastapi"],
+  "license": "mit",
+  "includes": [".gitignore", "README.md"]
+}
+
+```
+
+---
+
+## Author
+
+Built with ❤️ by Steven Msalu
+IWD Project — 2nd Semester 2025
 BSc ICT Software Engineering
