@@ -2,22 +2,7 @@
 
 **Create Python Project Scaffolds in Your Browser**
 
-Pi-Start is an interactive web tool that helps you generate clean, ready-to-use Python projects.
-
----
-
-## Interactive Features
-
-- Input validation for required fields
-- Optional input fields
-- Reactive input fields
-- Light/Dark mode
-- Dynamic icons and buttons
-- Smooth animations
-- Custom scrollbar design and placement
-- Responsive layout
-- Collapsible tooltips
-- Success modal with copy-to-clipboard actions
+Pi-Start is an interactive web initializer that helps you create clean, ready-to-use Python projects.
 
 ---
 
@@ -59,6 +44,19 @@ The app collects your project settings and sends them to a backend service that 
 }
 
 ```
+
+## Interactive Features
+
+- Input validation for required fields
+- Optional input fields
+- Reactive input fields
+- Light/Dark mode
+- Dynamic icons and buttons
+- Smooth animations
+- Custom scrollbar design and placement
+- Responsive layout
+- Collapsible tooltips
+- Success modal with copy-to-clipboard actions
 
 ---
 
