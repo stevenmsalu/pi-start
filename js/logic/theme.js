@@ -10,9 +10,7 @@ function updateGithubLogo(isDark) {
   const img = document.getElementById("githubLogo");
   if (!img) return;
 
-  img.src = isDark
-    ? "/assets/github-mark-white.svg"
-    : "/assets/github-mark.svg";
+  img.src = isDark ? "/assets/github-mark-white.svg" : "/assets/github-mark.svg";
 }
 
 export function loadTheme() {
@@ -26,7 +24,6 @@ export function loadTheme() {
   }
 
   updateThemeIcon(isDark);
-  updateGithubLogo(isDark);
 }
 
 export function toggleTheme() {
