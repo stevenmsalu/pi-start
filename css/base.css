@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   transition: background var(--transition-slow), color var(--transition-slow);
@@ -15,7 +16,7 @@ html, body {
    2. Base Typography & Body Defaults
 -------------------------------------- */
 body {
-  background: linear-gradient(180deg, var(--bg-start), var(--bg-end));
+  background: var(--bg);
   font-family: var(--font-family);
   color: var(--fg);
   font-size: var(--font-size);
@@ -23,6 +24,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 /* -------------------------------------
@@ -38,5 +45,5 @@ body {
 -------------------------------------- */
 ::selection {
   background-color: var(--accent);
-  color: var(--bg);
+  color: var(--card-fg);
 }

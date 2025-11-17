@@ -111,7 +111,7 @@ export function generateProject() {
     generateBtn.innerHTML = "Success!";
     showSuccessModal();
     setTimeout(() => {
-      generateBtn.innerHTML = "Generate Project";
+      generateBtn.innerHTML = "Generate";
       generateBtn.disabled = false;
     }, 1500);
   }, 2000);

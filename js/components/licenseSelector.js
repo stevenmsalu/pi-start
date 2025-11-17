@@ -21,12 +21,13 @@ export const licenseSelector = () => `
           :checked="$store.formState.isSelected('license', 'apache')">
         Apache 2.0
       </label>
-    </div>
 
-    <div class="license-more">
-      <button type="button" id="license-moreBtn" class="button-tertiary interactive">
-        show more
-      </button>
+      <div class="license-more">
+        <button type="button" id="license-moreBtn" class="button-tertiary interactive">
+          show more
+        </button>
+      </div>
+      
     </div>
 
     <div class="info-card" id="license-info" style="width: 260px">

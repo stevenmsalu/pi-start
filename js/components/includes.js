@@ -22,18 +22,19 @@ export const includes = () => `
         .gitignore
       </label>
 
-      <label class="custom-checkbox">
+      <label class="custom-checkbox desktop-only">
         <input type="checkbox" class="includes-checkbox interactive" value="readme.md"
           @change="$store.formState.toggleMultiple('includeOptions', 'readme.md')"
           :checked="$store.formState.isSelected('includeOptions', 'readme.md')">
         README
       </label>
-    </div>
 
-    <div class="includes-more">
-      <button type="button" id="includes-moreBtn" class="button-tertiary interactive">
-        show more
-      </button>
+      <div class="includes-more">
+        <button type="button" id="includes-moreBtn" class="button-tertiary interactive">
+          show more
+        </button>
+      </div>
+      
     </div>
 
     <div class="info-card" id="includes-info" style="width: 260px">
@@ -53,6 +54,16 @@ export const includes = () => `
         <div class="modal-body scrollable">
 
           <!-- Core Files -->
+          <div class="form-group modal-item mobile-only">
+            <label class="checkbox-group">
+              <input type="checkbox" value="readme.md" class="includes-checkbox interactive"
+                @change="$store.formState.toggleMultiple('includeOptions', 'readme.md')"
+                :checked="$store.formState.isSelected('includeOptions', 'readme.md')">
+              README
+            </label>
+            <small class="dep-desc">Include a README file for your project.</small>
+          </div>
+
           <div class="form-group modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="requirements.txt" class="includes-checkbox interactive"

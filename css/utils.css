@@ -20,6 +20,7 @@
   transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
   cursor: pointer;
 }
+
 .interactive:hover {
   background: var(--hover-bg);
   border-color: var(--hover-bg);
@@ -27,6 +28,7 @@
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover-1), var(--shadow-accent-weak);
 }
+
 .interactive.active {
   background: var(--hover-bg);
   border-color: var(--hover-bg);
@@ -53,7 +55,7 @@
   position: fixed;
   inset: 0;
   backdrop-filter: blur(1px);
-  background: rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.25);
   z-index: 20;
   display: none;
 }
@@ -63,8 +65,9 @@
 --------------------------- */
 .scrollable {
   overflow-y: auto;
-  max-height: 350px; /* fits inside modal */
-  scrollbar-width: thin; 
+  max-height: 350px;
+  /* fits inside modal */
+  scrollbar-width: thin;
   scrollbar-color: rgba(130, 130, 130, 0.5) transparent;
 }
 
@@ -89,5 +92,5 @@
   6. Hidden Util
 --------------------------- */
 .hidden {
-    display: none !important;
+  display: none !important;
 }

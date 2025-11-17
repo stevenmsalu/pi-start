@@ -17,7 +17,7 @@ export function clearForm() {
   // Reset generate button state
   const generateBtn = document.getElementById('generate-btn');
   if (generateBtn) {
-    generateBtn.textContent = "Generate Project";
+    generateBtn.textContent = "Generate";
     generateBtn.classList.remove('success');
   }
 
