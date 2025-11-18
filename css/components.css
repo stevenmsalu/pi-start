@@ -421,10 +421,16 @@ input[type="text"]:-webkit-autofill:active {
 }
 
 .info-icon {
-  font-size: .75rem;
+  font-size: 1rem;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s ease;
+  padding: 8px;
+  /* Adds touch-friendly padding */
+  margin: -8px;
+  /* Compensates for the padding to maintain layout */
+  border-radius: 50%;
+  /* Makes the touch area circular */
 }
 
 .label-row:hover .info-icon {
@@ -576,8 +582,8 @@ input[type="text"]:-webkit-autofill:active {
 
 @media (max-width: 768px) {
   .modal-card {
-    width: 92%;
-    max-height: 88vh;
+    width: 92% !important;
+    max-height: 88vh !important;
     padding: 16px;
   }
 
@@ -690,7 +696,6 @@ input[type="text"]:-webkit-autofill:active {
 
 @media (max-width: 768px) {
   .command-group {
-    flex-direction: column;
     align-items: stretch;
     padding: 12px;
   }
@@ -772,8 +777,8 @@ input[type="text"]:-webkit-autofill:active {
   }
 
   .includes-more {
-    order: 0;           
-    margin-left: 0;    
+    order: 0;
+    margin-left: 0;
   }
 
   .mobile-only {
