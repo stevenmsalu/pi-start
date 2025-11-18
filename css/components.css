@@ -395,7 +395,6 @@ input[type="text"]:-webkit-autofill:active {
 .includes-more {
   display: inline-flex;
   align-items: center;
-  margin-left: var(--spacing-md);
   margin-bottom: 1px;
   order: 2;
 }
@@ -754,7 +753,9 @@ input[type="text"]:-webkit-autofill:active {
   }
 }
 
-
+/* -------------------------------------
+  12. Responsive Styles
+-------------------------------------- */
 @media (max-width: 768px) {
   .error-msg {
     margin-top: 0px;

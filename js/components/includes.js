@@ -31,7 +31,7 @@ export const includes = () => `
 
       <div class="includes-more">
         <button type="button" id="includes-moreBtn" class="button-tertiary interactive">
-          show more
+          More
         </button>
       </div>
       
