@@ -57,6 +57,16 @@
   order: 2;
 }
 
+/* Hide on mobile */
+.desktop-only {
+  display: inline-flex;
+  order: 1;
+}
+
+.mobile-only {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .checkbox-group {
     flex-wrap: wrap;
@@ -65,5 +75,21 @@
 
   .checkbox-group label {
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .includes-more {
+    order: 0;
+    margin-left: 0;
+  }
+
+  .mobile-only {
+    display: flex !important;
+    flex-direction: column;
   }
 }

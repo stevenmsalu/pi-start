@@ -78,7 +78,7 @@ export function generateProject() {
 
   if (!license) {
     const selectedLicense = document.querySelector(
-      '#licenseModal input[type="checkbox"]:checked, .form-group input[value="mit"]:checked, .form-group input[value="apache"]:checked'
+      '#licenseModal input[type="checkbox"]:checked, .form-field input[value="mit"]:checked, .form-field input[value="apache"]:checked'
     );
     license = selectedLicense ? selectedLicense.value : "";
   }

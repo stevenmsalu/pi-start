@@ -54,7 +54,7 @@ export const includesSelector = () => `
         <div class="modal-body scrollable">
 
           <!-- Core Files -->
-          <div class="form-group modal-item mobile-only">
+          <div class="form-field modal-item mobile-only">
             <label class="checkbox-group">
               <input type="checkbox" value="readme.md" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'readme.md')"
@@ -64,7 +64,7 @@ export const includesSelector = () => `
             <small class="dep-desc">Include a README file for your project.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="requirements.txt" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'requirements.txt')"
@@ -74,7 +74,7 @@ export const includesSelector = () => `
             <small class="dep-desc">Include a dependency requirements file for Python packages.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="setup.py" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'setup.py')"
@@ -84,7 +84,7 @@ export const includesSelector = () => `
             <small class="dep-desc">Basic setup script for packaging and installing the project.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="main.py" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'main.py')"
@@ -97,7 +97,7 @@ export const includesSelector = () => `
           <!-- Environment / Config -->
           <h3 class="dep-section" style="margin-top: 2rem">Environment / Config</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value=".env.example" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', '.env.example')"
@@ -107,7 +107,7 @@ export const includesSelector = () => `
             <small class="dep-desc">Example environment file for configuration variables.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value=".prettierrc" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', '.prettierrc')"
@@ -117,7 +117,7 @@ export const includesSelector = () => `
             <small class="dep-desc">Formatter configuration file for consistent code styling.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="pyproject.toml" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'pyproject.toml')"
@@ -130,7 +130,7 @@ export const includesSelector = () => `
           <!-- Documentation -->
           <h3 class="dep-section" style="margin-top: 2rem">Documentation</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="CHANGELOG.md" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'CHANGELOG.md')"
@@ -140,7 +140,7 @@ export const includesSelector = () => `
             <small class="dep-desc">Log file for documenting changes across versions.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="CONTRIBUTING.md" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'CONTRIBUTING.md')"
@@ -153,7 +153,7 @@ export const includesSelector = () => `
           <!-- Testing -->
           <h3 class="dep-section" style="margin-top: 2rem">Testing</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="tests/" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'tests/')"
@@ -163,7 +163,7 @@ export const includesSelector = () => `
             <small class="dep-desc">Include a starter folder for your unit or integration tests.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="pytest.ini" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', 'pytest.ini')"

@@ -47,7 +47,7 @@ export const licenseSelector = () => `
         <div class="modal-body scrollable">
 
           <!-- Common Open Source Licenses -->
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="gpl" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'gpl')"
@@ -60,7 +60,7 @@ export const licenseSelector = () => `
           <!-- Less Restrictive Licenses -->
           <h3 class="dep-section" style="margin-top: 2rem">Permissive Licenses</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="bsd" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'bsd')"
@@ -70,7 +70,7 @@ export const licenseSelector = () => `
             <small class="dep-desc">Flexible license similar to MIT but with attribution clause.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="isc" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'isc')"
@@ -83,7 +83,7 @@ export const licenseSelector = () => `
           <!-- Others -->
           <h3 class="dep-section" style="margin-top: 2rem">Other Licenses</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="lgpl" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'lgpl')"
@@ -93,7 +93,7 @@ export const licenseSelector = () => `
             <small class="dep-desc">Allows linking to closed-source software under some terms.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="mpl" class="interactive"
                 @change="$store.formState.toggleSingle('license', 'mpl')"

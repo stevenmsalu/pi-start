@@ -20,7 +20,7 @@ export const dependenciesSelector = () => `
         <div class="modal-body scrollable">
 
           <!-- Core Utilities -->
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="requests" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'requests')"
@@ -30,7 +30,7 @@ export const dependenciesSelector = () => `
             <small class="dep-desc">HTTP library for sending web requests easily.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="python-dotenv" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'python-dotenv')"
@@ -40,7 +40,7 @@ export const dependenciesSelector = () => `
             <small class="dep-desc">Loads environment variables from a .env file.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="loguru" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'loguru')"
@@ -53,7 +53,7 @@ export const dependenciesSelector = () => `
           <!-- Web / API Development -->
           <h3 class="dep-section" style="margin-top: 2rem">Web / API</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="flask" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'flask')"
@@ -63,7 +63,7 @@ export const dependenciesSelector = () => `
             <small class="dep-desc">Minimal web framework for APIs and web apps.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="fastapi" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'fastapi')"
@@ -76,7 +76,7 @@ export const dependenciesSelector = () => `
           <!-- Data / Science -->
           <h3 class="dep-section" style="margin-top: 2rem">Data / Science</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="numpy" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'numpy')"
@@ -86,7 +86,7 @@ export const dependenciesSelector = () => `
             <small class="dep-desc">Core library for numerical computing in Python.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="pandas" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'pandas')"
@@ -99,7 +99,7 @@ export const dependenciesSelector = () => `
           <!-- CLI / Tools -->
           <h3 class="dep-section" style="margin-top: 2rem">CLI / Tools</h3>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="typer" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'typer')"
@@ -109,7 +109,7 @@ export const dependenciesSelector = () => `
             <small class="dep-desc">Easy and modern way to build CLI apps with Python.</small>
           </div>
 
-          <div class="form-group modal-item">
+          <div class="form-field modal-item">
             <label class="checkbox-group">
               <input type="checkbox" value="pytest" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'pytest')"

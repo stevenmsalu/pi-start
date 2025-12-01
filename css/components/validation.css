@@ -41,3 +41,9 @@
     transform: translateX(0)
   }
 }
+
+@media (max-width: 768px) {
+  .error-msg {
+    margin-top: 0px;
+  }
+}
