@@ -1,0 +1,68 @@
+/* -------------------------------------
+  InputBox
+-------------------------------------- */
+input[type="text"],
+select {
+  border-radius: var(--radius-xl);
+  background: var(--input-bg) !important;
+
+  border: var(--border-thickness) solid var(--border-color-strong);
+
+  color: var(--white) !important;
+  padding: 0.5rem 1rem;
+  flex-grow: 1;
+
+  caret-color: var(--white);
+  font-size: var(--size-md);
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+input[type="text"]::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+  padding-left: 4px;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:hover,
+select:focus,
+select:active,
+select:hover {
+  border-color: var(--hover-bg);
+  outline: none;
+
+  background: var(--input-bg) !important;
+  color: var(--white) !important;
+
+  transform: translateY(-1px);
+
+  box-shadow: var(--shadow-hover-1), var(--shadow-accent-weak);
+}
+
+input[type="text"]:-webkit-autofill,
+input[type="text"]:-webkit-autofill:hover,
+input[type="text"]:-webkit-autofill:focus,
+input[type="text"]:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--input-bg) inset !important;
+  box-shadow: 0 0 0 1000px var(--input-bg) inset !important;
+
+  -webkit-text-fill-color: var(--white) !important;
+
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+@media (max-width: 768px) {
+
+  input[type="text"],
+  select {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+}

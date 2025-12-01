@@ -1,6 +1,6 @@
 
 export const pythonSelector = () => `
-  <div class="form-group" x-data>
+  <div class="form-field" x-data>
     
     <div class="label-row">
       <label>Python Version</label>

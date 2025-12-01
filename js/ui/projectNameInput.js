@@ -1,6 +1,6 @@
 
 export const projectNameInput = () => `
-  <div class="form-group">
+  <div class="form-field">
     
     <div class="label-row">
       <label for="project-name">Project Name</label>

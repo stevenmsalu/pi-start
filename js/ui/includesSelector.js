@@ -1,6 +1,6 @@
 
-export const includes = () => `
-  <div class="form-group" x-data>
+export const includesSelector = () => `
+  <div class="form-field" x-data>
 
     <div class="label-row">
       <label for="includes">Include</label>

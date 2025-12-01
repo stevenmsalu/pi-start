@@ -4,10 +4,10 @@ import {
   pythonSelector,
   dependenciesSelector,
   licenseSelector,
-  includes,
+  includesSelector,
   actionPanel,
   sidebar
-} from '../components/index.js';
+} from '../ui/_index.js';
 
 export function homePage() {
   const panelContainer = document.querySelector(".panel-body");
@@ -20,7 +20,7 @@ export function homePage() {
     ${pythonSelector()}
     ${dependenciesSelector()}
     ${licenseSelector()}
-    ${includes()}
+    ${includesSelector()}
   `;
   
   sidebarContainer.innerHTML = sidebar();

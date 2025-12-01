@@ -1,5 +1,5 @@
 import Alpine from 'https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/module.esm.js';
-import { componentEventListeners } from "./events/index.js";
+import { componentEventListeners } from "./events/_index.js";
 import { loadTheme, toggleTheme } from "./logic/theme.js";
 import { loadPage, handleRouteClick } from "./router.js";
 import { initStore } from './store.js';

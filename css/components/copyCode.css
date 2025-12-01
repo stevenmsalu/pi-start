@@ -1,0 +1,58 @@
+/* -------------------------------------
+  Copy-Code
+-------------------------------------- */
+.copy-code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  background: var(--card-bg);
+  border: 1px solid var(--border-color-strong);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+  width: 100%;
+}
+
+.copy-code code {
+  flex: 1;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9rem;
+  color: var(--card-fg);
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.copy-code .icon-button {
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.copy-code .icon-button:hover {
+  background: var(--border-color-strong);
+}
+
+.copy-code .icon-button.copied {
+  background: var(--accent-bg);
+  color: var(--accent-fg);
+  scale: 1.1;
+}
+
+@media (max-width: 768px) {
+  .copy-code {
+    align-items: stretch;
+    padding: 12px;
+  }
+
+  .copy-code code {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .copy-code .icon-button {
+    align-self: flex-end;
+  }
+}

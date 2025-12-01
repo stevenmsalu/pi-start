@@ -16,7 +16,7 @@ export const actionPanel = () => `
       <div class="modal-body">
       
         <div class="modal-item">
-          <div class="command-group">
+          <div class="copy-code">
             <code id="venvCommand">.\venv\Scripts\activate</code>
             <span id="copyVenvBtn" class="material-icons icon-button">content_copy</span>
           </div>
@@ -24,7 +24,7 @@ export const actionPanel = () => `
         </div>
 
         <div class="modal-item">
-          <div class="command-group">
+          <div class="copy-code">
             <code id="requirementsCommand">pip install -r requirements.txt</code>
             <span id="copyRequirementsBtn" class="material-icons icon-button">content_copy</span>
           </div>
@@ -32,7 +32,7 @@ export const actionPanel = () => `
         </div>
 
         <div class="modal-item">
-          <div class="command-group">
+          <div class="copy-code">
             <code id="runCommand">py main.py</code>
             <span id="copyRunBtn" class="material-icons icon-button">content_copy</span>
           </div>

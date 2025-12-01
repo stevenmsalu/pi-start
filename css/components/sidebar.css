@@ -1,0 +1,92 @@
+/* -------------------------------------
+  Sidebar (Navigation)
+-------------------------------------- */
+.sidebar {
+  width: 100px;
+  background: transparent;
+  border-radius: var(--radius);
+  padding: var(--spacing-sm);
+
+  border: var(--border-thickness) solid var(--border-color-medium);
+
+  box-shadow:
+    var(--shadow-1),
+    var(--shadow-2);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.nav-top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.nav-bottom {
+  margin-top: auto;
+}
+
+.sidebar a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  color: var(--fg);
+  padding: var(--spacing-xs);
+
+  border-radius: var(--radius-lg);
+
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.sidebar a .material-icons {
+  font-size: var(--size-xxl);
+  line-height: 1;
+}
+
+.sidebar a .ti {
+  width: var(--size-xxl);
+  height: var(--size-xxl);
+  display: block;
+}
+
+.sidebar a:hover {
+  background: var(--hover-bg);
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-hover-1), var(--shadow-accent-weak);
+}
+
+.sidebar a.active {
+  background: var(--hover-bg);
+  box-shadow: var(--shadow-accent-medium);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    overflow-x: auto;
+  }
+
+  .nav-top {
+    flex-direction: row;
+  }
+
+  .nav-bottom {
+    margin-top: 0;
+  }
+
+  .sidebar a {
+    padding: var(--spacing-xs);
+  }
+}

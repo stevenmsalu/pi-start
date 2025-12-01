@@ -1,0 +1,43 @@
+/* -------------------------------------
+  Validation Styles
+-------------------------------------- */
+.error-msg {
+  color: #ff4a4a;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.input-error {
+  border: 1px dashed #ff4a4a !important;
+  border-radius: 6px;
+  animation: shake 0.2s ease-in-out;
+}
+
+.checkbox-group.input-error {
+  border: 1px dashed #ff4a4a;
+  padding: 6px;
+  border-radius: 6px;
+  animation: shake 0.2s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0)
+  }
+
+  25% {
+    transform: translateX(-3px)
+  }
+
+  50% {
+    transform: translateX(3px)
+  }
+
+  75% {
+    transform: translateX(-3px)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}

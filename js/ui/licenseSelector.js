@@ -1,6 +1,6 @@
 
 export const licenseSelector = () => `
-  <div class="form-group" x-data>
+  <div class="form-field" x-data>
 
     <div class="label-row">
       <label for="license">License</label>
