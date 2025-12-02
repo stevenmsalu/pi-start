@@ -20,10 +20,8 @@ header {
 -------------------------------------- */
 main.main-container {
   flex: 1;
-  /* fills available vertical space */
   width: 100%;
   max-width: var(--container-max-width);
-
   display: flex;
   gap: 20px;
   margin: 0 auto;
@@ -43,11 +41,8 @@ main.main-container {
 footer {
   width: 100%;
   max-width: var(--container-max-width);
-
   margin-top: auto;
-  /* pushes to bottom */
   padding-top: 2rem;
-
   text-align: center;
   font-size: 0.9rem;
   background: transparent;

@@ -1,43 +1,63 @@
 /* -------------------------------------
-  Primary Button
--------------------------------------- */
-.button-primary {
-  background: var(--accent);
-  border: none;
+   1. Base Button — shared foundation
+------------------------------------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
+  padding: 0.75rem 1.4rem;
   border-radius: var(--radius);
-  padding: 0.8rem 1.5rem 0.8rem 1.4rem;
 
-  color: #000;
-  text-transform: uppercase;
-  font-weight: 600;
+  font-size: var(--size-md);
+  font-weight: 500;
+  line-height: 1;
+
   cursor: pointer;
+  border: none;
+  background: none;
 
-  box-shadow: var(--shadow-accent-strong);
-  transition: background var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background var(--transition-fast),
+              color var(--transition-fast),
+              box-shadow var(--transition-fast),
+              border-color var(--transition-fast),
+              transform var(--transition-fast);
 }
 
-.button-primary:hover {
+/* -------------------------------------
+   2. Primary Button (filled)
+------------------------------------- */
+.button.button-primary {
+  background: var(--accent);
+  color: #000;
+  box-shadow: var(--shadow-accent-strong);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.button.button-primary:hover {
   background: #35c8f7;
   box-shadow: 0 0 18px rgba(91, 224, 255, 0.8);
 }
 
-/* -------------------------------------
-  Secondary Button
--------------------------------------- */
-.button-secondary {
+/* ------------------------------------
+   3. Secondary Button (outlined)
+------------------------------------ */
+.button.button-secondary {
   background: transparent;
   border: var(--border-thickness-bold) solid var(--fg);
   border-radius: var(--radius-xl);
 
-  padding: 0.6rem 1.2rem;
   color: var(--fg);
-  font-size: var(--size-md);
-  font-weight: 500;
+}
+
+.button.button-secondary:hover {
+  border-color: var(--hover-bg);
+  color: var(--fg);
 }
 
 @media (max-width: 768px) {
-  .button-secondary {
+  .button.button-secondary {
     width: 100%;
     text-align: center;
     padding: 0.75rem 1rem;
@@ -46,36 +66,20 @@
 }
 
 /* -------------------------------------
-  Tertiary Button
--------------------------------------- */
-.button-tertiary {
+   4. Tertiary Button (minimal link)
+------------------------------------ */
+.button.button-tertiary {
   background: none;
   border: none;
-  color: var(--fg);
-
-  font: inherit;
   padding: 0 6px;
 
+  font: inherit;
+  color: var(--fg);
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 4px;
-
-  display: inline-flex;
-  align-items: center;
 }
 
-/* -------------------------------------
-  Options Button
--------------------------------------- */
-.options-button {
-  background: transparent;
-  border: var(--border-thickness-bold) solid var(--fg);
-  border-radius: var(--radius);
-
-  padding: 0.8rem 1.5rem 0.8rem 1.4rem;
-  margin: 0 0 0 var(--spacing-xs);
-
+.button.button-tertiary:hover {
   color: var(--fg);
-  text-transform: uppercase;
-  font-weight: 600;
 }

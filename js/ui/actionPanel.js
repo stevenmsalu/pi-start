@@ -1,8 +1,14 @@
 
 export const actionPanel = () => `
-  <div class="center-button">
-    <button id="generate-btn" class="button-primary">Generate</button>
-    <button id="clear-btn" class="options-button interactive">Clear</button>
+  <div class="center-panel-actions">
+    <button id="generate-btn" class="button button-primary">Generate</button>
+
+    <button id="clear-btn"
+      class="button button-secondary interactive"
+      style="border-radius: var(--radius); margin-left: var(--spacing-xs); text-transform: uppercase; font-weight: 600;">
+      Clear
+    </button>
+    
   </div>
 
   <!-- Success Modal -->

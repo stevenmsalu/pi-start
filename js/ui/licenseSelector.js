@@ -23,7 +23,7 @@ export const licenseSelector = () => `
       </label>
 
       <div class="license-more">
-        <button type="button" id="license-moreBtn" class="button-tertiary interactive">
+        <button type="button" id="license-moreBtn" class="button button-tertiary interactive">
           More
         </button>
       </div>

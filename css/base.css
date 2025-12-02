@@ -1,5 +1,5 @@
 /* -------------------------------------
-   1. Reset & Box Sizing
+   1. Reset & Box-Sizing
 -------------------------------------- */
 * {
   box-sizing: border-box;
@@ -9,14 +9,12 @@ html,
 body {
   height: 100%;
   min-height: 100dvh;
-  /* Mobile-safe full viewport */
   margin: 0;
-  box-sizing: border-box;
   transition: background var(--transition-slow), color var(--transition-slow);
 }
 
 /* -------------------------------------
-   2. Base Typography & Body Defaults
+   2. Body Styles & Typography
 -------------------------------------- */
 body {
   background: var(--bg);
@@ -40,7 +38,7 @@ body {
 }
 
 /* -------------------------------------
-   3. Accessibility & Focus States
+   3. Focus Styles (Accessibility)
 -------------------------------------- */
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -48,7 +46,7 @@ body {
 }
 
 /* -------------------------------------
-   4. Text Selection
+   4. Text Selection Highlight
 -------------------------------------- */
 ::selection {
   background-color: var(--accent);

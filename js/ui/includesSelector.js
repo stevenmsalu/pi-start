@@ -30,7 +30,7 @@ export const includesSelector = () => `
       </label>
 
       <div class="includes-more">
-        <button type="button" id="includes-moreBtn" class="button-tertiary interactive">
+        <button type="button" id="includes-moreBtn" class="button button-tertiary interactive">
           More
         </button>
       </div>
