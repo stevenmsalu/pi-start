@@ -29,7 +29,7 @@ export const includesSelector = () => `
         README
       </label>
 
-      <div class="includes-more">
+      <div class="includes-moreBtn">
         <button type="button" id="includes-moreBtn" class="button button-tertiary interactive">
           More
         </button>

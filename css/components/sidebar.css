@@ -51,7 +51,7 @@
   line-height: 1;
 }
 
-.sidebar a .ti {
+.sidebar a .local-icons {
   width: var(--size-xxl);
   height: var(--size-xxl);
   display: block;

@@ -12,11 +12,8 @@
   opacity: 0;
   transition: opacity 0.2s ease;
   padding: 8px;
-  /* Adds touch-friendly padding */
   margin: -8px;
-  /* Compensates for the padding to maintain layout */
   border-radius: 50%;
-  /* Makes the touch area circular */
 }
 
 .label-row:hover .info-icon {

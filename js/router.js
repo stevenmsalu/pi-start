@@ -2,7 +2,7 @@ import { homePage } from "./pages/home.js";
 
 export function loadPage(page) {
   if (page === "home") return homePage();
-  homePage(); // fallback
+  homePage();
 }
 
 export function handleRouteClick(e) {

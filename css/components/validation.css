@@ -3,18 +3,19 @@
 -------------------------------------- */
 .error-msg {
   color: #ff4a4a;
+  font-weight: 600;
   font-size: 0.85rem;
   margin-top: 4px;
 }
 
 .input-error {
-  border: 1px dashed #ff4a4a !important;
+  border: 2px solid #ff4a4a !important;
   border-radius: 6px;
   animation: shake 0.2s ease-in-out;
 }
 
 .checkbox-group.input-error {
-  border: 1px dashed #ff4a4a;
+  border: 2px solid #ff4a4a;
   padding: 6px;
   border-radius: 6px;
   animation: shake 0.2s ease-in-out;

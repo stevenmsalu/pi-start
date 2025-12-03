@@ -4,7 +4,6 @@
 .scrollable {
   overflow-y: auto;
   max-height: 350px;
-  /* fits inside modal */
   scrollbar-width: thin;
   scrollbar-color: rgba(130, 130, 130, 0.5) transparent;
 }

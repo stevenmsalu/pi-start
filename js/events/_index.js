@@ -5,7 +5,7 @@ import { initLicenseModal } from "./licenseModal.js";
 import { initIncludesModal } from "./includesModal.js";
 import { initSuccessModal } from "./successModal.js";
 
-export function componentEventListeners() {
+export function uiEventListeners() {
   initButtonEvents();
   initInfoCardEvents();
   initDependencyModal();

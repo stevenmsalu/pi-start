@@ -1,5 +1,5 @@
 /* -------------------------------------
-  Checkbox Group
+  Checkbox Group & Includes-moreBtn
 -------------------------------------- */
 .checkbox-group {
   display: inline-flex;
@@ -50,14 +50,13 @@
   gap: var(--spacing-xs);
 }
 
-.includes-more {
+.includes-moreBtn {
   display: inline-flex;
   align-items: center;
   margin-bottom: 1px;
   order: 2;
 }
 
-/* Hide on mobile */
 .desktop-only {
   display: inline-flex;
   order: 1;
@@ -83,7 +82,7 @@
     display: none !important;
   }
 
-  .includes-more {
+  .includes-moreBtn {
     order: 0;
     margin-left: 0;
   }
