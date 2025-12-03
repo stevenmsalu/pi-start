@@ -46,8 +46,6 @@ export const actionPanel = () => `
         </div>
 
       </div>
-
     </div>
   </div>
-</div>
 `;

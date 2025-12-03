@@ -4,7 +4,7 @@
 header {
   width: 100%;
   max-width: var(--container-max-width);
-  margin: 15px 0;
+  margin: 15px auto;
   padding: 0 var(--spacing-md);
   position: relative;
 }
@@ -41,7 +41,7 @@ main.main-container {
 footer {
   width: 100%;
   max-width: var(--container-max-width);
-  margin-top: auto;
+  margin: 0 auto;
   padding-top: 2rem;
   text-align: center;
   font-size: 0.9rem;
