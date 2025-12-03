@@ -29,6 +29,7 @@
 ------------------------------------- */
 .button.button-primary {
   background: var(--accent);
+  border: var(--border-thickness-bold) solid var(--accent);
   color: #000;
   box-shadow: var(--shadow-accent-strong);
   text-transform: uppercase;
@@ -37,6 +38,7 @@
 
 .button.button-primary:hover {
   background: #35c8f7;
+  border: var(--border-thickness-bold) solid #35c8f7;
   box-shadow: 0 0 18px rgba(91, 224, 255, 0.8);
 }
 

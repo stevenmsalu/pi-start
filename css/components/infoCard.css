@@ -10,7 +10,7 @@
   font-size: 1rem;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity var(--transition-normal);
   padding: 8px;
   margin: -8px;
   border-radius: 50%;
@@ -21,7 +21,6 @@
 }
 
 .info-card {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -32,7 +31,22 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  transform: translateY(6px) scale(0.98);
+  transition:
+    opacity var(--transition-normal),
+    transform var(--transition-normal);
+
+  pointer-events: none;
+
   z-index: var(--z-tooltip);
+}
+
+.label-row:hover .info-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
 .info-card content {
