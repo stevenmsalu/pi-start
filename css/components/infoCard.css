@@ -43,7 +43,7 @@
   z-index: var(--z-tooltip);
 }
 
-.label-row:hover .info-card {
+.info-card.open {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;

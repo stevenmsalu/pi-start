@@ -1,15 +1,5 @@
-import { clearForm } from "./clearForm.js";
-import { showSuccessModal } from "../events/successModal.js";
-import { validateForm } from "./validator.js";
 
-export function generateProject() {
-  if (!validateForm()) return;
-
-  const generateBtn = document.getElementById("generate-btn");
-  generateBtn.disabled = true;
-  generateBtn.innerHTML = `<span class="spinner"></span> Generating...`;
-  showLoadingOverlay();
-
+export function buildProjectConfig() {
   const projectName = document.getElementById("project-name")?.value.trim() || "(none)";
 
   // Virtual environment logic
@@ -89,8 +79,7 @@ export function generateProject() {
       .map(el => el.value);
   }
 
-  // Build JSON config object
-  const config = {
+  return {
     project_name: projectName,
     virtual_environment: venvOutput,
     python_version: pythonVersion,
@@ -98,40 +87,4 @@ export function generateProject() {
     license: license,
     includes: includeOptions
   };
-
-  // Output clean JSON object
-  console.clear();
-  console.group("JSON Project Configuration");
-  console.log(JSON.stringify(config, null, 2));
-  console.groupEnd();
-
-  // Simulate processing delay
-  setTimeout(() => {
-    hideLoadingOverlay();
-    generateBtn.innerHTML = "Success!";
-    showSuccessModal();
-    setTimeout(() => {
-      generateBtn.innerHTML = "Generate";
-      generateBtn.disabled = false;
-    }, 1500);
-  }, 2000);
-
-  clearForm(); // At End Clear Form
-}
-
-// Loading overlay helpers
-function showLoadingOverlay() {
-  let overlay = document.getElementById("loading-overlay");
-  if (!overlay) {
-    overlay = document.createElement("div");
-    overlay.id = "loading-overlay";
-    overlay.innerHTML = `<div class="loading-screen"><div class="spinner large"></div><p>Generating your project...</p></div>`;
-    document.body.appendChild(overlay);
-  }
-  overlay.style.display = "flex";
-}
-
-function hideLoadingOverlay() {
-  const overlay = document.getElementById("loading-overlay");
-  if (overlay) overlay.style.display = "none";
 }

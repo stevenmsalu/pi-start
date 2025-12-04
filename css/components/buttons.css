@@ -30,10 +30,12 @@
 .button.button-primary {
   background: var(--accent);
   border: var(--border-thickness-bold) solid var(--accent);
+  border-radius: var(--radius-round);
   color: #000;
   box-shadow: var(--shadow-accent-strong);
   text-transform: uppercase;
   font-weight: 600;
+  padding: 1rem 2rem;
 }
 
 .button.button-primary:hover {
@@ -48,7 +50,7 @@
 .button.button-secondary {
   background: transparent;
   border: var(--border-thickness-bold) solid var(--fg);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-round);
 
   color: var(--fg);
 }
@@ -84,4 +86,33 @@
 
 .button.button-tertiary:hover {
   color: var(--fg);
+}
+
+/* -------------------------------------
+   5. Icon Button (circular, minimal)
+------------------------------------- */
+.button.button-icon {
+  padding: 0.5rem;
+  border-radius: var(--radius-round);
+  background: transparent;
+  border: var(--border-thickness-bold) solid var(--fg);
+  width: 42px;
+  height: 42px;
+  line-height: 0;
+}
+
+.button.button-icon .material-icons {
+  font-size: 1.35rem;
+  color: var(--fg);
+}
+
+.button.button-icon:hover {
+  border-color: var(--hover-bg);
+  color: var(--fg);
+  
+  transform: scale(1.05);
+}
+
+.button.button-icon:active {
+  transform: scale(0.95);
 }

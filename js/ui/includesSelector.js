@@ -99,16 +99,6 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value=".env.example" class="includes-checkbox interactive"
-                @change="$store.formState.toggleMultiple('includeOptions', '.env.example')"
-                :checked="$store.formState.isSelected('includeOptions', '.env.example')">
-              .env.example
-            </label>
-            <small class="dep-desc">Example environment file for configuration variables.</small>
-          </div>
-
-          <div class="form-field modal-item">
-            <label class="checkbox-group">
               <input type="checkbox" value=".prettierrc" class="includes-checkbox interactive"
                 @change="$store.formState.toggleMultiple('includeOptions', '.prettierrc')"
                 :checked="$store.formState.isSelected('includeOptions', '.prettierrc')">

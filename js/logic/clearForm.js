@@ -1,3 +1,4 @@
+import { applyResponsiveLabels } from "../utils.js";
 
 export function clearForm() {
   const textInputs = document.querySelectorAll('input[type="text"], input[type="search"]');
@@ -17,8 +18,8 @@ export function clearForm() {
   // Reset generate button state
   const generateBtn = document.getElementById('generate-btn');
   if (generateBtn) {
-    generateBtn.textContent = "Generate";
     generateBtn.classList.remove('success');
+    applyResponsiveLabels(); 
   }
 
   // Clear validator UI

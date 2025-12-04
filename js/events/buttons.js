@@ -1,7 +1,10 @@
-import { generateProject } from "../logic/generator.js";
+import { generateProject } from "../logic/generator/_index.js";
 import { clearForm } from "../logic/clearForm.js";
+import { applyResponsiveLabels } from "../utils.js";
 
 export function initButtonEvents() {
+  // Apply responsive labels on load
+  applyResponsiveLabels();
 
   const generateBtn = document.getElementById("generate-btn");
   if (generateBtn) {
@@ -10,10 +13,6 @@ export function initButtonEvents() {
 
   const clearBtn = document.getElementById("clear-btn");
   if (clearBtn) {
-    clearBtn.addEventListener("click", () => {
-      clearForm();
-      clearBtn.textContent = "Cleared!";
-      setTimeout(() => (clearBtn.textContent = "Clear"), 1200);
-    });
+    clearBtn.addEventListener("click", clearForm);
   }
 }
