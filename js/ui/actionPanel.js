@@ -22,6 +22,14 @@ export const actionPanel = () => `
       
         <div class="modal-item">
           <div class="copy-code">
+            <code id="createVenvCommand">python -m venv venv</code>
+            <span id="copyCreateVenvBtn" class="material-icons icon-button">content_copy</span>
+          </div>
+          <small class="dep-desc" style="margin-left: 6px">Create a new virtual environment</small>
+        </div>
+        
+        <div class="modal-item">
+          <div class="copy-code">
             <code id="venvCommand">.\venv\Scripts\activate</code>
             <span id="copyVenvBtn" class="material-icons icon-button">content_copy</span>
           </div>

@@ -2,7 +2,7 @@
 
 **Create Python Project Scaffolds in Your Browser**
 
-Pi-Start is an interactive web initializer that helps you create clean, ready-to-use Python projects.
+Pi-Start is an interactive web initializer that helps you create clean, ready-to-use Python structures.
 
 ---
 
@@ -12,22 +12,25 @@ Pi-Start is a **Single Page Application (SPA)** built with:
 
 - HTML, CSS, JavaScript  
 - AlpineJS for state management  
+- JSZip for generating the full Python project archive entirely on the client
 
-The app collects your project settings and sends them to a backend service that generates the final scaffold.
+The user fills out the form → Pi-Start builds a configuration object → JSZip creates a downloadable .zip containing the full scaffold.
 
 ---
 
 ## Architecture (Short Overview)
 
-**Frontend**
-- Form components
-- Event Handlers  
-- AlpineJS state store  
-- Extractor that builds a configuration object  
+**Frontend (Full Logic Lives Here)**
+- UI form components
+- Event handlers for user actions
+- AlpineJS store for reactive state
+- Config Builder: extracts all selected project settings into a single object
+- Project Generator: receives the config object and creates the folder/files
+- Success modal with dynamic copy-to-clipboard commands to startup project
 
-**Backend** : `Out of scope for this assignment`
-- Receives configuration  
-- Generates the Python project folder with all selected options  
+**Backend**
+❌ No backend is used.
+⭕ Replaced by JSZip-based generation executed fully in the frontend. 
 
 ---
 

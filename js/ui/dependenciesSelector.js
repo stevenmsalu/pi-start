@@ -32,16 +32,6 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="python-dotenv" class="interactive"
-                @change="$store.formState.toggleMultiple('dependencies', 'python-dotenv')"
-                :checked="$store.formState.isSelected('dependencies', 'python-dotenv')">
-              Python-Dotenv
-            </label>
-            <small class="dep-desc">Loads environment variables from a .env file.</small>
-          </div>
-
-          <div class="form-field modal-item">
-            <label class="checkbox-group">
               <input type="checkbox" value="loguru" class="interactive"
                 @change="$store.formState.toggleMultiple('dependencies', 'loguru')"
                 :checked="$store.formState.isSelected('dependencies', 'loguru')">

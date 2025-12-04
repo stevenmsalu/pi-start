@@ -2,13 +2,15 @@
 export function initSuccessModal() {
     const modal = document.getElementById("successModal");
     const closeBtn = document.getElementById("closeSuccessModal");
+    const copyCreateVenvBtn = document.getElementById("copyCreateVenvBtn");
+    const createVenvCommand = document.getElementById("createVenvCommand");
     const copyVenvBtn = document.getElementById("copyVenvBtn");
     const copyRequirementsBtn = document.getElementById("copyRequirementsBtn");
     const copyRunBtn = document.getElementById("copyRunBtn");
     const venvCommand = document.getElementById("venvCommand");
     const requirementsCommand = document.getElementById("requirementsCommand");
     const runCommand = document.getElementById("runCommand");
-    
+
     if (!modal) return;
 
     function swapIcon(newIcon) {
@@ -22,6 +24,16 @@ export function initSuccessModal() {
     modal.addEventListener("click", (e) => { if (e.target.id === "successModal") modal.style.display = "none"; });
 
     // Copy buttons
+    copyCreateVenvBtn?.addEventListener("click", async () => {
+        await navigator.clipboard.writeText(createVenvCommand.textContent.trim());
+        copyCreateVenvBtn.textContent = "done";
+        copyCreateVenvBtn.classList.add("copied");
+        setTimeout(() => {
+            copyCreateVenvBtn.textContent = "content_copy";
+            copyCreateVenvBtn.classList.remove("copied");
+        }, 1200);
+    });
+
     copyVenvBtn?.addEventListener("click", async () => {
         await navigator.clipboard.writeText(venvCommand.textContent.trim());
         copyVenvBtn.textContent = "done";

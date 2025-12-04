@@ -12,18 +12,37 @@ export function buildProjectConfig() {
     const inputValue = venvNameInput?.value.trim();
     venvOutput = inputValue || "venv";
     const venvCmd = document.getElementById("venvCommand");
+
     if (venvCmd) venvCmd.textContent = `.\\${venvOutput}\\Scripts\\activate`;
     if (venvModalItem) venvModalItem.classList.remove('hidden');
+    
   } else {
     if (venvModalItem) venvModalItem.classList.add('hidden');
+  }
+
+  // Create Venv command logic
+  const createVenvCmd = document.getElementById("createVenvCommand");
+  let createVenvModalItem = document.querySelector('.modal-item:has(#createVenvCommand)');
+
+  if (venvCheckbox?.checked) {
+    const inputValue = venvNameInput?.value.trim();
+    const venvName = inputValue || "venv";
+
+    if (createVenvCmd) createVenvCmd.textContent = `python -m venv ${venvName}`;
+    if (createVenvModalItem) createVenvModalItem.classList.remove("hidden");
+
+  } else {
+    if (createVenvModalItem) createVenvModalItem.classList.add("hidden");
   }
 
   // Requirements command logic
   const reqCheckbox = document.querySelector('input[value="requirements.txt"]');
   const reqModalItem = document.querySelector('.modal-item:has(#requirementsCommand)');
+
   if (reqCheckbox?.checked) {
     document.getElementById("requirementsCommand").textContent = "pip install -r requirements.txt";
     reqModalItem.classList.remove("hidden");
+
   } else {
     reqModalItem.classList.add("hidden");
   }
@@ -31,10 +50,13 @@ export function buildProjectConfig() {
   // Run command logic
   let runModalItem = document.querySelector('.modal-item:has(#runCommand)');
   const mainPyCheckbox = document.querySelector('input[value="main.py"]');
+
   if (mainPyCheckbox?.checked) {
     const runCmd = document.getElementById("runCommand");
+
     if (runCmd) runCmd.textContent = "python main.py";
     if (runModalItem) runModalItem.classList.remove("hidden");
+    
   } else {
     if (runModalItem) runModalItem.classList.add("hidden");
   }

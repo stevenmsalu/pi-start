@@ -1,127 +1,121 @@
-import { loadPyodide } from "https://cdn.jsdelivr.net/pyodide/v0.26.0/full/pyodide.mjs";
-
-let pyodideInstance = null;
-
-async function initPyodide() {
-    if (!pyodideInstance) {
-        pyodideInstance = await loadPyodide();
-    }
-    return pyodideInstance;
-}
 
 export async function generatePythonProject(config) {
-    const py = await initPyodide();
+    const files = {};
+    const root = config.project_name;
 
-    // Pass JSON to Python
-    py.globals.set("config", config);
+    /* -------------------------------
+    1. Python Version
+    -------------------------------- */
+    if (config.python_version) {
+        files[`${root}/.python-version`] = config.python_version;
+    }
 
-    const pythonCode = `
-        # Convert JsProxy -> Python dict
-        cfg = config.to_py()
+    /* ------------------------------
+    2. Virtual Environment 
+    -------------------------------*/
+    if (config.virtual_environment) {
+        const venv = config.virtual_environment;
 
-        files = {}
-        root = cfg["project_name"]
+        files[`${root}/${venv}/`] = "";
+        files[`${root}/${venv}/bin/`] = "";
+        files[`${root}/${venv}/lib/`] = "";
+    }
 
-        # -------------------------------
-        # 1. Python Version File (.python-version)
-        # -------------------------------
-        if cfg.get("python_version"):
-            files[f"{root}/.python-version"] = cfg["python_version"]
+    /* -------------------------------
+    3. requirements.txt
+    ------------------------------- */
+    if (config.includes.includes("requirements.txt")) {
+        files[`${root}/requirements.txt`] = config.dependencies.join("\n");
+    }
 
+    /* -------------------------------
+    4. License File
+    ------------------------------- */
+    const LICENSE_TEMPLATES = {
+        mit: "MIT License\n\nCopyright (c) 2025 <Your Name>",
+        apache: "Apache License 2.0\n\nCopyright 2025 <Your Name>",
+        gpl3: "GNU GPL v3 — See https://www.gnu.org/licenses/gpl-3.0.en.html",
+        bsd: "BSD 3-Clause License",
+        isc: "ISC License",
+        lgpl3: "GNU Lesser GPL v3",
+        mpl2: "Mozilla Public License 2.0",
+    };
 
-        # -------------------------------
-        # 2. Virtual Environment folder
-        #   (we just create an empty folder structure)
-        # -------------------------------
-        venv_name = cfg.get("virtual_environment")
-        if venv_name:
-            files[f"{root}/{venv_name}/"] = "" 
-            files[f"{root}/{venv_name}/bin/"] = ""
-            files[f"{root}/{venv_name}/lib/"] = ""
+    if (config.license) {
+        const text =
+            LICENSE_TEMPLATES[config.license.toLowerCase()] ||
+            `License: ${config.license}`;
+        files[`${root}/LICENSE`] = text;
+    }
 
+    /* -------------------------------
+    5. Includes
+    ------------------------------- */
+    const includes = config.includes;
 
-        # -------------------------------
-        # 3. Dependencies -> requirements.txt
-        # -------------------------------
-        if "requirements.txt" in cfg["includes"]:
-            reqs = "\\n".join(cfg["dependencies"])
-            files[f"{root}/requirements.txt"] = reqs
+    // .env
+    if (includes.includes(".env")) {
+        files[`${root}/.env`] = "SECRET_KEY=your_key_here";
+    }
 
+    // .gitignore
+    if (includes.includes(".gitignore")) {
+        files[`${root}/.gitignore`] =
+            "__pycache__/\n*.pyc\n.env\nvenv/";
+    }
 
-        # -------------------------------
-        # 4. License File
-        # -------------------------------
-        LICENSE_TEMPLATES = {
-            "mit": "MIT License\\n\\nCopyright (c) 2025 <Your Name>",
-            "apache": "Apache License 2.0\\n\\nCopyright 2025 <Your Name>",
-            "gpl3": "GNU GPL v3 — See https://www.gnu.org/licenses/gpl-3.0.en.html",
-            "bsd": "BSD 3-Clause License",
-            "isc": "ISC License",
-            "lgpl3": "GNU Lesser GPL v3",
-            "mpl2": "Mozilla Public License 2.0"
-        }
+    // README.md
+    if (includes.includes("README.md")) {
+        files[`${root}/README.md`] = `# ${root}\nGenerated with Pi-Start.`;
+    }
 
-        lic = cfg.get("license")
-        if lic:
-            text = LICENSE_TEMPLATES.get(lic.lower(), f"License: {lic}")
-            files[f"{root}/LICENSE"] = text
+    // setup.py
+    if (includes.includes("setup.py")) {
+        files[`${root}/setup.py`] =
+            "from setuptools import setup\nsetup(name='app')";
+    }
 
+    // main.py
+    if (includes.includes("main.py")) {
+        files[`${root}/main.py`] = "print('Hello from Pi-Start!')";
+    }
 
-        # -------------------------------
-        # 5. Includes (many options)
-        # -------------------------------
+    // .prettierrc
+    if (includes.includes(".prettierrc")) {
+        files[`${root}/.prettierrc`] = `{
+            "singleQuote": true
+        }`;
+    }
 
-        includes = set(cfg.get("includes", []))
+    // pyproject.toml
+    if (includes.includes("pyproject.toml")) {
+        files[`${root}/pyproject.toml`] = `[project]
+        name = "app"`;
+    }
 
-        # .env
-        if ".env" in includes:
-            files[f"{root}/.env"] = "SECRET_KEY=your_key_here"
+    // CHANGELOG.md
+    if (includes.includes("CHANGELOG.md")) {
+        files[`${root}/CHANGELOG.md`] =
+            "# Changelog\nAll notable changes...";
+    }
 
-        # .gitignore
-        if ".gitignore" in includes:
-            files[f"{root}/.gitignore"] = "__pycache__/\\n*.pyc\\n.env\\nvenv/"
+    // CONTRIBUTING.md
+    if (includes.includes("CONTRIBUTING.md")) {
+        files[`${root}/CONTRIBUTING.md`] = "## Contribution Guidelines";
+    }
 
-        # README.md
-        if "README.md" in includes:
-            files[f"{root}/README.md"] = f"# {root}\\nGenerated with Pi-Start."
+    // tests folder + basic test file
+    if (includes.includes("tests")) {
+        files[`${root}/tests/`] = "";
+        files[`${root}/tests/test_basic.py`] =
+            "def test_example():\n    assert True";
+    }
 
-        # setup.py
-        if "setup.py" in includes:
-            files[f"{root}/setup.py"] = "from setuptools import setup\\nsetup(name='app')"
+    // pytest.ini
+    if (includes.includes("pytest.ini")) {
+        files[`${root}/pytest.ini`] = `[pytest]
+        testpaths = tests`;
+    }
 
-        # main.py
-        if "main.py" in includes:
-            files[f"{root}/main.py"] = "print('Hello from Pi-Start!')"
-
-        # .prettierrc
-        if ".prettierrc" in includes:
-            files[f"{root}/.prettierrc"] = "{\\n  \\"singleQuote\\": true\\n}"
-
-        # pyproject.toml
-        if "pyproject.toml" in includes:
-            files[f"{root}/pyproject.toml"] = "[project]\\nname = \\"app\\""
-
-        # CHANGELOG.md
-        if "CHANGELOG.md" in includes:
-            files[f"{root}/CHANGELOG.md"] = "# Changelog\\nAll notable changes..."
-
-        # CONTRIBUTING.md
-            if "CONTRIBUTING.md" in includes:
-                files[f"{root}/CONTRIBUTING.md"] = "## Contribution Guidelines"
-
-        # tests folder + test file
-        if "tests" in includes:
-            files[f"{root}/tests/"] = ""
-            files[f"{root}/tests/test_basic.py"] = "def test_example():\\n    assert True"
-
-        # pytest.ini
-        if "pytest.ini" in includes:
-            files[f"{root}/pytest.ini"] = "[pytest]\\ntestpaths = tests"
-
-
-        # Return generated file tree
-        files
-    `
-    const result = py.runPython(pythonCode);
-    return result.toJs();
+    return files;
 }
