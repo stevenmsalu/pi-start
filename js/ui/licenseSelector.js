@@ -49,7 +49,7 @@ export const licenseSelector = () => `
           <!-- Common Open Source Licenses -->
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="gpl" class="interactive"
+              <input type="checkbox" value="gpl" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleSingle('license', 'gpl')"
                 :checked="$store.formState.isSelected('license', 'gpl')">
               GNU GPL v3
@@ -62,7 +62,7 @@ export const licenseSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="bsd" class="interactive"
+              <input type="checkbox" value="bsd" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleSingle('license', 'bsd')"
                 :checked="$store.formState.isSelected('license', 'bsd')">
               BSD 3-Clause
@@ -72,7 +72,7 @@ export const licenseSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="isc" class="interactive"
+              <input type="checkbox" value="isc" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleSingle('license', 'isc')"
                 :checked="$store.formState.isSelected('license', 'isc')">
               ISC License
@@ -85,7 +85,7 @@ export const licenseSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="lgpl" class="interactive"
+              <input type="checkbox" value="lgpl" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleSingle('license', 'lgpl')"
                 :checked="$store.formState.isSelected('license', 'lgpl')">
               GNU LGPL v3
@@ -95,7 +95,7 @@ export const licenseSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="mpl" class="interactive"
+              <input type="checkbox" value="mpl" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleSingle('license', 'mpl')"
                 :checked="$store.formState.isSelected('license', 'mpl')">
               Mozilla Public License 2.0

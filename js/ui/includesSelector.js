@@ -56,7 +56,7 @@ export const includesSelector = () => `
           <!-- Core Files -->
           <div class="form-field modal-item mobile-only">
             <label class="checkbox-group">
-              <input type="checkbox" value="readme.md" class="includes-checkbox interactive"
+              <input type="checkbox" value="readme.md" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'readme.md')"
                 :checked="$store.formState.isSelected('includeOptions', 'readme.md')">
               README
@@ -66,7 +66,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="requirements.txt" class="includes-checkbox interactive"
+              <input type="checkbox" value="requirements.txt" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'requirements.txt')"
                 :checked="$store.formState.isSelected('includeOptions', 'requirements.txt')">
               requirements.txt
@@ -76,7 +76,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="setup.py" class="includes-checkbox interactive"
+              <input type="checkbox" value="setup.py" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'setup.py')"
                 :checked="$store.formState.isSelected('includeOptions', 'setup.py')">
               setup.py
@@ -86,7 +86,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="main.py" class="includes-checkbox interactive"
+              <input type="checkbox" value="main.py" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'main.py')"
                 :checked="$store.formState.isSelected('includeOptions', 'main.py')">
               main.py
@@ -99,7 +99,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value=".prettierrc" class="includes-checkbox interactive"
+              <input type="checkbox" value=".prettierrc" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', '.prettierrc')"
                 :checked="$store.formState.isSelected('includeOptions', '.prettierrc')">
               .prettierrc
@@ -109,7 +109,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="pyproject.toml" class="includes-checkbox interactive"
+              <input type="checkbox" value="pyproject.toml" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'pyproject.toml')"
                 :checked="$store.formState.isSelected('includeOptions', 'pyproject.toml')">
               pyproject.toml
@@ -122,7 +122,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="CHANGELOG.md" class="includes-checkbox interactive"
+              <input type="checkbox" value="CHANGELOG.md" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'CHANGELOG.md')"
                 :checked="$store.formState.isSelected('includeOptions', 'CHANGELOG.md')">
               CHANGELOG.md
@@ -132,7 +132,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="CONTRIBUTING.md" class="includes-checkbox interactive"
+              <input type="checkbox" value="CONTRIBUTING.md" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'CONTRIBUTING.md')"
                 :checked="$store.formState.isSelected('includeOptions', 'CONTRIBUTING.md')">
               CONTRIBUTING.md
@@ -145,7 +145,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="tests/" class="includes-checkbox interactive"
+              <input type="checkbox" value="tests/" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'tests/')"
                 :checked="$store.formState.isSelected('includeOptions', 'tests/')">
               tests/
@@ -155,7 +155,7 @@ export const includesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="pytest.ini" class="includes-checkbox interactive"
+              <input type="checkbox" value="pytest.ini" class="includes-checkbox interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('includeOptions', 'pytest.ini')"
                 :checked="$store.formState.isSelected('includeOptions', 'pytest.ini')">
               pytest.ini

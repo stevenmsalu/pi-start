@@ -29,8 +29,7 @@ The user fills out the form → Pi-Start builds a configuration object → JSZip
 - Success modal with dynamic copy-to-clipboard commands to startup project
 
 **Backend**
-❌ No backend is used.
-⭕ Replaced by JSZip-based generation executed fully in the frontend. 
+❌ No backend is used. Replaced by JSZip-based generation executed fully in the frontend. 
 
 ---
 

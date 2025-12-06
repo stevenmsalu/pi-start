@@ -21,20 +21,39 @@ export async function generatePythonProject(config) {
         files[`${root}/${venv}/lib/`] = "";
     }
 
+    /* -----------------------------------
+    3. Auto-Inject Framework Dependencies
+    ------------------------------------*/
+    let deps = new Set(config.dependencies || []);
+
+    if (deps.has("fastapi")) {
+        deps.add("uvicorn");
+    }
+
+    if (deps.has("flask")) {
+        deps.add("flask");
+    }
+
+    if (deps.has("typer")) {
+        deps.add("typer");
+    }
+
+    config.dependencies = Array.from(deps);
+
     /* -------------------------------
-    3. requirements.txt
+    4. requirements.txt
     ------------------------------- */
     if (config.includes.includes("requirements.txt")) {
         files[`${root}/requirements.txt`] = config.dependencies.join("\n");
     }
 
     /* -------------------------------
-    4. License File
+    5. License File
     ------------------------------- */
     const LICENSE_TEMPLATES = {
-        mit: "MIT License\n\nCopyright (c) 2025 <Your Name>",
-        apache: "Apache License 2.0\n\nCopyright 2025 <Your Name>",
-        gpl3: "GNU GPL v3 — See https://www.gnu.org/licenses/gpl-3.0.en.html",
+        mit: "MIT License",
+        apache: "Apache License 2.0",
+        gpl3: "GNU GPL v3",
         bsd: "BSD 3-Clause License",
         isc: "ISC License",
         lgpl3: "GNU Lesser GPL v3",
@@ -49,7 +68,7 @@ export async function generatePythonProject(config) {
     }
 
     /* -------------------------------
-    5. Includes
+    6. Includes
     ------------------------------- */
     const includes = config.includes;
 
@@ -60,8 +79,13 @@ export async function generatePythonProject(config) {
 
     // .gitignore
     if (includes.includes(".gitignore")) {
+        const venvName = config.virtual_environment || "venv";
+
         files[`${root}/.gitignore`] =
-            "__pycache__/\n*.pyc\n.env\nvenv/";
+            `__pycache__/ 
+    *.pyc
+    .env
+    ${venvName}/`;
     }
 
     // README.md
@@ -77,7 +101,56 @@ export async function generatePythonProject(config) {
 
     // main.py
     if (includes.includes("main.py")) {
-        files[`${root}/main.py`] = "print('Hello from Pi-Start!')";
+        let mainContent = "print('Hello from Pi-Start!')";
+        const deps = config.dependencies || [];
+
+        if (deps.includes("fastapi")) {
+            mainContent = [
+                "from fastapi import FastAPI",
+                "import uvicorn",
+                "",
+                "app = FastAPI()",
+                "",
+                "@app.get('/')",
+                "def home():",
+                "    return 'Hello from FastAPI & Pi-Start!'",
+                "",
+                "if __name__ == '__main__':",
+                "    uvicorn.run(app, host='127.0.0.1', port=8000)"
+            ].join("\n");
+        }
+
+        else if (deps.includes("flask")) {
+            mainContent = [
+                "from flask import Flask",
+                "",
+                "app = Flask(__name__)",
+                "",
+                "@app.route('/')",
+                "def home():",
+                "    return 'Hello from Flask & Pi-Start!'",
+                "",
+                "if __name__ == '__main__':",
+                "    app.run(debug=True)"
+            ].join("\n");
+        }
+
+        else if (deps.includes("typer")) {
+            mainContent = [
+                "import typer",
+                "",
+                "app = typer.Typer()",
+                "",
+                "@app.command()",
+                "def hello(name: str = 'World'):",
+                "    typer.echo(f'Hello {name} from Pi-Start!')",
+                "",
+                "if __name__ == '__main__':",
+                "    app()"
+            ].join("\n");
+        }
+
+        files[`${root}/main.py`] = mainContent;
     }
 
     // .prettierrc

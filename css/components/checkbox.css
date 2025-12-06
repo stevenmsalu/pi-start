@@ -38,7 +38,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--white);
+  color: #fff;
   font-size: 14px;
   font-weight: bold;
   line-height: 16px;

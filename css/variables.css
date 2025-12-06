@@ -21,7 +21,7 @@
   /* ---------------------------------
    2. Borders
   --------------------------------- */
-  --border-color-strong: rgba(255, 255, 255, 0.1);
+  --border-color-strong: rgba(255, 255, 255, 0.15);
   --border-color-medium: rgba(255, 255, 255, 0.08);
   --border-color-light: rgba(255, 255, 255, 0.03);
 
@@ -111,7 +111,7 @@
 .theme-dark {
   --bg: rgba(8, 25, 38, 1);
 
-  --input-bg: rgba(0, 0, 0, 1);
+  --input-bg: rgba(233, 247, 230, 0.15);
   --card-bg: rgba(233, 247, 230, 0.85);
   --card-fg: rgba(0, 0, 0, 1);
 

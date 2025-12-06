@@ -22,7 +22,7 @@ export const dependenciesSelector = () => `
           <!-- Core Utilities -->
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="requests" class="interactive"
+              <input type="checkbox" value="requests" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'requests')"
                 :checked="$store.formState.isSelected('dependencies', 'requests')">
               Requests
@@ -32,7 +32,17 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="loguru" class="interactive"
+              <input type="checkbox" value="python-dotenv" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
+                @change="$store.formState.toggleMultiple('dependencies', 'python-dotenv')"
+                :checked="$store.formState.isSelected('dependencies', 'python-dotenv')">
+              Python-Dotenv
+            </label>
+            <small class="dep-desc">Loads environment variables from a .env file.</small>
+          </div>
+
+          <div class="form-field modal-item">
+            <label class="checkbox-group">
+              <input type="checkbox" value="loguru" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'loguru')"
                 :checked="$store.formState.isSelected('dependencies', 'loguru')">
               Loguru
@@ -45,7 +55,7 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="flask" class="interactive"
+              <input type="checkbox" value="flask" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'flask')"
                 :checked="$store.formState.isSelected('dependencies', 'flask')">
               Flask
@@ -55,7 +65,7 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="fastapi" class="interactive"
+              <input type="checkbox" value="fastapi" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'fastapi')"
                 :checked="$store.formState.isSelected('dependencies', 'fastapi')">
               FastAPI
@@ -68,7 +78,7 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="numpy" class="interactive"
+              <input type="checkbox" value="numpy" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'numpy')"
                 :checked="$store.formState.isSelected('dependencies', 'numpy')">
               Numpy
@@ -78,7 +88,7 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="pandas" class="interactive"
+              <input type="checkbox" value="pandas" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'pandas')"
                 :checked="$store.formState.isSelected('dependencies', 'pandas')">
               Pandas
@@ -91,7 +101,7 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="typer" class="interactive"
+              <input type="checkbox" value="typer" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'typer')"
                 :checked="$store.formState.isSelected('dependencies', 'typer')">
               Typer
@@ -101,7 +111,7 @@ export const dependenciesSelector = () => `
 
           <div class="form-field modal-item">
             <label class="checkbox-group">
-              <input type="checkbox" value="pytest" class="interactive"
+              <input type="checkbox" value="pytest" class="interactive" style="background-color: rgba(36, 36, 40, 1)"
                 @change="$store.formState.toggleMultiple('dependencies', 'pytest')"
                 :checked="$store.formState.isSelected('dependencies', 'pytest')">
               Pytest
