@@ -2,7 +2,7 @@
 export function buildProjectConfig() {
   const projectName = document.getElementById("project-name")?.value.trim() || "(none)";
 
-  // Virtual environment logic
+  // Activate Venv logic
   let venvOutput = "(none)";
   const venvCheckbox = document.querySelector('input[value="Venv"]');
   const venvNameInput = document.getElementById("venv-name");
@@ -20,7 +20,7 @@ export function buildProjectConfig() {
     if (venvModalItem) venvModalItem.classList.add('hidden');
   }
 
-  // Create Venv command logic
+  // Create Venv logic
   const createVenvCmd = document.getElementById("createVenvCommand");
   let createVenvModalItem = document.querySelector('.modal-item:has(#createVenvCommand)');
 
@@ -73,7 +73,7 @@ export function buildProjectConfig() {
       includeOptions = store.data.includeOptions || [];
     }
   } catch (err) {
-    console.warn("⚠️ Could not access Alpine store, falling back to DOM parsing.");
+    console.warn("Could not access Alpine store, falling back to DOM parsing.");
   }
 
   // Fallbacks for missing store data

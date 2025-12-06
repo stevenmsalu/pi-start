@@ -22,13 +22,10 @@ export async function generateProject() {
   console.groupEnd();
 
   try {
-    // 1. Run Python generator inside Pyodide
     const fileTree = await generatePythonProject(config);
-
-    // 2. Trigger download
     await downloadZip(fileTree, config.project_name);
 
-    // Existing success animation
+    // Success animation
     hideLoadingOverlay();
     generateBtn.innerHTML = "Success!";
     generateBtn.classList.add("success");

@@ -3,7 +3,6 @@ import { clearForm } from "../logic/clearForm.js";
 import { applyResponsiveLabels } from "../utils.js";
 
 export function initButtonEvents() {
-  // Apply responsive labels on load
   applyResponsiveLabels();
 
   const generateBtn = document.getElementById("generate-btn");
