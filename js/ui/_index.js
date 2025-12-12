@@ -6,3 +6,6 @@ export * from './includesSelector.js';
 export * from './actionPanel.js';
 export * from './pythonSelector.js';
 export * from './sidebar.js';
+export * from './landing.js';
+export * from './header.js';
+export * from './footer.js';

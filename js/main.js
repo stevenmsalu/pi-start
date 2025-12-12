@@ -10,19 +10,22 @@ Alpine.start();
 
 function startApp() {
   loadTheme();
-  loadPage("home");
-  
-  const mainContainer = document.querySelector("#app") || document.body;
+  loadPage("landing");
+
+  const mainContainer = document.body;
   Alpine.initTree(mainContainer);
+
   uiEventListeners();
 
   document.addEventListener("click", (e) => {
-    if (e.target.closest("#modeToggle")) { toggleTheme(); return; }
+    if (e.target.closest("#modeToggle")) {
+      toggleTheme();
+      return;
+    }
     handleRouteClick(e);
   });
 
   document.addEventListener("pageLoaded", () => {
-    const mainContainer = document.querySelector("#app") || document.body;
     Alpine.initTree(mainContainer);
   });
 }

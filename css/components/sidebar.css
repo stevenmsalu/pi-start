@@ -28,6 +28,10 @@
   margin-top: auto;
 }
 
+.spacer {
+  margin-bottom: var(--spacing-md);
+}
+
 .sidebar a {
   display: flex;
   justify-content: center;

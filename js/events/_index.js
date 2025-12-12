@@ -4,6 +4,8 @@ import { initDependencyModal } from "./dependencyModal.js";
 import { initLicenseModal } from "./licenseModal.js";
 import { initIncludesModal } from "./includesModal.js";
 import { initSuccessModal } from "./successModal.js";
+import { handleGetStartedClick } from "./getStarted.js";
+import { handleLandingPageIconClick } from "./toLandingPage.js";
 
 export function uiEventListeners() {
   initButtonEvents();
@@ -12,4 +14,6 @@ export function uiEventListeners() {
   initLicenseModal();
   initIncludesModal();
   initSuccessModal();
+  handleGetStartedClick();
+  handleLandingPageIconClick();
 }

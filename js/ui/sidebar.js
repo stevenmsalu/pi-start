@@ -13,6 +13,13 @@ export const sidebar = () => {
     </div>
 
     <div class="nav-bottom">
+
+      <div class="spacer">
+        <a href="javascript:void(0)" id="linkToLandingPage" title="Go to Landing Page">
+          <span id="homeIconForLandingPage" class="material-icons">home</span>
+        </a>
+      </div>
+
       <a href="https://github.com/stevenmsalu/pi-start" target="_blank" title="GitHub">
         <img id="githubLogo" src="${logo}" class="local-icons" alt="GitHub Logo">
       </a>
