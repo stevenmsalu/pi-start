@@ -38,3 +38,23 @@
   display: none !important;
   pointer-events: none;
 }
+
+/* ---------------------------------------------------------
+   CURSOR UTILITY
+   --------------------------------------------------------- */
+.hide-cursor {
+  user-select: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

@@ -12,3 +12,17 @@
     display: block !important;
     flex: initial !important;
 }
+
+body.landing-mode header {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+
+@media (max-width: 768px) {
+    body.landing-mode header {
+        padding: 0 !important;
+    }
+}

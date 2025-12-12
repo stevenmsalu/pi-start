@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+5.0 LAYOUT
+--------------------------------------------------------------*/
+
+.ui-layout-container {
+  padding-left: var(--ui-layout-container);
+  padding-right: var(--ui-layout-container);
+}
+
+.ui-layout-flex,
+.ui-layout-grid {
+  align-items: center;
+  justify-content: center;
+}
+
+.ui-layout-flex { display: flex; }
+
+.ui-layout-grid { display: grid; }
+

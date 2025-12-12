@@ -1,0 +1,86 @@
+/*--------------------------------------------------------------
+2.0 FOUNDATION
+--------------------------------------------------------------*/
+
+body.landing-mode html { 
+  box-sizing: border-box; 
+  scroll-behavior: smooth;
+}
+
+
+body.landing-mode *,
+body.landing-mode *:before,
+body.landing-mode *:after { box-sizing: inherit; }
+
+body.landing-mode {
+  background-color: var(--ui-color-background-primary);
+  color: var(--ui-color-typography-body);
+  font-family: var(--ui-typography-typeface);
+  font-feature-settings: "liga", "kern";
+  font-size: var(--ui-typography-p);
+  font-weight: 400;
+  line-height: var(--ui-typography-p-leading);
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/*--------------------------------------------------------------
+3.0 TYPOGRAPHY
+--------------------------------------------------------------*/
+
+body.landing-mode a {
+  color: var(--ui-color-brand);
+  text-decoration-color: var(--ui-color-typography-note);
+}
+
+body.landing-mode h1,
+body.landing-mode h2,
+body.landing-mode p,
+body.landing-mode ul { margin-top: 0; }
+
+body.landing-mode h1,
+body.landing-mode h2 {
+  color: var(--ui-color-typography-heading);
+  margin-bottom: var(--ui-typography-margin-heading);
+}
+
+body.landing-mode h1 {
+  font-size: 5rem;
+  line-height: var(--ui-typography-h1-leading);
+}
+
+body.landing-mode h2 {
+  font-size: var(--ui-typography-h2);
+  line-height: var(--ui-typography-h2-leading);
+}
+
+body.landing-mode p,
+body.landing-mode ul { margin-bottom: var(--ui-typography-margin-body); }
+
+body.landing-mode p:last-child,
+body.landing-mode ul:last-child { margin-bottom: 0; }
+
+body.landing-mode ul { padding-left: 0; }
+
+body.landing-mode strong { font-weight: 700; }
+
+body.landing-mode small { font-size: var(--ui-typography-s); }
+
+body.landing-mode .ui-text-note {
+  color: var(--ui-color-typography-heading);
+  line-height: 1;
+}
+
+/*--------------------------------------------------------------
+4.0 IMAGE
+--------------------------------------------------------------*/
+
+body.landing-mode img,
+body.landing-mode svg {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
