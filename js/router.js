@@ -2,6 +2,9 @@ import { homePage } from "./pages/home.js";
 import { landingPage } from "./pages/landing.js";
 
 export function loadPage(page) {
+  const container = document.querySelector(".main-container");
+  container.classList.remove("landing-mode");
+
   switch (page) {
     case "home":
       homePage();
