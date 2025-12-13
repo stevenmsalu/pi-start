@@ -14,7 +14,7 @@ export const sidebar = () => {
 
     <div class="nav-bottom cursor-pointer">
 
-      <div class="spacer">
+      <div class="spacer nav-home">
         <a href="javascript:void(0)" id="linkToLandingPage" title="Go to Landing Page">
           <span id="homeIconForLandingPage" class="material-icons">home</span>
         </a>

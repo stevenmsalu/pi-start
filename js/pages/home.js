@@ -11,13 +11,14 @@ import {
   footer
 } from '../ui/_index.js';
 
-import { handleLandingPageIconClick } from '../events/toLandingPage.js';
 import { initButtonEvents } from '../events/buttons.js';
 import { initInfoCardEvents } from '../events/infoCards.js';
 import { initDependencyModal } from '../events/dependencyModal.js';
 import { initLicenseModal } from '../events/licenseModal.js';
 import { initIncludesModal } from '../events/includesModal.js';
 import { initSuccessModal } from '../events/successModal.js';
+import { initSidebarHomeButton } from '../events/sidebar-toLanding.js';
+import { initHeaderHomeLogo } from '../events/logo-toLanding.js';
 
 export function homePage() {
 
@@ -66,5 +67,6 @@ export function homePage() {
   initLicenseModal();
   initIncludesModal();
   initSuccessModal();
-  handleLandingPageIconClick();
+  initSidebarHomeButton();
+  initHeaderHomeLogo();
 }
