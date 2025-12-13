@@ -17,6 +17,7 @@ export function loadPage(page) {
       landingPage();
   }
 
+  window.scrollTo(0, 0);
   document.dispatchEvent(new Event("pageLoaded"));
 }
 

@@ -1,5 +1,6 @@
 import { welcomePage } from '../ui/_index.js';
 import { handleGetStartedClick } from "../events/getStarted.js";
+import { initComingSoonModal } from '../events/coming-soonModal.js';
 
 export function landingPage() {
   const landingPageContainer = document.querySelector(".main-container");
@@ -9,4 +10,5 @@ export function landingPage() {
   landingPageContainer.innerHTML = welcomePage();
 
   handleGetStartedClick();
+  initComingSoonModal();
 }

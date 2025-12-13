@@ -5,7 +5,7 @@ export const welcomePage = () => `
     <div class="ui-section-header__layout ui-layout-flex">
 
       <!-- LOGO -->
-      <a href="/" role="link" aria-label="Pi-Start Home" class="ui-section-header--logo cursor-pointer">
+      <a href="#" role="link" aria-label="Pi-Start Home" class="ui-section-header--logo cursor-pointer">
         <img
           src="/assets/logo.svg"
           alt="Pi-Start Logo"
@@ -31,7 +31,7 @@ export const welcomePage = () => `
 <main role="main">
 
   <!-- HERO -->
-  <section class="ui-section-hero hide-cursor">
+  <section id="heroSection" class="ui-section-hero hide-cursor">
     <div class="ui-layout-container">
       <div class="ui-section-hero__layout ui-layout-grid ui-layout-grid-2">
 
@@ -66,7 +66,7 @@ export const welcomePage = () => `
 
   <!-- FEATURES -->
   <section id="features" class="ui-section-feature hide-cursor">
-    <div class="ui-layout-container">
+    <div class="ui-layout-container feature-stack">
 
       <div class="ui-section-feature__layout ui-layout-grid ui-layout-grid-2">
         <img src="/assets/zero.svg"
@@ -99,62 +99,67 @@ export const welcomePage = () => `
       </div>
 
       <!-- SUPPORT US -->
-      <div id="support" class="ui-section-feature__layout ui-layout-grid ui-layout-grid-2">
-        <div>
-          <h2>Support Pi-Start</h2>
-          <p class="ui-text-intro">
-            Pi-Start is completely free and built to help beginners learn Python
-            without setup frustration. If this tool saves you time or stress,
-            your support helps keep it running and improving.
-          </p>
+      <div id="support">
+        <div class="ui-section-feature__layout ui-layout-grid ui-layout-grid-2">
+          <div>
+            <h2>Support Pi-Start</h2>
+            <p class="ui-text-intro">
+              Pi-Start is completely free and built to help beginners learn Python
+              without setup frustration. If this tool saves you time or stress,
+              your support helps keep it running and improving.
+            </p>
 
-          <ul class="ui-component-list ui-component-list-feature ui-layout-grid">
-            <li class="ui-component-list--item ui-component-list--item-check">
-              Keep Pi-Start free for everyone
-            </li>
-            <li class="ui-component-list--item ui-component-list--item-check">
-              Support new features and templates
-            </li>
-            <li class="ui-component-list--item ui-component-list--item-check">
-              Help cover hosting and maintenance costs
-            </li>
-            <li class="ui-component-list--item ui-component-list--item-check">
-              Encourage open-source learning tools
-            </li>
-          </ul>
-        </div>
-
-        <!-- SUPPORT CARD -->
-        <div class="ui-component-card ui-component-card--pricing">
-          <span><strong>Supporter</strong></span>
-          <div class="ui-component-card--pricing-price">
-            <span class="ui-component-card--pricing-amount ui-component-card--pricing-amount-1"></span>
-            <span>/</span><span>month</span>
+            <ul class="ui-component-list ui-component-list-feature ui-layout-grid">
+              <li class="ui-component-list--item ui-component-list--item-check">
+                Keep Pi-Start free for everyone
+              </li>
+              <li class="ui-component-list--item ui-component-list--item-check">
+                Support new features and templates
+              </li>
+              <li class="ui-component-list--item ui-component-list--item-check">
+                Help cover hosting and maintenance costs
+              </li>
+              <li class="ui-component-list--item ui-component-list--item-check">
+                Encourage open-source learning tools
+              </li>
+            </ul>
           </div>
-          <span><small>A small contribution that makes a big difference.</small></span>
 
-          <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
-            <li class="ui-component-list--item ui-component-list--item-check">
-              Support ongoing development
-            </li>
-            <li class="ui-component-list--item ui-component-list--item-check">
-              Help keep Pi-Start free
-            </li>
-            <li class="ui-component-list--item ui-component-list--item-check">
-              Early access to improvements
-            </li>
-          </ul>
+          <!-- SUPPORT CARD -->
+          <div class="ui-component-card ui-component-card--pricing">
+            <span><strong>Supporter</strong></span>
+            <div class="ui-component-card--pricing-price">
+              <span class="ui-component-card--pricing-amount ui-component-card--pricing-amount-1"></span>
+              <span>/</span><span>month</span>
+            </div>
+            <span><small>A small contribution that makes a big difference.</small></span>
 
-          <a href="#" class="ui-component-button ui-component-button-big ui-component-button-secondary">
-            Support Pi-Start
-          </a>
+            <ul class="ui-component-list ui-component-list--pricing ui-layout-grid">
+              <li class="ui-component-list--item ui-component-list--item-check">
+                Support ongoing development
+              </li>
+              <li class="ui-component-list--item ui-component-list--item-check">
+                Help keep Pi-Start free
+              </li>
+              <li class="ui-component-list--item ui-component-list--item-check">
+                Early access to improvements
+              </li>
+            </ul>
+
+            <span
+              id="support-btn"
+              class="ui-component-button ui-component-button-big ui-component-button-secondary">
+              Support Pi-Start
+            </span>
+
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ABOUT US -->
-  <section id="about" class="ui-section-feature aboutus">
+  <section id="about" class="ui-section-feature aboutus hide-cursor">
     <div class="ui-layout-container">
       <h2>About Pi-Start</h2>
 
@@ -185,6 +190,34 @@ export const welcomePage = () => `
   </section>
 
 </main>
+
+<!-- SUPPORT COMING SOON MODAL -->
+<div id="support-modal" class="ui-modal" aria-hidden="true">
+  <div class="ui-modal__overlay"></div>
+
+  <div class="ui-modal__content">
+    <div class="hide-cursor">
+      <h3>Thank you for your support 🙏</h3>
+      <p>
+        Payments are coming soon.  
+        Leave your email and we'll notify you when support goes live.
+      </p>
+    </div>
+    
+    <form class="ui-modal__form">
+      <input
+        type="email"
+        placeholder="your@email.com"
+        required
+      />
+      <span class="ui-modal_notify-btn">
+        Notify Me
+      </span>
+    </form>
+
+    <span class="ui-modal__close material-icons" aria-label="Close">close</span>
+  </div>
+</div>
 
 <footer class="flex-center hide-cursor">
    &copy; 2025 Pi-Start. A Simple, Reliable Python Initializer for Clean Project Setup.

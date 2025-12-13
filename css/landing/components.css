@@ -22,10 +22,10 @@
   cursor: pointer;
 
   transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    background-color 0.15s ease,
-    color 0.15s ease;
+    transform 220ms cubic-bezier(.22, 1, .36, 1),
+    box-shadow 220ms cubic-bezier(.22, 1, .36, 1),
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .ui-component-button-primary {
@@ -60,12 +60,13 @@
 }
 
 .ui-component-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
 }
 
 .ui-component-button:active {
-  animation: bounce 0.35s ease;
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 /*--------------------------------------------------------------
@@ -159,8 +160,16 @@ div label[for=ui-component-toggle__yearly] {
 --------------------------------------------------------------*/
 
 .ui-section-header {
-  padding-bottom: 1.25rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
   padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+
+  background-color: var(--ui-color-background-primary);
 }
 
 .ui-section-header__layout { justify-content: space-between; }
@@ -211,18 +220,26 @@ div label[for=ui-component-toggle__yearly] {
 
 /* MENU */
 .ui-section-header--nav {
+  position: fixed;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
   background-color: var(--ui-color-background-primary);
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.05);
+
   flex-direction: column;
   gap: var(--ui-gap-header);
-  left: 0;
-  opacity: 0;
   padding: 7.375rem var(--ui-layout-container) 5rem;
-  position: absolute;
-  right: 0;
-  top: -1rem;
-  transition: all 250ms cubic-bezier(.785, .135, .15, .86);
+
+  opacity: 0;
   visibility: hidden;
+
+  transition:
+    top 250ms cubic-bezier(.785, .135, .15, .86),
+    opacity 200ms ease,
+    visibility 0s linear 200ms;
 }
 
 #ui-section-header--menu-id:checked ~
@@ -277,13 +294,19 @@ div label[for=ui-component-toggle__yearly] {
   padding-top: 5rem;
 }
 
-.ui-section-feature__layout { row-gap: var(--ui-gap-feature); }
+.ui-section-feature__layout { row-gap: 5rem; }
 
 .ui-section-feature__layout:first-of-type div {
   grid-row-start: 1;
 }
 
 .ui-section-feature__layout:last-of-type { margin-top: 5rem; }
+
+.feature-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
 
 /*--------------------------------------------------------------
 | 7.5 PRICING

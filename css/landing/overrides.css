@@ -3,7 +3,7 @@
 ----------------------------------------*/
 .main-container.landing-mode {
     max-width: 100% !important;
-    padding: 0 !important;
+    padding: 5rem 0 0 0 !important;
     margin: 0 !important;
     background: none !important;
     box-shadow: none !important;
@@ -25,4 +25,19 @@ body.landing-mode header {
     body.landing-mode header {
         padding: 0 !important;
     }
+}
+
+body.landing-mode .ui-section-header--nav-link {
+    padding: 0.5rem;
+    color: var(--ui-color-brand);
+    border-radius: 2px;
+    transition:
+        background-color 150ms ease,
+        color 150ms ease;
+}
+
+body.landing-mode .ui-section-header--nav-link:hover,
+body.landing-mode .ui-section-header--nav-link:focus-visible {
+    background-color: var(--ui-color-brand);
+    color: #fff;
 }
