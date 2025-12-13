@@ -12,6 +12,12 @@ import {
 } from '../ui/_index.js';
 
 import { handleLandingPageIconClick } from '../events/toLandingPage.js';
+import { initButtonEvents } from '../events/buttons.js';
+import { initInfoCardEvents } from '../events/infoCards.js';
+import { initDependencyModal } from '../events/dependencyModal.js';
+import { initLicenseModal } from '../events/licenseModal.js';
+import { initIncludesModal } from '../events/includesModal.js';
+import { initSuccessModal } from '../events/successModal.js';
 
 export function homePage() {
 
@@ -53,5 +59,12 @@ export function homePage() {
   sidebarContainer.innerHTML = sidebar();
   buttonContainer.innerHTML = actionPanel();
 
+  // Events Handlers
+  initButtonEvents();
+  initInfoCardEvents();
+  initDependencyModal();
+  initLicenseModal();
+  initIncludesModal();
+  initSuccessModal();
   handleLandingPageIconClick();
 }

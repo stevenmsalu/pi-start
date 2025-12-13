@@ -12,7 +12,16 @@ body {
   min-height: 100dvh;
   margin: 0 auto;
   transition: background var(--transition-slow), color var(--transition-slow);
+
+  font-family: var(--font-family);
+  font-size: 1rem;
+  line-height: var(--line-height);
+
+  color: var(--fg);
+  background: var(--bg);
+  font-weight: 400;
 }
+
 
 /* -------------------------------------
    2. Body Styles & Typography
