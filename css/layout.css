@@ -4,8 +4,8 @@
 header {
   width: 100%;
   max-width: var(--container-max-width);
-  margin: 15px auto;
-  padding: 0 var(--spacing-md);
+  margin: 0 auto; 
+  padding: 15px var(--spacing-md);
   position: relative;
 }
 
@@ -21,6 +21,7 @@ header {
 main.main-container {
   flex: 1;
   width: 100%;
+  min-height: 0; 
   max-width: var(--container-max-width);
   display: flex;
   gap: 20px;
@@ -40,7 +41,7 @@ main.main-container {
 -------------------------------------- */
 footer {
   width: 100%;
-  max-width: var(--container-max-width);
+  /** max-width: var(--container-max-width); */
   margin: 0 auto;
   padding-top: 2rem;
   text-align: center;

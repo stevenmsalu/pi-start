@@ -2,7 +2,7 @@
 export const projectNameInput = () => `
   <div class="form-field">
     
-    <div class="label-row">
+    <div class="label-row hide-cursor">
       <label for="project-name">Project Name</label>
       <span class="material-icons info-icon" data-info="project-name-info">info</span>
     </div>

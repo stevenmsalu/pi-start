@@ -2,7 +2,7 @@
 export const licenseSelector = () => `
   <div class="form-field" x-data>
 
-    <div class="label-row">
+    <div class="label-row hide-cursor">
       <label for="license">License</label>
       <span class="material-icons info-icon" data-info="license-info">info</span>
     </div>
@@ -22,7 +22,7 @@ export const licenseSelector = () => `
         Apache 2.0
       </label>
 
-      <div class="license-more">
+      <div class="license-more cursor-pointer">
         <button type="button" id="license-moreBtn" class="button button-tertiary interactive">
           More
         </button>
@@ -54,7 +54,7 @@ export const licenseSelector = () => `
                 :checked="$store.formState.isSelected('license', 'gpl')">
               GNU GPL v3
             </label>
-            <small class="dep-desc">Copyleft license requiring derivatives to remain open source.</small>
+            <small class="dep-desc hide-cursor">Copyleft license requiring derivatives to remain open source.</small>
           </div>
 
           <!-- Less Restrictive Licenses -->
@@ -67,7 +67,7 @@ export const licenseSelector = () => `
                 :checked="$store.formState.isSelected('license', 'bsd')">
               BSD 3-Clause
             </label>
-            <small class="dep-desc">Flexible license similar to MIT but with attribution clause.</small>
+            <small class="dep-desc hide-cursor">Flexible license similar to MIT but with attribution clause.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -77,7 +77,7 @@ export const licenseSelector = () => `
                 :checked="$store.formState.isSelected('license', 'isc')">
               ISC License
             </label>
-            <small class="dep-desc">Simplified MIT-like license with minimal conditions.</small>
+            <small class="dep-desc hide-cursor">Simplified MIT-like license with minimal conditions.</small>
           </div>
 
           <!-- Others -->
@@ -90,7 +90,7 @@ export const licenseSelector = () => `
                 :checked="$store.formState.isSelected('license', 'lgpl')">
               GNU LGPL v3
             </label>
-            <small class="dep-desc">Allows linking to closed-source software under some terms.</small>
+            <small class="dep-desc hide-cursor">Allows linking to closed-source software under some terms.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -100,7 +100,7 @@ export const licenseSelector = () => `
                 :checked="$store.formState.isSelected('license', 'mpl')">
               Mozilla Public License 2.0
             </label>
-            <small class="dep-desc">Requires shared modifications for MPL-licensed files only.</small>
+            <small class="dep-desc hide-cursor">Requires shared modifications for MPL-licensed files only.</small>
           </div>
 
         </div>

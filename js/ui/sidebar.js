@@ -6,13 +6,13 @@ export const sidebar = () => {
     : "/assets/github-mark.svg";
 
   return `
-    <div class="nav-top">
+    <div class="nav-top cursor-pointer">
       <a href="javascript:void(0)" id="modeToggle" title="Toggle Theme">
         <span id="themeIcon" class="material-icons">dark_mode</span>
       </a>
     </div>
 
-    <div class="nav-bottom">
+    <div class="nav-bottom cursor-pointer">
 
       <div class="spacer">
         <a href="javascript:void(0)" id="linkToLandingPage" title="Go to Landing Page">

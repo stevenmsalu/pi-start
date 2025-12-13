@@ -2,7 +2,7 @@
 export const pythonSelector = () => `
   <div class="form-field" x-data>
     
-    <div class="label-row">
+    <div class="label-row hide-cursor">
       <label>Python Version</label>
       <span class="material-icons info-icon" data-info="python-info">info</span>
     </div>

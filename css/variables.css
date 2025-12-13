@@ -2,10 +2,10 @@
   /* ---------------------------------
    1. Core Colors (Light Mode)
   --------------------------------- */
-  --bg: rgba(231, 235, 238, 1);
-  --card-bg: rgba(36, 36, 40, 1);
-  --card-fg: rgba(233, 247, 230, 0.85);
-  --fg: rgba(36, 36, 40, 1);
+  --bg: #fff;
+  --card-bg: #282828;
+  --card-fg:#fff;
+  --fg: #282828;
 
   --white: rgba(233, 247, 230, 0.85);
   --muted: rgba(119, 131, 141, 1);
@@ -15,7 +15,7 @@
   --window-close-bg: rgba(0, 170, 0, 0.85);
 
   --hover-bg: rgba(255, 255, 255, 0.1);
-  --input-bg: rgba(36, 36, 40, 1);
+  --input-bg: #282828;
 
 
   /* ---------------------------------
@@ -53,7 +53,7 @@
   /* ---------------------------------
    5. Typography
   --------------------------------- */
-  --font-family: "Menlo", "Monaco", "Consolas", "Courier New", monospace;
+  --font-family: "Inter", sans-serif;
   --font-size: 1.25rem; 
   --line-height: 1.45;
 
@@ -109,7 +109,7 @@
    11. Core Colors (Dark Mode)
   --------------------------------- */
 .theme-dark {
-  --bg: rgba(8, 25, 38, 1);
+  --bg: rgba(8, 25, 38, 0.95);
 
   --input-bg: rgba(233, 247, 230, 0.15);
   --card-bg: rgba(233, 247, 230, 0.85);

@@ -2,7 +2,7 @@
 export const dependenciesSelector = () => `
   <div class="form-field" x-data>
   
-    <div class="dependencies-container">
+    <div class="dependencies-container cursor-pointer">
       <button type="button" id="addDependencyBtn" class="button button-secondary interactive">
         + Add Dependencies
       </button>

@@ -444,7 +444,7 @@ div label[for=ui-component-toggle__yearly] {
   padding-top: 10px;
   margin-bottom: 0;
   margin-right: auto;
-  color: var(--ui-color-typography-note);
+  color: var(--ui-color-typography-heading);
   font-size: var(--ui-typography-s);
 }
 
@@ -455,7 +455,7 @@ div label[for=ui-component-toggle__yearly] {
 }
 
 .ui-section-footer__nav a {
-  color: var(--ui-color-typography-note);
+  color: var(--ui-color-typography-heading);
   text-decoration: none;
 }
 

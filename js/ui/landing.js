@@ -186,28 +186,7 @@ export const welcomePage = () => `
 
 </main>
 
-<div class="ui-section-footer">
-  <div class="ui-layout-container">
-
-    <div class="ui-section-footer__layout ui-layout-flex">
-
-      <!-- COPYRIGHT / BRAND -->
-      <p class="ui-section-footer--copyright ui-text-note">
-        &copy; 2025 <strong>Pi-Start</strong> — A simple, reliable Python initializer
-        for clean project setup.
-      </p>
-
-      <!-- FOOTER NAV -->
-      <nav class="ui-section-footer__nav">
-        <a href="#features">Features</a>
-        <span aria-hidden="true">·</span>
-        <a href="#support">Support</a>
-        <span aria-hidden="true">·</span>
-        <a href="#about">About</a>
-      </nav>
-
-    </div>
-
-  </div>
-</div>
+<footer class="flex-center hide-cursor">
+   &copy; 2025 Pi-Start. A Simple, Reliable Python Initializer for Clean Project Setup.
+</footer>
 `;

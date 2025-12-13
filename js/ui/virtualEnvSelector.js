@@ -2,7 +2,7 @@
 export const VirtualEnvSelector = () => `
   <div class="form-field" x-data>
     
-    <div class="label-row">
+    <div class="label-row hide-cursor">
       <label>Virtual Environment</label>
       <span class="material-icons info-icon" data-info="venv-info">info</span>
     </div>

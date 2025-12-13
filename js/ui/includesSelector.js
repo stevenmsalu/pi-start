@@ -2,7 +2,7 @@
 export const includesSelector = () => `
   <div class="form-field" x-data>
 
-    <div class="label-row">
+    <div class="label-row hide-cursor">
       <label for="includes">Include</label>
       <span class="material-icons info-icon" data-info="includes-info">info</span>
     </div>
@@ -29,7 +29,7 @@ export const includesSelector = () => `
         README
       </label>
 
-      <div class="includes-moreBtn">
+      <div class="includes-moreBtn cursor-pointer">
         <button type="button" id="includes-moreBtn" class="button button-tertiary interactive">
           More
         </button>
@@ -61,7 +61,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'readme.md')">
               README
             </label>
-            <small class="dep-desc">Include a README file for your project.</small>
+            <small class="dep-desc hide-cursor">Include a README file for your project.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -71,7 +71,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'requirements.txt')">
               requirements.txt
             </label>
-            <small class="dep-desc">Include a dependency requirements file for Python packages.</small>
+            <small class="dep-desc hide-cursor">Include a dependency requirements file for Python packages.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -81,7 +81,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'setup.py')">
               setup.py
             </label>
-            <small class="dep-desc">Basic setup script for packaging and installing the project.</small>
+            <small class="dep-desc hide-cursor">Basic setup script for packaging and installing the project.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -91,7 +91,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'main.py')">
               main.py
             </label>
-            <small class="dep-desc">Entry-point Python script for the project.</small>
+            <small class="dep-desc hide-cursor">Entry-point Python script for the project.</small>
           </div>
 
           <!-- Environment / Config -->
@@ -104,7 +104,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', '.prettierrc')">
               .prettierrc
             </label>
-            <small class="dep-desc">Formatter configuration file for consistent code styling.</small>
+            <small class="dep-desc hide-cursor">Formatter configuration file for consistent code styling.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -114,7 +114,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'pyproject.toml')">
               pyproject.toml
             </label>
-            <small class="dep-desc">Modern build configuration file used by Poetry or Flit.</small>
+            <small class="dep-desc hide-cursor">Modern build configuration file used by Poetry or Flit.</small>
           </div>
 
           <!-- Documentation -->
@@ -127,7 +127,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'CHANGELOG.md')">
               CHANGELOG.md
             </label>
-            <small class="dep-desc">Log file for documenting changes across versions.</small>
+            <small class="dep-desc hide-cursor">Log file for documenting changes across versions.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -137,7 +137,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'CONTRIBUTING.md')">
               CONTRIBUTING.md
             </label>
-            <small class="dep-desc">Guidelines for contributing to the project.</small>
+            <small class="dep-desc hide-cursor">Guidelines for contributing to the project.</small>
           </div>
 
           <!-- Testing -->
@@ -150,7 +150,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'tests/')">
               tests/
             </label>
-            <small class="dep-desc">Include a starter folder for your unit or integration tests.</small>
+            <small class="dep-desc hide-cursor">Include a starter folder for your unit or integration tests.</small>
           </div>
 
           <div class="form-field modal-item">
@@ -160,7 +160,7 @@ export const includesSelector = () => `
                 :checked="$store.formState.isSelected('includeOptions', 'pytest.ini')">
               pytest.ini
             </label>
-            <small class="dep-desc">Pytest configuration file for test discovery and settings.</small>
+            <small class="dep-desc hide-cursor">Pytest configuration file for test discovery and settings.</small>
           </div>
 
         </div>
