@@ -5,10 +5,12 @@ export const welcomePage = () => `
     <div class="ui-section-header__layout ui-layout-flex">
 
       <!-- LOGO -->
-      <a href="#" role="link" aria-label="Pi-Start" class="ui-section-header--logo">
-        <svg viewBox="0 0 18 18" height="18" width="18" role="img" aria-label="Pi-Start Logo">
-          <path fill="#353535" d="M0 0h4.5v9a4.5 4.5 0 109 0V6H18v3A9 9 0 110 9V0zm18 4.5V0h-4.5v4.5H18z"/>
-        </svg>
+      <a href="/" role="link" aria-label="Pi-Start Home" class="ui-section-header--logo cursor-pointer">
+        <img
+          src="/assets/logo.svg"
+          alt="Pi-Start Logo"
+          class="logo"
+        />
       </a>
 
       <!-- HAMBURGER -->
@@ -37,7 +39,7 @@ export const welcomePage = () => `
           <h1>Start Fast. Code Faster.</h1>
           <p class="ui-text-intro">
             Generate a ready-to-code Python project in seconds with Pi-Start —
-            so you can focus on learning, not setup.
+            so you can focus on building, not setup.
           </p>
 
           <!-- CTA -->
@@ -55,7 +57,9 @@ export const welcomePage = () => `
         <img src="/assets/hero-img.svg"
              loading="lazy"
              alt="Pi-Start Hero"
-             class="ui-image-half-right-mask">
+             class="ui-image-half-right-mask"
+        >
+        
       </div>
     </div>
   </section>
@@ -181,4 +185,29 @@ export const welcomePage = () => `
   </section>
 
 </main>
+
+<div class="ui-section-footer">
+  <div class="ui-layout-container">
+
+    <div class="ui-section-footer__layout ui-layout-flex">
+
+      <!-- COPYRIGHT / BRAND -->
+      <p class="ui-section-footer--copyright ui-text-note">
+        &copy; 2025 <strong>Pi-Start</strong> — A simple, reliable Python initializer
+        for clean project setup.
+      </p>
+
+      <!-- FOOTER NAV -->
+      <nav class="ui-section-footer__nav">
+        <a href="#features">Features</a>
+        <span aria-hidden="true">·</span>
+        <a href="#support">Support</a>
+        <span aria-hidden="true">·</span>
+        <a href="#about">About</a>
+      </nav>
+
+    </div>
+
+  </div>
+</div>
 `;

@@ -19,6 +19,13 @@
   line-height: 1;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .ui-component-button-primary {
@@ -26,17 +33,54 @@
   color: var(--ui-color-typography-button);
 }
 
+.ui-component-button-primary:hover {
+  background-color: var(--ui-color-n-700);
+}
+
 .ui-component-button-secondary {
   background-color: var(--ui-color-background-primary);
   color: var(--ui-color-brand);
 }
 
+.ui-component-button-secondary:hover {
+  background-color: var(--ui-color-background-tertiary);
+}
+
 .ui-component-button-big,
-.ui-component-button-normal { padding: .75rem 1rem .875rem; }
+.ui-component-button-normal {
+  padding: .75rem 1rem .875rem;
+}
 
-.ui-component-button-big { width: 100%; }
+.ui-component-button-big {
+  width: 100%;
+}
 
-.ui-component-button-normal { width: fit-content; }
+.ui-component-button-normal {
+  width: fit-content;
+}
+
+.ui-component-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.ui-component-button:active {
+  animation: bounce 0.35s ease;
+}
+
+/*--------------------------------------------------------------
+| ACCESSIBILITY – REDUCED MOTION
+--------------------------------------------------------------*/
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-component-button {
+    transition: none;
+  }
+
+  .ui-component-button:active {
+    animation: none;
+  }
+}
 
 /*--------------------------------------------------------------
 | 6.3 TOGGLE
@@ -386,13 +430,35 @@ div label[for=ui-component-toggle__yearly] {
 .ui-section-footer {
   padding-bottom: 1.25rem;
   padding-top: 1.25rem;
+  background-color: var(--ui-color-background-secondary);
+  border-top: 1px solid var(--ui-color-border);
 }
 
 .ui-section-footer__layout {
+  display: flex;
+  align-items: center;
   column-gap: var(--ui-layout-gutter);
 }
 
 .ui-section-footer--copyright {
+  padding-top: 10px;
   margin-bottom: 0;
   margin-right: auto;
+  color: var(--ui-color-typography-note);
+  font-size: var(--ui-typography-s);
+}
+
+.ui-section-footer__nav {
+  display: flex;
+  gap: .5rem;
+  font-size: var(--ui-typography-s);
+}
+
+.ui-section-footer__nav a {
+  color: var(--ui-color-typography-note);
+  text-decoration: none;
+}
+
+.ui-section-footer__nav a:hover {
+  color: var(--ui-color-typography-body);
 }

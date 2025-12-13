@@ -77,8 +77,8 @@ body.landing-mode .ui-text-note {
 4.0 IMAGE
 --------------------------------------------------------------*/
 
-body.landing-mode img,
-body.landing-mode svg {
+body.landing-mode .aug img,
+body.landing-mode .aug svg {
   display: block;
   height: auto;
   margin: 0 auto;
